@@ -3,16 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8370C08B26F10EF4005FFBFC /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
-		8370C09026F10EF4005FFBFC /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C08F26F10EF4005FFBFC /* DataTests.swift */; };
 		8370C09B26F10F0B005FFBFC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09A26F10F0B005FFBFC /* HTTPClient.swift */; };
 		8370C09E26F10F3E005FFBFC /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */; };
-		8370C0BD26F10F97005FFBFC /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0BC26F10F97005FFBFC /* HTTPError.swift */; };
+		8370C0BD26F10F97005FFBFC /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0BC26F10F97005FFBFC /* HttpError.swift */; };
 		8370C0C026F10FBE005FFBFC /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0BF26F10FBE005FFBFC /* DomainError.swift */; };
+		8370C0D026F111D8005FFBFC /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0C726F111D7005FFBFC /* Infra.framework */; };
+		8370C0DF26F111E3005FFBFC /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0A426F10F59005FFBFC /* Domain.framework */; };
+		8370C0E026F111E3005FFBFC /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0A426F10F59005FFBFC /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8370C0E426F111EB005FFBFC /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
+		8370C0E526F111EB005FFBFC /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8370C0EC26F11220005FFBFC /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0EB26F11220005FFBFC /* AlamofireAdapter.swift */; };
+		8370C0ED26F1122D005FFBFC /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0A426F10F59005FFBFC /* Domain.framework */; };
+		8370C0EE26F1122D005FFBFC /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0A426F10F59005FFBFC /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8370C0F326F1128E005FFBFC /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0F226F1128E005FFBFC /* AlamofireAdapterTests.swift */; };
+		8370C0F526F112CE005FFBFC /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0F426F112CE005FFBFC /* UrlProtocolStub.swift */; };
+		8370C0FC26F113C3005FFBFC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0FB26F113C3005FFBFC /* Model.swift */; };
+		8370C0FE26F113E7005FFBFC /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0FD26F113E7005FFBFC /* HttpMethod.swift */; };
+		8370C10026F113EE005FFBFC /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0FF26F113EE005FFBFC /* HttpRequest.swift */; };
+		8370C10226F113F4005FFBFC /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10126F113F4005FFBFC /* HttpStatusCode.swift */; };
+		8370C10526F1146A005FFBFC /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8370C10426F1146A005FFBFC /* Fakery */; };
+		8370C10826F11487005FFBFC /* FakerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10726F11487005FFBFC /* FakerFactory.swift */; };
+		8370C10A26F114AF005FFBFC /* TestDataFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10926F114AF005FFBFC /* TestDataFactories.swift */; };
+		8370C10C26F1154C005FFBFC /* FakerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10726F11487005FFBFC /* FakerFactory.swift */; };
+		8370C10D26F1155D005FFBFC /* TestDataFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10926F114AF005FFBFC /* TestDataFactories.swift */; };
+		8370C11026F1157E005FFBFC /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10F26F1157E005FFBFC /* TestExtension.swift */; };
+		8370C11126F11587005FFBFC /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10F26F1157E005FFBFC /* TestExtension.swift */; };
+		8370C11F26F117A2005FFBFC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8370C11E26F117A2005FFBFC /* Alamofire */; };
+		8370C12726F119AB005FFBFC /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8370C12626F119AB005FFBFC /* Fakery */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,20 +45,87 @@
 			remoteGlobalIDString = 8370C08126F10EF4005FFBFC;
 			remoteInfo = Data;
 		};
+		8370C0D126F111D8005FFBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370C03E26F10E7C005FFBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370C0C626F111D7005FFBFC;
+			remoteInfo = Infra;
+		};
+		8370C0E126F111E3005FFBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370C03E26F10E7C005FFBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370C0A326F10F59005FFBFC;
+			remoteInfo = Domain;
+		};
+		8370C0E626F111EB005FFBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370C03E26F10E7C005FFBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370C08126F10EF4005FFBFC;
+			remoteInfo = Data;
+		};
+		8370C0EF26F1122D005FFBFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8370C03E26F10E7C005FFBFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8370C0A326F10F59005FFBFC;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8370C0E326F111E3005FFBFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8370C0E026F111E3005FFBFC /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0E826F111EB005FFBFC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8370C0EE26F1122D005FFBFC /* Domain.framework in Embed Frameworks */,
+				8370C0E526F111EB005FFBFC /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8370C08226F10EF4005FFBFC /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8370C08526F10EF4005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8370C08A26F10EF4005FFBFC /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8370C08F26F10EF4005FFBFC /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		8370C09126F10EF4005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8370C09A26F10F0B005FFBFC /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		8370C0A426F10F59005FFBFC /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8370C0A726F10F59005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8370C0BC26F10F97005FFBFC /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		8370C0BC26F10F97005FFBFC /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		8370C0BF26F10FBE005FFBFC /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		8370C0C726F111D7005FFBFC /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8370C0CA26F111D7005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8370C0CF26F111D8005FFBFC /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8370C0D626F111D8005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8370C0EB26F11220005FFBFC /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		8370C0F226F1128E005FFBFC /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
+		8370C0F426F112CE005FFBFC /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
+		8370C0FB26F113C3005FFBFC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8370C0FD26F113E7005FFBFC /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		8370C0FF26F113EE005FFBFC /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		8370C10126F113F4005FFBFC /* HttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
+		8370C10726F11487005FFBFC /* FakerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakerFactory.swift; sourceTree = "<group>"; };
+		8370C10926F114AF005FFBFC /* TestDataFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataFactories.swift; sourceTree = "<group>"; };
+		8370C10F26F1157E005FFBFC /* TestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8370C0DF26F111E3005FFBFC /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8370C10526F1146A005FFBFC /* Fakery in Frameworks */,
 				8370C08B26F10EF4005FFBFC /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +150,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0C426F111D7005FFBFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370C11F26F117A2005FFBFC /* Alamofire in Frameworks */,
+				8370C0ED26F1122D005FFBFC /* Domain.framework in Frameworks */,
+				8370C0E426F111EB005FFBFC /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0CC26F111D8005FFBFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370C12726F119AB005FFBFC /* Fakery in Frameworks */,
+				8370C0D026F111D8005FFBFC /* Infra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +181,10 @@
 				8370C0A526F10F59005FFBFC /* Domain */,
 				8370C08326F10EF4005FFBFC /* Data */,
 				8370C08E26F10EF4005FFBFC /* DataTests */,
+				8370C0C826F111D7005FFBFC /* Infra */,
+				8370C0D326F111D8005FFBFC /* InfraTests */,
 				8370C04826F10E7C005FFBFC /* Products */,
+				8370C0DE26F111E3005FFBFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +194,8 @@
 				8370C08226F10EF4005FFBFC /* Data.framework */,
 				8370C08A26F10EF4005FFBFC /* DataTests.xctest */,
 				8370C0A426F10F59005FFBFC /* Domain.framework */,
+				8370C0C726F111D7005FFBFC /* Infra.framework */,
+				8370C0CF26F111D8005FFBFC /* InfraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +213,10 @@
 		8370C08E26F10EF4005FFBFC /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				8370C08F26F10EF4005FFBFC /* DataTests.swift */,
+				8370C10E26F11570005FFBFC /* Extensions */,
+				8370C10626F11479005FFBFC /* Helpers */,
 				8370C09126F10EF4005FFBFC /* Info.plist */,
+				8370C10926F114AF005FFBFC /* TestDataFactories.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -123,6 +240,7 @@
 		8370C0A526F10F59005FFBFC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				8370C0FA26F113B3005FFBFC /* Model */,
 				8370C0BB26F10F71005FFBFC /* Errors */,
 				8370C0A726F10F59005FFBFC /* Info.plist */,
 			);
@@ -141,9 +259,86 @@
 		8370C0C126F10FC4005FFBFC /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				8370C0BC26F10F97005FFBFC /* HTTPError.swift */,
+				8370C0BC26F10F97005FFBFC /* HttpError.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		8370C0C826F111D7005FFBFC /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0E926F1120B005FFBFC /* Http */,
+				8370C0CA26F111D7005FFBFC /* Info.plist */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		8370C0D326F111D8005FFBFC /* InfraTests */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0D626F111D8005FFBFC /* Info.plist */,
+				8370C0F126F11250005FFBFC /* Http */,
+			);
+			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		8370C0DE26F111E3005FFBFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8370C0E926F1120B005FFBFC /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0EB26F11220005FFBFC /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		8370C0F126F11250005FFBFC /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0F226F1128E005FFBFC /* AlamofireAdapterTests.swift */,
+				8370C0F426F112CE005FFBFC /* UrlProtocolStub.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		8370C0F926F113A6005FFBFC /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0FD26F113E7005FFBFC /* HttpMethod.swift */,
+				8370C0FF26F113EE005FFBFC /* HttpRequest.swift */,
+				8370C10126F113F4005FFBFC /* HttpStatusCode.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		8370C0FA26F113B3005FFBFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8370C0F926F113A6005FFBFC /* Http */,
+				8370C0FB26F113C3005FFBFC /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8370C10626F11479005FFBFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8370C10726F11487005FFBFC /* FakerFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8370C10E26F11570005FFBFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8370C10F26F1157E005FFBFC /* TestExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +358,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8370C0C226F111D7005FFBFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -174,12 +376,16 @@
 				8370C07E26F10EF4005FFBFC /* Sources */,
 				8370C07F26F10EF4005FFBFC /* Frameworks */,
 				8370C08026F10EF4005FFBFC /* Resources */,
+				8370C0E326F111E3005FFBFC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8370C0E226F111E3005FFBFC /* PBXTargetDependency */,
 			);
 			name = Data;
+			packageProductDependencies = (
+			);
 			productName = Data;
 			productReference = 8370C08226F10EF4005FFBFC /* Data.framework */;
 			productType = "com.apple.product-type.framework";
@@ -198,6 +404,9 @@
 				8370C08D26F10EF4005FFBFC /* PBXTargetDependency */,
 			);
 			name = DataTests;
+			packageProductDependencies = (
+				8370C10426F1146A005FFBFC /* Fakery */,
+			);
 			productName = DataTests;
 			productReference = 8370C08A26F10EF4005FFBFC /* DataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -220,6 +429,51 @@
 			productReference = 8370C0A426F10F59005FFBFC /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		8370C0C626F111D7005FFBFC /* Infra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8370C0D826F111D8005FFBFC /* Build configuration list for PBXNativeTarget "Infra" */;
+			buildPhases = (
+				8370C0C226F111D7005FFBFC /* Headers */,
+				8370C0C326F111D7005FFBFC /* Sources */,
+				8370C0C426F111D7005FFBFC /* Frameworks */,
+				8370C0C526F111D7005FFBFC /* Resources */,
+				8370C0E826F111EB005FFBFC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8370C0E726F111EB005FFBFC /* PBXTargetDependency */,
+				8370C0F026F1122D005FFBFC /* PBXTargetDependency */,
+			);
+			name = Infra;
+			packageProductDependencies = (
+				8370C11E26F117A2005FFBFC /* Alamofire */,
+			);
+			productName = Infra;
+			productReference = 8370C0C726F111D7005FFBFC /* Infra.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8370C0CE26F111D8005FFBFC /* InfraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8370C0DB26F111D8005FFBFC /* Build configuration list for PBXNativeTarget "InfraTests" */;
+			buildPhases = (
+				8370C0CB26F111D8005FFBFC /* Sources */,
+				8370C0CC26F111D8005FFBFC /* Frameworks */,
+				8370C0CD26F111D8005FFBFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8370C0D226F111D8005FFBFC /* PBXTargetDependency */,
+			);
+			name = InfraTests;
+			packageProductDependencies = (
+				8370C12626F119AB005FFBFC /* Fakery */,
+			);
+			productName = InfraTests;
+			productReference = 8370C0CF26F111D8005FFBFC /* InfraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,8 +489,17 @@
 					};
 					8370C08926F10EF4005FFBFC = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					8370C0A326F10F59005FFBFC = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+					8370C0C626F111D7005FFBFC = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+					8370C0CE26F111D8005FFBFC = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
 					};
@@ -251,6 +514,10 @@
 				Base,
 			);
 			mainGroup = 8370C03D26F10E7C005FFBFC;
+			packageReferences = (
+				8370C10326F1146A005FFBFC /* XCRemoteSwiftPackageReference "Fakery" */,
+				8370C11D26F117A2005FFBFC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8370C04826F10E7C005FFBFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +525,8 @@
 				8370C08126F10EF4005FFBFC /* Data */,
 				8370C08926F10EF4005FFBFC /* DataTests */,
 				8370C0A326F10F59005FFBFC /* Domain */,
+				8370C0C626F111D7005FFBFC /* Infra */,
+				8370C0CE26F111D8005FFBFC /* InfraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +553,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8370C0C526F111D7005FFBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0CD26F111D8005FFBFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -300,7 +583,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8370C09026F10EF4005FFBFC /* DataTests.swift in Sources */,
+				8370C10A26F114AF005FFBFC /* TestDataFactories.swift in Sources */,
+				8370C11026F1157E005FFBFC /* TestExtension.swift in Sources */,
+				8370C10826F11487005FFBFC /* FakerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +593,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8370C10226F113F4005FFBFC /* HttpStatusCode.swift in Sources */,
+				8370C0FE26F113E7005FFBFC /* HttpMethod.swift in Sources */,
+				8370C0FC26F113C3005FFBFC /* Model.swift in Sources */,
+				8370C10026F113EE005FFBFC /* HttpRequest.swift in Sources */,
 				8370C0C026F10FBE005FFBFC /* DomainError.swift in Sources */,
-				8370C0BD26F10F97005FFBFC /* HTTPError.swift in Sources */,
+				8370C0BD26F10F97005FFBFC /* HttpError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0C326F111D7005FFBFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370C0EC26F11220005FFBFC /* AlamofireAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8370C0CB26F111D8005FFBFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8370C10D26F1155D005FFBFC /* TestDataFactories.swift in Sources */,
+				8370C11126F11587005FFBFC /* TestExtension.swift in Sources */,
+				8370C0F326F1128E005FFBFC /* AlamofireAdapterTests.swift in Sources */,
+				8370C0F526F112CE005FFBFC /* UrlProtocolStub.swift in Sources */,
+				8370C10C26F1154C005FFBFC /* FakerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +629,26 @@
 			isa = PBXTargetDependency;
 			target = 8370C08126F10EF4005FFBFC /* Data */;
 			targetProxy = 8370C08C26F10EF4005FFBFC /* PBXContainerItemProxy */;
+		};
+		8370C0D226F111D8005FFBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370C0C626F111D7005FFBFC /* Infra */;
+			targetProxy = 8370C0D126F111D8005FFBFC /* PBXContainerItemProxy */;
+		};
+		8370C0E226F111E3005FFBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370C0A326F10F59005FFBFC /* Domain */;
+			targetProxy = 8370C0E126F111E3005FFBFC /* PBXContainerItemProxy */;
+		};
+		8370C0E726F111EB005FFBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370C08126F10EF4005FFBFC /* Data */;
+			targetProxy = 8370C0E626F111EB005FFBFC /* PBXContainerItemProxy */;
+		};
+		8370C0F026F1122D005FFBFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8370C0A326F10F59005FFBFC /* Domain */;
+			targetProxy = 8370C0EF26F1122D005FFBFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -500,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2NP7EFFGEA;
@@ -511,6 +841,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -519,6 +850,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2NP7EFFGEA;
@@ -585,6 +917,98 @@
 			};
 			name = Release;
 		};
+		8370C0D926F111D8005FFBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Infra/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.Infra;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8370C0DA26F111D8005FFBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Infra/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.Infra;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8370C0DC26F111D8005FFBFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				INFOPLIST_FILE = InfraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.InfraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8370C0DD26F111D8005FFBFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				INFOPLIST_FILE = InfraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.InfraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -624,7 +1048,62 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8370C0D826F111D8005FFBFC /* Build configuration list for PBXNativeTarget "Infra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8370C0D926F111D8005FFBFC /* Debug */,
+				8370C0DA26F111D8005FFBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8370C0DB26F111D8005FFBFC /* Build configuration list for PBXNativeTarget "InfraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8370C0DC26F111D8005FFBFC /* Debug */,
+				8370C0DD26F111D8005FFBFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8370C10326F1146A005FFBFC /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		8370C11D26F117A2005FFBFC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8370C10426F1146A005FFBFC /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8370C10326F1146A005FFBFC /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+		8370C11E26F117A2005FFBFC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8370C11D26F117A2005FFBFC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8370C12626F119AB005FFBFC /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8370C10326F1146A005FFBFC /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8370C03E26F10E7C005FFBFC /* Project object */;
 }

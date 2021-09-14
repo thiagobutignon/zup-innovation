@@ -9,5 +9,5 @@ import Foundation
 import Domain
 
 public protocol HTTPClient {
-    func request(data: HTTPRequest, completion: @escaping (Result<Data?, HTTPError>) -> Void)
+    func request(data: HttpRequest, completion: @escaping (Result<Data?, HttpError>) -> Void)
 }

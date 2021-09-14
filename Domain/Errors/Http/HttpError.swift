@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum HTTPError: Error {
+public enum HttpError: Error {
     case noConnectivity
     case badRequest
     case serverError
