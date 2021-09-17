@@ -22,6 +22,13 @@ class RemoteScreenTests: XCTestCase {
         sut.performs { _ in }
         XCTAssertEqual(httpClientSpy.data, nil)
     }
+    
+    func test_performs_should_complete_with_error_if_client_completes_with_error() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.noConnectivity)
+        })
+    }
 }
 
 typealias SutRemoteScreenType = (sut: RemoteScreen, httpClientSpy: HttpClientSpy)
@@ -33,5 +40,22 @@ extension RemoteScreenTests {
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
+    }
+    
+    func expect(_ sut: RemoteScreen, completeWith expectedResult: Screen.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+        let exp = expectation(description: "waiting")
+        sut.performs { receivedResult in
+            switch (expectedResult, receivedResult) {
+                case (.failure(let expectedError), .failure(let receivedError)):
+                    XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+                case (.success(let expectedAccount), .success(let receivedAccount)):
+                    XCTAssertEqual(expectedAccount, receivedAccount, file: file, line: line)
+                default:
+                    XCTFail("Expected \(expectedResult) error received \(receivedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+        }
+        action()
+        wait(for: [exp], timeout: 1)
     }
 }
