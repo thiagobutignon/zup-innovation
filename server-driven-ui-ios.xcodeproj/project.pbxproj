@@ -44,6 +44,7 @@
 		839A283326F439E3005E9EF1 /* RemoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283226F439E3005E9EF1 /* RemoteScreen.swift */; };
 		839A283626F43C9E005E9EF1 /* RemoteScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283526F43C9E005E9EF1 /* RemoteScreenTests.swift */; };
 		839A283926F43CBF005E9EF1 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */; };
+		839A283C26F441D0005E9EF1 /* BeagleComponentMockFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283B26F441D0005E9EF1 /* BeagleComponentMockFactories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		839A283226F439E3005E9EF1 /* RemoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreen.swift; sourceTree = "<group>"; };
 		839A283526F43C9E005E9EF1 /* RemoteScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreenTests.swift; sourceTree = "<group>"; };
 		839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		839A283B26F441D0005E9EF1 /* BeagleComponentMockFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeagleComponentMockFactories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 		8370C08E26F10EF4005FFBFC /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				839A283A26F441B5005E9EF1 /* MockFactories */,
 				839A283726F43CAE005E9EF1 /* Http */,
 				839A283426F43C7F005E9EF1 /* UseCases */,
 				8370C10E26F11570005FFBFC /* Extensions */,
@@ -422,6 +425,14 @@
 				839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		839A283A26F441B5005E9EF1 /* MockFactories */ = {
+			isa = PBXGroup;
+			children = (
+				839A283B26F441D0005E9EF1 /* BeagleComponentMockFactories.swift */,
+			);
+			path = MockFactories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,6 +680,7 @@
 			files = (
 				8370C10A26F114AF005FFBFC /* TestDataFactories.swift in Sources */,
 				839A283926F43CBF005E9EF1 /* HttpClientSpy.swift in Sources */,
+				839A283C26F441D0005E9EF1 /* BeagleComponentMockFactories.swift in Sources */,
 				8370C11026F1157E005FFBFC /* TestExtension.swift in Sources */,
 				8370C10826F11487005FFBFC /* FakerFactory.swift in Sources */,
 				839A283626F43C9E005E9EF1 /* RemoteScreenTests.swift in Sources */,
