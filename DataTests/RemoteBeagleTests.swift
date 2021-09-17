@@ -13,22 +13,22 @@ struct StyleProperties: Codable, Equatable {
     let type: String
 }
 
-struct BeagleComponent: Codable, Equatable {
-    struct Style: Codable, Equatable {
-        struct Padding: Codable, Equatable {
-            typealias All = StyleProperties
-            let all: All
-        }
-        
-        struct Margin: Codable, Equatable {
-            typealias Vertical = StyleProperties
-            let vertical: Vertical
-        }
-        let backgroundColor: String
-        let padding: Padding
-        let margin: Margin?
+struct Style: Codable, Equatable {
+    struct Padding: Codable, Equatable {
+        typealias All = StyleProperties
+        let all: All
     }
     
+    struct Margin: Codable, Equatable {
+        typealias Vertical = StyleProperties
+        let vertical: Vertical
+    }
+    let backgroundColor: String
+    let padding: Padding?
+    let margin: Margin?
+}
+
+struct BeagleComponent: Codable, Equatable {
     struct Children: Codable, Equatable {
         let beagleComponent: String
         let style: Style?
@@ -57,9 +57,6 @@ struct BeagleComponent: Codable, Equatable {
         case children
     }
 }
-
-
-
 
 
 class RemoteBeagleTests: XCTestCase {
@@ -114,7 +111,7 @@ class RemoteBeagleTests: XCTestCase {
             }
 """#.data(using: .utf8)!
         let result = try JSONDecoder().decode(BeagleComponent.self, from: givenJsonData)
-        let expected: BeagleComponent = BeagleComponent(beagleComponent: "beagle:container", style: BeagleComponent.Style(backgroundColor: "#FF0000", padding: BeagleComponent.Style.Padding(all: BeagleComponent.Style.Padding.All(value: 60, type: "REAL")), margin: nil), children: [makeBeagleComponentChildrenBoxOnly(backgroundColor: "#00FF00", paddingValue: 40, children: makeBeagleComponentChildrenBoxOnly(backgroundColor: "#0000FF", paddingValue: 20, children: makeBeagleComponentText(text: "Hello World!")))])
+        let expected: BeagleComponent = BeagleComponent(beagleComponent: "beagle:container", style: Style(backgroundColor: "#FF0000", padding: Style.Padding(all: Style.Padding.All(value: 60, type: "REAL")), margin: nil), children: [makeBeagleComponentChildrenBoxOnly(backgroundColor: "#00FF00", paddingValue: 40, children: makeBeagleComponentChildrenBoxOnly(backgroundColor: "#0000FF", paddingValue: 20, children: makeBeagleComponentText(text: "Hello World!")))])
         XCTAssertEqual(result, expected)
     }
     
@@ -210,11 +207,11 @@ class RemoteBeagleTests: XCTestCase {
 
 extension RemoteBeagleTests {
     func makeBeagleComponentChildrenWithText(backgroundColor: String, text: String) -> BeagleComponent.Children {
-        return BeagleComponent.Children(beagleComponent: "beagle:container", style: BeagleComponent.Style(backgroundColor: backgroundColor, padding: BeagleComponent.Style.Padding(all: BeagleComponent.Style.Padding.All(value: 20, type: "REAL")), margin: BeagleComponent.Style.Margin(vertical: BeagleComponent.Style.Margin.Vertical(value: 10, type: "REAL"))), text: nil, textColor: nil, children: [makeBeagleComponentText(text: text)])
+        return BeagleComponent.Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: 20, type: "REAL")), margin: Style.Margin(vertical: Style.Margin.Vertical(value: 10, type: "REAL"))), text: nil, textColor: nil, children: [makeBeagleComponentText(text: text)])
     }
     
     func makeBeagleComponentChildrenBoxOnly(backgroundColor: String, paddingValue: Int, children: BeagleComponent.Children) -> BeagleComponent.Children {
-        return BeagleComponent.Children(beagleComponent: "beagle:container", style: BeagleComponent.Style(backgroundColor: backgroundColor, padding: BeagleComponent.Style.Padding(all: BeagleComponent.Style.Padding.All(value: paddingValue, type: "REAL")), margin: nil), text: nil, textColor: nil, children: [children])
+        return BeagleComponent.Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: paddingValue, type: "REAL")), margin: nil), text: nil, textColor: nil, children: [children])
     }
     
     func makeBeagleComponentText(text: String) -> BeagleComponent.Children {
