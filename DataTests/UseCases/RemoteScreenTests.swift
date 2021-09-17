@@ -36,6 +36,13 @@ class RemoteScreenTests: XCTestCase {
             httpClientSpy.completeWithError(.badRequest)
         })
     }
+    
+    func test_performs_should_complete_with_unexpected_error_if_client_complete_with_serverError() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.serverError)
+        })
+    }
 }
 
 typealias SutRemoteScreenType = (sut: RemoteScreen, httpClientSpy: HttpClientSpy)
