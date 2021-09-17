@@ -44,7 +44,7 @@ class RemoteScreenTests: XCTestCase {
         })
     }
     
-    func test_performs_should_complete_with_beagle_component_boxedTextJson_if_client_completes_with_valid_data() {
+    func test_performs_should_complete_with_beagle_component_boxed_text_json_if_client_completes_with_valid_data() {
         let (sut, httpClientSpy) = makeSut()
         let boxedTextJson: BeagleComponent = makeJSONBoxedText()
         expect(sut, completeWith: .success(boxedTextJson), when: {
