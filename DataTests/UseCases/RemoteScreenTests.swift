@@ -16,6 +16,12 @@ class RemoteScreenTests: XCTestCase {
         sut.performs { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
+    
+    func test_performs_should_call_httpClient_with_no_data() {
+        let (sut, httpClientSpy) = makeSut()
+        sut.performs { _ in }
+        XCTAssertEqual(httpClientSpy.data, nil)
+    }
 }
 
 typealias SutRemoteScreenType = (sut: RemoteScreen, httpClientSpy: HttpClientSpy)
