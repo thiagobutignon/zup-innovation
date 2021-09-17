@@ -36,7 +36,10 @@
 		8370C11F26F117A2005FFBFC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8370C11E26F117A2005FFBFC /* Alamofire */; };
 		8370C12726F119AB005FFBFC /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8370C12626F119AB005FFBFC /* Fakery */; };
 		839A281F26F4171D005E9EF1 /* RemoteBeagleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A281E26F4171D005E9EF1 /* RemoteBeagleTests.swift */; };
-		83E57AE526F28BB2005C4043 /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E57AE426F28BB2005C4043 /* Teste.swift */; };
+		839A282526F429D0005E9EF1 /* StyleProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282426F429D0005E9EF1 /* StyleProperties.swift */; };
+		839A282726F42A6D005E9EF1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282626F42A6D005E9EF1 /* Style.swift */; };
+		839A282A26F42A8A005E9EF1 /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282926F42A8A005E9EF1 /* Children.swift */; };
+		839A282D26F42AA6005E9EF1 /* BeagleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +132,10 @@
 		8370C10926F114AF005FFBFC /* TestDataFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataFactories.swift; sourceTree = "<group>"; };
 		8370C10F26F1157E005FFBFC /* TestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtension.swift; sourceTree = "<group>"; };
 		839A281E26F4171D005E9EF1 /* RemoteBeagleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBeagleTests.swift; sourceTree = "<group>"; };
-		83E57AE426F28BB2005C4043 /* Teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste.swift; sourceTree = "<group>"; };
+		839A282426F429D0005E9EF1 /* StyleProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleProperties.swift; sourceTree = "<group>"; };
+		839A282626F42A6D005E9EF1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		839A282926F42A8A005E9EF1 /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
+		839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeagleComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +227,6 @@
 				8370C10626F11479005FFBFC /* Helpers */,
 				8370C09126F10EF4005FFBFC /* Info.plist */,
 				8370C10926F114AF005FFBFC /* TestDataFactories.swift */,
-				83E57AE426F28BB2005C4043 /* Teste.swift */,
 				839A281E26F4171D005E9EF1 /* RemoteBeagleTests.swift */,
 			);
 			path = DataTests;
@@ -326,6 +331,9 @@
 		8370C0FA26F113B3005FFBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				839A282B26F42A99005E9EF1 /* BeagleComponent */,
+				839A282826F42A7E005E9EF1 /* Children */,
+				839A282326F429B3005E9EF1 /* Style */,
 				8370C0F926F113A6005FFBFC /* Http */,
 				8370C0FB26F113C3005FFBFC /* Model.swift */,
 			);
@@ -353,6 +361,31 @@
 			children = (
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		839A282326F429B3005E9EF1 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				839A282426F429D0005E9EF1 /* StyleProperties.swift */,
+				839A282626F42A6D005E9EF1 /* Style.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		839A282826F42A7E005E9EF1 /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				839A282926F42A8A005E9EF1 /* Children.swift */,
+			);
+			path = Children;
+			sourceTree = "<group>";
+		};
+		839A282B26F42A99005E9EF1 /* BeagleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */,
+			);
+			path = BeagleComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,7 +633,6 @@
 				8370C10A26F114AF005FFBFC /* TestDataFactories.swift in Sources */,
 				8370C11026F1157E005FFBFC /* TestExtension.swift in Sources */,
 				8370C10826F11487005FFBFC /* FakerFactory.swift in Sources */,
-				83E57AE526F28BB2005C4043 /* Teste.swift in Sources */,
 				839A281F26F4171D005E9EF1 /* RemoteBeagleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,11 +642,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8370C10226F113F4005FFBFC /* HttpStatusCode.swift in Sources */,
+				839A282526F429D0005E9EF1 /* StyleProperties.swift in Sources */,
 				8370C0FE26F113E7005FFBFC /* HttpMethod.swift in Sources */,
+				839A282A26F42A8A005E9EF1 /* Children.swift in Sources */,
 				8370C0FC26F113C3005FFBFC /* Model.swift in Sources */,
 				8370C10026F113EE005FFBFC /* HttpRequest.swift in Sources */,
 				8370C0C026F10FBE005FFBFC /* DomainError.swift in Sources */,
 				8370C0BD26F10F97005FFBFC /* HttpError.swift in Sources */,
+				839A282726F42A6D005E9EF1 /* Style.swift in Sources */,
+				839A282D26F42AA6005E9EF1 /* BeagleComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,57 +7,7 @@
 
 import Foundation
 import XCTest
-
-struct StyleProperties: Codable, Equatable {
-    let value: Int
-    let type: String
-}
-
-struct Style: Codable, Equatable {
-    struct Padding: Codable, Equatable {
-        typealias All = StyleProperties
-        let all: All
-    }
-    
-    struct Margin: Codable, Equatable {
-        typealias Vertical = StyleProperties
-        let vertical: Vertical
-    }
-    let backgroundColor: String
-    let padding: Padding?
-    let margin: Margin?
-}
-
-struct BeagleComponent: Codable, Equatable {
-    struct Children: Codable, Equatable {
-        let beagleComponent: String
-        let style: Style?
-        let text: String?
-        let textColor: String?
-        let children: [Children]?
-        
-        enum CodingKeys: String, CodingKey {
-            case beagleComponent = "_beagleComponent_"
-            case style
-            case children
-            case text
-            case textColor
-        }
-    }
-    
-    
-    let beagleComponent: String
-    let style: Style?
-    let children: [Children]
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case beagleComponent = "_beagleComponent_"
-        case style
-        case children
-    }
-}
-
+import Domain
 
 class RemoteBeagleTests: XCTestCase {
     func test_decode_boxed_json() throws {
@@ -206,15 +156,15 @@ class RemoteBeagleTests: XCTestCase {
 
 
 extension RemoteBeagleTests {
-    func makeBeagleComponentChildrenWithText(backgroundColor: String, text: String) -> BeagleComponent.Children {
-        return BeagleComponent.Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: 20, type: "REAL")), margin: Style.Margin(vertical: Style.Margin.Vertical(value: 10, type: "REAL"))), text: nil, textColor: nil, children: [makeBeagleComponentText(text: text)])
+    func makeBeagleComponentChildrenWithText(backgroundColor: String, text: String) -> Children {
+        return Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: 20, type: "REAL")), margin: Style.Margin(vertical: Style.Margin.Vertical(value: 10, type: "REAL"))), text: nil, textColor: nil, children: [makeBeagleComponentText(text: text)])
     }
     
-    func makeBeagleComponentChildrenBoxOnly(backgroundColor: String, paddingValue: Int, children: BeagleComponent.Children) -> BeagleComponent.Children {
-        return BeagleComponent.Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: paddingValue, type: "REAL")), margin: nil), text: nil, textColor: nil, children: [children])
+    func makeBeagleComponentChildrenBoxOnly(backgroundColor: String, paddingValue: Int, children: Children) -> Children {
+        return Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: paddingValue, type: "REAL")), margin: nil), text: nil, textColor: nil, children: [children])
     }
     
-    func makeBeagleComponentText(text: String) -> BeagleComponent.Children {
-        return BeagleComponent.Children(beagleComponent: "beagle:text", style: nil, text: text, textColor: "#FFFFFF", children: nil)
+    func makeBeagleComponentText(text: String) -> Children {
+        return Children(beagleComponent: "beagle:text", style: nil, text: text, textColor: "#FFFFFF", children: nil)
     }
 }
