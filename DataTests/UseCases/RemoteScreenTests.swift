@@ -51,6 +51,16 @@ class RemoteScreenTests: XCTestCase {
             httpClientSpy.completeWithData(boxedTextJson.toData()!)
         })
     }
+    
+    func test_performs_should_complete_with_beagle_component_multiple_boxes_if_client_completes_with_valid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let multipleBoxesJson: BeagleComponent = makeJSONMultipleBoxes()
+        expect(sut, completeWith: .success(multipleBoxesJson), when: {
+            httpClientSpy.completeWithData(multipleBoxesJson.toData()!)
+        })
+    }
+    
+    
 }
 
 typealias SutRemoteScreenType = (sut: RemoteScreen, httpClientSpy: HttpClientSpy)
