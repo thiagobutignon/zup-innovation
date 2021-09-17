@@ -32,6 +32,8 @@ public final class RemoteScreen: Screen {
                         case .badRequest:
                             completion(.failure(.badRequest))
                         case .serverError: completion(.failure(.unexpected))
+                        case .noConnectivity:
+                            completion(.failure(.badRequest))
                         default:
                             print("Unkown error: \(error)")
                             completion(.failure(.unexpected))

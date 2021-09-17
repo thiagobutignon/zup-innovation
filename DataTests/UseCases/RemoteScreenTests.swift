@@ -25,8 +25,15 @@ class RemoteScreenTests: XCTestCase {
     
     func test_performs_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
-        expect(sut, completeWith: .failure(.unexpected), when: {
+        expect(sut, completeWith: .failure(.badRequest), when: {
             httpClientSpy.completeWithError(.noConnectivity)
+        })
+    }
+    
+    func test_performs_should_complete_with_badRequest_if_client_complete_with_badRequest() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.badRequest), when: {
+            httpClientSpy.completeWithError(.badRequest)
         })
     }
 }
