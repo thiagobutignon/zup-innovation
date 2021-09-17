@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83481DA426F55E4D00DC2EC0 /* ScreenIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83481DA326F55E4D00DC2EC0 /* ScreenIntegrationTests.swift */; };
+		83481DA926F55E5500DC2EC0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
+		83481DAA26F55E5500DC2EC0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0A426F10F59005FFBFC /* Domain.framework */; };
+		83481DAB26F55E5500DC2EC0 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C0C726F111D7005FFBFC /* Infra.framework */; };
 		8370C08B26F10EF4005FFBFC /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
 		8370C09B26F10F0B005FFBFC /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09A26F10F0B005FFBFC /* HttpClient.swift */; };
 		8370C09E26F10F3E005FFBFC /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */; };
@@ -112,6 +116,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		83481DA126F55E4D00DC2EC0 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83481DA326F55E4D00DC2EC0 /* ScreenIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIntegrationTests.swift; sourceTree = "<group>"; };
+		83481DA526F55E4D00DC2EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8370C08226F10EF4005FFBFC /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8370C08526F10EF4005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8370C08A26F10EF4005FFBFC /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +156,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		83481D9E26F55E4D00DC2EC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83481DA926F55E5500DC2EC0 /* Data.framework in Frameworks */,
+				83481DAA26F55E5500DC2EC0 /* Domain.framework in Frameworks */,
+				83481DAB26F55E5500DC2EC0 /* Infra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8370C07F26F10EF4005FFBFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +212,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83481DA226F55E4D00DC2EC0 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				83481DA326F55E4D00DC2EC0 /* ScreenIntegrationTests.swift */,
+				83481DA526F55E4D00DC2EC0 /* Info.plist */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
 		8370C03D26F10E7C005FFBFC = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +229,7 @@
 				8370C08E26F10EF4005FFBFC /* DataTests */,
 				8370C0C826F111D7005FFBFC /* Infra */,
 				8370C0D326F111D8005FFBFC /* InfraTests */,
+				83481DA226F55E4D00DC2EC0 /* IntegrationTests */,
 				8370C04826F10E7C005FFBFC /* Products */,
 				8370C0DE26F111E3005FFBFC /* Frameworks */,
 			);
@@ -216,6 +243,7 @@
 				8370C0A426F10F59005FFBFC /* Domain.framework */,
 				8370C0C726F111D7005FFBFC /* Infra.framework */,
 				8370C0CF26F111D8005FFBFC /* InfraTests.xctest */,
+				83481DA126F55E4D00DC2EC0 /* IntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,6 +490,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		83481DA026F55E4D00DC2EC0 /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83481DA826F55E4D00DC2EC0 /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				83481D9D26F55E4D00DC2EC0 /* Sources */,
+				83481D9E26F55E4D00DC2EC0 /* Frameworks */,
+				83481D9F26F55E4D00DC2EC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntegrationTests;
+			productName = IntegrationTests;
+			productReference = 83481DA126F55E4D00DC2EC0 /* IntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8370C08126F10EF4005FFBFC /* Data */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8370C09326F10EF4005FFBFC /* Build configuration list for PBXNativeTarget "Data" */;
@@ -577,6 +622,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					83481DA026F55E4D00DC2EC0 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					8370C08126F10EF4005FFBFC = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
@@ -621,11 +669,19 @@
 				8370C0A326F10F59005FFBFC /* Domain */,
 				8370C0C626F111D7005FFBFC /* Infra */,
 				8370C0CE26F111D8005FFBFC /* InfraTests */,
+				83481DA026F55E4D00DC2EC0 /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		83481D9F26F55E4D00DC2EC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8370C08026F10EF4005FFBFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,6 +720,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		83481D9D26F55E4D00DC2EC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83481DA426F55E4D00DC2EC0 /* ScreenIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8370C07E26F10EF4005FFBFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,6 +821,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		83481DA626F55E4D00DC2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				INFOPLIST_FILE = IntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.IntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		83481DA726F55E4D00DC2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2NP7EFFGEA;
+				INFOPLIST_FILE = IntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.IntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		8370C05926F10E7D005FFBFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1116,6 +1216,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		83481DA826F55E4D00DC2EC0 /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83481DA626F55E4D00DC2EC0 /* Debug */,
+				83481DA726F55E4D00DC2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8370C04126F10E7C005FFBFC /* Build configuration list for PBXProject "server-driven-ui-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,7 +10,7 @@ import Data
 import Domain
 import Alamofire
 
-public final class AlamofireAdapter: HTTPClient {
+public final class AlamofireAdapter: HttpClient {
     private let session: Session
     
     public init(session: Session = .default) {
