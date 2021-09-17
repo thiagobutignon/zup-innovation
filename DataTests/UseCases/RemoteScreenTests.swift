@@ -67,7 +67,15 @@ class RemoteScreenTests: XCTestCase {
         })
     }
 
-    
+    func test_performs_should_not_complete_if_sut_has_been_deallocated() {
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteScreen? = RemoteScreen(url: makeUrl(), httpClient: httpClientSpy)
+        var result: Result<BeagleComponent, DomainError>?
+        sut?.performs(completion: { result = $0 })
+        sut = nil
+        httpClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
 }
 
 typealias SutRemoteScreenType = (sut: RemoteScreen, httpClientSpy: HttpClientSpy)
