@@ -8,21 +8,20 @@
 import Foundation
 import XCTest
 
+struct StyleProperties: Codable, Equatable {
+    let value: Int
+    let type: String
+}
+
 struct BeagleComponent: Codable, Equatable {
     struct Style: Codable, Equatable {
         struct Padding: Codable, Equatable {
-            struct All: Codable, Equatable {
-                let value: Int
-                let type: String
-            }
+            typealias All = StyleProperties
             let all: All
         }
         
         struct Margin: Codable, Equatable {
-            struct Vertical: Codable, Equatable {
-                let value: Int
-                let type: String
-            }
+            typealias Vertical = StyleProperties
             let vertical: Vertical
         }
         let backgroundColor: String
@@ -58,6 +57,7 @@ struct BeagleComponent: Codable, Equatable {
         case children
     }
 }
+
 
 
 
