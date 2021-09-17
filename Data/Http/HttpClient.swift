@@ -8,6 +8,6 @@
 import Foundation
 import Domain
 
-public protocol HTTPClient {
+public protocol HttpClient {
     func request(data: HttpRequest, completion: @escaping (Result<Data?, HttpError>) -> Void)
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8370C08B26F10EF4005FFBFC /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
-		8370C09B26F10F0B005FFBFC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09A26F10F0B005FFBFC /* HTTPClient.swift */; };
+		8370C09B26F10F0B005FFBFC /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09A26F10F0B005FFBFC /* HttpClient.swift */; };
 		8370C09E26F10F3E005FFBFC /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */; };
 		8370C0BD26F10F97005FFBFC /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0BC26F10F97005FFBFC /* HttpError.swift */; };
 		8370C0C026F10FBE005FFBFC /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C0BF26F10FBE005FFBFC /* DomainError.swift */; };
@@ -40,6 +40,10 @@
 		839A282726F42A6D005E9EF1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282626F42A6D005E9EF1 /* Style.swift */; };
 		839A282A26F42A8A005E9EF1 /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282926F42A8A005E9EF1 /* Children.swift */; };
 		839A282D26F42AA6005E9EF1 /* BeagleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */; };
+		839A283026F4390D005E9EF1 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A282F26F4390D005E9EF1 /* Screen.swift */; };
+		839A283326F439E3005E9EF1 /* RemoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283226F439E3005E9EF1 /* RemoteScreen.swift */; };
+		839A283626F43C9E005E9EF1 /* RemoteScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283526F43C9E005E9EF1 /* RemoteScreenTests.swift */; };
+		839A283926F43CBF005E9EF1 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +115,7 @@
 		8370C08526F10EF4005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8370C08A26F10EF4005FFBFC /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8370C09126F10EF4005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8370C09A26F10F0B005FFBFC /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		8370C09A26F10F0B005FFBFC /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		8370C0A426F10F59005FFBFC /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8370C0A726F10F59005FFBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +140,10 @@
 		839A282626F42A6D005E9EF1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		839A282926F42A8A005E9EF1 /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeagleComponent.swift; sourceTree = "<group>"; };
+		839A282F26F4390D005E9EF1 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		839A283226F439E3005E9EF1 /* RemoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreen.swift; sourceTree = "<group>"; };
+		839A283526F43C9E005E9EF1 /* RemoteScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteScreenTests.swift; sourceTree = "<group>"; };
+		839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,7 @@
 		8370C08326F10EF4005FFBFC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				839A283126F439CF005E9EF1 /* UseCases */,
 				8370C09C26F10F31005FFBFC /* Extensions */,
 				8370C09926F10F03005FFBFC /* Http */,
 				8370C08526F10EF4005FFBFC /* Info.plist */,
@@ -223,10 +232,11 @@
 		8370C08E26F10EF4005FFBFC /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				839A283726F43CAE005E9EF1 /* Http */,
+				839A283426F43C7F005E9EF1 /* UseCases */,
 				8370C10E26F11570005FFBFC /* Extensions */,
 				8370C10626F11479005FFBFC /* Helpers */,
 				8370C09126F10EF4005FFBFC /* Info.plist */,
-				8370C10926F114AF005FFBFC /* TestDataFactories.swift */,
 				839A281E26F4171D005E9EF1 /* RemoteBeagleTests.swift */,
 			);
 			path = DataTests;
@@ -235,7 +245,7 @@
 		8370C09926F10F03005FFBFC /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				8370C09A26F10F0B005FFBFC /* HTTPClient.swift */,
+				8370C09A26F10F0B005FFBFC /* HttpClient.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -343,6 +353,7 @@
 		8370C10626F11479005FFBFC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8370C10926F114AF005FFBFC /* TestDataFactories.swift */,
 				8370C10726F11487005FFBFC /* FakerFactory.swift */,
 			);
 			path = Helpers;
@@ -359,6 +370,7 @@
 		8370C12826F120DC005FFBFC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				839A282F26F4390D005E9EF1 /* Screen.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -386,6 +398,30 @@
 				839A282C26F42AA6005E9EF1 /* BeagleComponent.swift */,
 			);
 			path = BeagleComponent;
+			sourceTree = "<group>";
+		};
+		839A283126F439CF005E9EF1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				839A283226F439E3005E9EF1 /* RemoteScreen.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		839A283426F43C7F005E9EF1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				839A283526F43C9E005E9EF1 /* RemoteScreenTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		839A283726F43CAE005E9EF1 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				839A283826F43CBF005E9EF1 /* HttpClientSpy.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,7 +657,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8370C09B26F10F0B005FFBFC /* HTTPClient.swift in Sources */,
+				8370C09B26F10F0B005FFBFC /* HttpClient.swift in Sources */,
+				839A283326F439E3005E9EF1 /* RemoteScreen.swift in Sources */,
 				8370C09E26F10F3E005FFBFC /* ExtensionHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,8 +668,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8370C10A26F114AF005FFBFC /* TestDataFactories.swift in Sources */,
+				839A283926F43CBF005E9EF1 /* HttpClientSpy.swift in Sources */,
 				8370C11026F1157E005FFBFC /* TestExtension.swift in Sources */,
 				8370C10826F11487005FFBFC /* FakerFactory.swift in Sources */,
+				839A283626F43C9E005E9EF1 /* RemoteScreenTests.swift in Sources */,
 				839A281F26F4171D005E9EF1 /* RemoteBeagleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +688,7 @@
 				8370C10026F113EE005FFBFC /* HttpRequest.swift in Sources */,
 				8370C0C026F10FBE005FFBFC /* DomainError.swift in Sources */,
 				8370C0BD26F10F97005FFBFC /* HttpError.swift in Sources */,
+				839A283026F4390D005E9EF1 /* Screen.swift in Sources */,
 				839A282726F42A6D005E9EF1 /* Style.swift in Sources */,
 				839A282D26F42AA6005E9EF1 /* BeagleComponent.swift in Sources */,
 			);
