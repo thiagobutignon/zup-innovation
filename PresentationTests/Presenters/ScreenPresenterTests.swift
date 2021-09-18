@@ -12,7 +12,7 @@ import Domain
 class ScreenPresenterTests: XCTestCase {
     func test_show_screen_should_show_generic_error_message_if_screen_fails() {
         
-        let(sut, displayScreenViewSpy, alertViewSpy, screenSpy, loadingViewSpy) = makeSut()
+        let(sut, _, alertViewSpy, screenSpy, _) = makeSut()
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
             XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Você está sem conexão, tente novamente mais tarde"))
@@ -25,7 +25,7 @@ class ScreenPresenterTests: XCTestCase {
     
 
     func test_show_screen_should_show_success_message_if_screen_succeds() {
-        let(sut, displayScreenViewSpy, alertViewSpy, screenSpy, loadingViewSpy) = makeSut()
+        let(sut, displayScreenViewSpy, _, screenSpy, _) = makeSut()
         let exp = expectation(description: "waiting")
         displayScreenViewSpy.observe { viewModel in
             XCTAssertEqual(viewModel, DisplayScreenViewModel(data: makeJSONBoxedText()))
@@ -37,7 +37,7 @@ class ScreenPresenterTests: XCTestCase {
     }
 
     func test_show_screen_should_show_loading_before_and_after_screen() {
-        let(sut, displayScreenViewSpy, alertViewSpy, screenSpy, loadingViewSpy) = makeSut()
+        let(sut, _, _, screenSpy, loadingViewSpy) = makeSut()
         let exp = expectation(description: "waiting")
         loadingViewSpy.observe { viewModel in
             XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
