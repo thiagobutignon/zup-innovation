@@ -25,7 +25,7 @@ public final class ScreenPresenter {
         loadingView.display(viewModel: LoadingViewModel(isLoading: true))
         screen.performs { [weak self] result in
             guard let self = self else { return }
-            
+            self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             switch result {
                 case .failure:
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Você está sem conexão, tente novamente mais tarde"))

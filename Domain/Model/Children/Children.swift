@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Children: Model {
+public struct Children: Model, ComponentLayer {
     public var beagleComponent: String
     public var style: Style?
     public var text: String?

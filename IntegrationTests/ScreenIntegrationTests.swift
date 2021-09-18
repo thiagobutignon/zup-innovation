@@ -20,8 +20,9 @@ class ScreenIntegrationTests: XCTestCase {
             switch result {
                 case .failure:
                     XCTFail("Expected success, got \(result) instead")
-                default:
+                case .success(let success):
                     dump(result)
+                    XCTAssertEqual(success.beagleComponent, "beagle:container")
                     XCTAssertNotNil(result)
             }
             exp.fulfill()
@@ -38,8 +39,9 @@ class ScreenIntegrationTests: XCTestCase {
             switch result {
                 case .failure:
                     XCTFail("Expected success, got \(result) instead")
-                default:
+                case .success(let success):
                     dump(result)
+                    XCTAssertEqual(success.beagleComponent, "beagle:container")
                     XCTAssertNotNil(result)
             }
             exp.fulfill()
