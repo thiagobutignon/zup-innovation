@@ -1,0 +1,3132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Combine.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "Combine.swift" : </span><span>Lines: </span><span class="cov_low">0.00%</span><span> Branches: </span><span class="cov_low">0.00%</span>
+</h2>
+<h4 class="cov_subtitle">(0 of 204 relevant lines covered)</h4>
+<h4 class="cov_filepath">../../Library/Developer/Xcode/DerivedData/server-driven-ui-ios-dpdbyuhldehuondfhutxcvvbrvtz/SourcePackages/checkouts/Alamofire/Source/Combine.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc">//  Combine.swift</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">//  Copyright (c) 2020 Alamofire Software Foundation (http://alamofire.org/)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">//  Permission is hereby granted, free of charge, to any person obtaining a copy</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc">//  of this software and associated documentation files (the "Software"), to deal</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">//  in the Software without restriction, including without limitation the rights</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc">//  copies of the Software, and to permit persons to whom the Software is</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc">//  furnished to do so, subject to the following conditions:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">//  The above copyright notice and this permission notice shall be included in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc">//  all copies or substantial portions of the Software.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">#if canImport(Combine)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc">import Combine</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">import Dispatch</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc">// MARK: - DataRequest / UploadRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc">/// A Combine `Publisher` that publishes the `DataResponse&lt;Value, AFError&gt;` of the provided `DataRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc">public struct DataResponsePublisher&lt;Value&gt;: Publisher {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc">    public typealias Output = DataResponse&lt;Value, AFError&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">37</td>
+<td class="src"><pre><code class="objc">    public typealias Failure = Never</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">38</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">39</td>
+<td class="src"><pre><code class="objc">    private typealias Handler = (@escaping (_ response: DataResponse&lt;Value, AFError&gt;) -&gt; Void) -&gt; DataRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">40</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">41</td>
+<td class="src"><pre><code class="objc">    private let request: DataRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">42</td>
+<td class="src"><pre><code class="objc">    private let responseHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">43</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">44</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which will serialize responses using the provided `ResponseSerializer`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">45</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">46</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc">    ///   - request:    `DataRequest` for which to publish the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">48</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataResponse` value will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">49</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `ResponseSerializer` used to produce the published `DataResponse`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">50</td>
+<td class="src"><pre><code class="objc">    public init&lt;Serializer: ResponseSerializer&gt;(_ request: DataRequest, queue: DispatchQueue, serializer: Serializer)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">51</td>
+<td class="src"><pre><code class="objc">        where Value == Serializer.SerializedObject {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">52</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">53</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, responseSerializer: serializer, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">54</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">55</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which will serialize responses using the provided `DataResponseSerializerProtocol`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">    ///   - request:    `DataRequest` for which to publish the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">60</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataResponse` value will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">61</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `DataResponseSerializerProtocol` used to produce the published `DataResponse`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">    public init&lt;Serializer: DataResponseSerializerProtocol&gt;(_ request: DataRequest,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">                                                            queue: DispatchQueue,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">                                                            serializer: Serializer)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">        where Value == Serializer.SerializedObject {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, responseSerializer: serializer, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">    /// Publishes only the `Result` of the `DataResponse` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher` publishing the `Result&lt;Value, AFError&gt;` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc">    public func result() -&gt; AnyPublisher&lt;Result&lt;Value, AFError&gt;, Never&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">        map { $0.result }.eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc">    /// Publishes the `Result` of the `DataResponse` as a single `Value` or fail with the `AFError` instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher&lt;Value, AFError&gt;` publishing the stream.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc">    public func value() -&gt; AnyPublisher&lt;Value, AFError&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">        setFailureType(to: AFError.self).flatMap { $0.result.publisher }.eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc">    public func receive&lt;S&gt;(subscriber: S) where S: Subscriber, DataResponsePublisher.Failure == S.Failure, DataResponsePublisher.Output == S.Input {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">        subscriber.receive(subscription: Inner(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc">                                               responseHandler: responseHandler,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc">                                               downstream: subscriber))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">    private final class Inner&lt;Downstream: Subscriber&gt;: Subscription, Cancellable</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc">        where Downstream.Input == Output {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc">        typealias Failure = Downstream.Failure</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">94</td>
+<td class="src"><pre><code class="objc">        @Protected</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">95</td>
+<td class="src"><pre><code class="objc">        private var downstream: Downstream?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">96</td>
+<td class="src"><pre><code class="objc">        private let request: DataRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">97</td>
+<td class="src"><pre><code class="objc">        private let responseHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">98</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">99</td>
+<td class="src"><pre><code class="objc">        init(request: DataRequest, responseHandler: @escaping Handler, downstream: Downstream) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">100</td>
+<td class="src"><pre><code class="objc">            self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">101</td>
+<td class="src"><pre><code class="objc">            self.responseHandler = responseHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">102</td>
+<td class="src"><pre><code class="objc">            self.downstream = downstream</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">103</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">104</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">105</td>
+<td class="src"><pre><code class="objc">        func request(_ demand: Subscribers.Demand) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">106</td>
+<td class="src"><pre><code class="objc">            assert(demand &gt; 0)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">107</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">108</td>
+<td class="src"><pre><code class="objc">            guard let downstream = downstream else { return }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">109</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">110</td>
+<td class="src"><pre><code class="objc">            self.downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">111</td>
+<td class="src"><pre><code class="objc">            responseHandler { response in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">112</td>
+<td class="src"><pre><code class="objc">                _ = downstream.receive(response)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">113</td>
+<td class="src"><pre><code class="objc">                downstream.receive(completion: .finished)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">114</td>
+<td class="src"><pre><code class="objc">            }.resume()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">115</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">116</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">117</td>
+<td class="src"><pre><code class="objc">        func cancel() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">118</td>
+<td class="src"><pre><code class="objc">            request.cancel()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">119</td>
+<td class="src"><pre><code class="objc">            downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">120</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">121</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">122</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">123</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">124</td>
+<td class="src"><pre><code class="objc">@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">125</td>
+<td class="src"><pre><code class="objc">extension DataResponsePublisher where Value == Data? {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">126</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which publishes a `DataResponse&lt;Data?, AFError&gt;` value without serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">127</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">128</td>
+<td class="src"><pre><code class="objc">    public init(_ request: DataRequest, queue: DispatchQueue) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">129</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">130</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">131</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">132</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">133</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">134</td>
+<td class="src"><pre><code class="objc">extension DataRequest {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">135</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance using the given `ResponseSerializer` and `DispatchQueue`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">136</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">137</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">138</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `ResponseSerializer` used to serialize response `Data`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">139</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">140</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">141</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DataResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">142</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">143</td>
+<td class="src"><pre><code class="objc">    public func publishResponse&lt;Serializer: ResponseSerializer, T&gt;(using serializer: Serializer, on queue: DispatchQueue = .main) -&gt; DataResponsePublisher&lt;T&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">144</td>
+<td class="src"><pre><code class="objc">        where Serializer.SerializedObject == T {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">145</td>
+<td class="src"><pre><code class="objc">        DataResponsePublisher(self, queue: queue, serializer: serializer)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">146</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">147</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">148</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance and uses a `DataResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">149</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">150</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">151</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">152</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">153</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">154</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">155</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">156</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">157</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">158</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">159</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DataResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">160</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">161</td>
+<td class="src"><pre><code class="objc">    public func publishData(queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">162</td>
+<td class="src"><pre><code class="objc">                            preprocessor: DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">163</td>
+<td class="src"><pre><code class="objc">                            emptyResponseCodes: Set&lt;Int&gt; = DataResponseSerializer.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">164</td>
+<td class="src"><pre><code class="objc">                            emptyRequestMethods: Set&lt;HTTPMethod&gt; = DataResponseSerializer.defaultEmptyRequestMethods) -&gt; DataResponsePublisher&lt;Data&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">165</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: DataResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">166</td>
+<td class="src"><pre><code class="objc">                                                      emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">167</td>
+<td class="src"><pre><code class="objc">                                                      emptyRequestMethods: emptyRequestMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">168</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">169</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">170</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">171</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance and uses a `StringResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">172</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">173</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">174</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">175</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">176</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">177</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">178</td>
+<td class="src"><pre><code class="objc">    ///   - encoding:            `String.Encoding` to parse the response. `nil` by default, in which case the encoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">179</td>
+<td class="src"><pre><code class="objc">    ///                          will be determined by the server response, falling back to the default HTTP character</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">180</td>
+<td class="src"><pre><code class="objc">    ///                          set, `ISO-8859-1`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">181</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">182</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">183</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">184</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">185</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">186</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DataResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">187</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">188</td>
+<td class="src"><pre><code class="objc">    public func publishString(queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">189</td>
+<td class="src"><pre><code class="objc">                              preprocessor: DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">190</td>
+<td class="src"><pre><code class="objc">                              encoding: String.Encoding? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">191</td>
+<td class="src"><pre><code class="objc">                              emptyResponseCodes: Set&lt;Int&gt; = StringResponseSerializer.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">192</td>
+<td class="src"><pre><code class="objc">                              emptyRequestMethods: Set&lt;HTTPMethod&gt; = StringResponseSerializer.defaultEmptyRequestMethods) -&gt; DataResponsePublisher&lt;String&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">193</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: StringResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">194</td>
+<td class="src"><pre><code class="objc">                                                        encoding: encoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">195</td>
+<td class="src"><pre><code class="objc">                                                        emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">196</td>
+<td class="src"><pre><code class="objc">                                                        emptyRequestMethods: emptyRequestMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">197</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">198</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">199</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">200</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance and uses a `DecodableResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">201</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">202</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">203</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">204</td>
+<td class="src"><pre><code class="objc">    ///   - type:                `Decodable` type to which to decode response `Data`. Inferred from the context by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">205</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">206</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">207</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">208</td>
+<td class="src"><pre><code class="objc">    ///   - decoder:             `DataDecoder` instance used to decode response `Data`. `JSONDecoder()` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">209</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">210</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">211</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">212</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">213</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">214</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DataResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">215</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">216</td>
+<td class="src"><pre><code class="objc">    public func publishDecodable&lt;T: Decodable&gt;(type: T.Type = T.self,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">217</td>
+<td class="src"><pre><code class="objc">                                               queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">218</td>
+<td class="src"><pre><code class="objc">                                               preprocessor: DataPreprocessor = DecodableResponseSerializer&lt;T&gt;.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">219</td>
+<td class="src"><pre><code class="objc">                                               decoder: DataDecoder = JSONDecoder(),</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">220</td>
+<td class="src"><pre><code class="objc">                                               emptyResponseCodes: Set&lt;Int&gt; = DecodableResponseSerializer&lt;T&gt;.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">221</td>
+<td class="src"><pre><code class="objc">                                               emptyResponseMethods: Set&lt;HTTPMethod&gt; = DecodableResponseSerializer&lt;T&gt;.defaultEmptyRequestMethods) -&gt; DataResponsePublisher&lt;T&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">222</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: DecodableResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">223</td>
+<td class="src"><pre><code class="objc">                                                           decoder: decoder,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">224</td>
+<td class="src"><pre><code class="objc">                                                           emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">225</td>
+<td class="src"><pre><code class="objc">                                                           emptyRequestMethods: emptyResponseMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">226</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">227</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">228</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">229</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance which does not serialize the response before publishing.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">230</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">231</td>
+<td class="src"><pre><code class="objc">    ///   - queue: `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">232</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">233</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `DataResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">234</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">235</td>
+<td class="src"><pre><code class="objc">    public func publishUnserialized(queue: DispatchQueue = .main) -&gt; DataResponsePublisher&lt;Data?&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">236</td>
+<td class="src"><pre><code class="objc">        DataResponsePublisher(self, queue: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">237</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">238</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">239</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">240</td>
+<td class="src"><pre><code class="objc">// A Combine `Publisher` that publishes a sequence of `Stream&lt;Value, AFError&gt;` values received by the provided `DataStreamRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">241</td>
+<td class="src"><pre><code class="objc">@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">242</td>
+<td class="src"><pre><code class="objc">public struct DataStreamPublisher&lt;Value&gt;: Publisher {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">243</td>
+<td class="src"><pre><code class="objc">    public typealias Output = DataStreamRequest.Stream&lt;Value, AFError&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">244</td>
+<td class="src"><pre><code class="objc">    public typealias Failure = Never</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">245</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">246</td>
+<td class="src"><pre><code class="objc">    private typealias Handler = (@escaping DataStreamRequest.Handler&lt;Value, AFError&gt;) -&gt; DataStreamRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">247</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">248</td>
+<td class="src"><pre><code class="objc">    private let request: DataStreamRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">249</td>
+<td class="src"><pre><code class="objc">    private let streamHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">250</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">251</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which will serialize responses using the provided `DataStreamSerializer`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">252</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">253</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">254</td>
+<td class="src"><pre><code class="objc">    ///   - request:    `DataStreamRequest` for which to publish the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">255</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `Stream&lt;Value, AFError&gt;` values will be published. `.main` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">256</td>
+<td class="src"><pre><code class="objc">    ///                 default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">257</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `DataStreamSerializer` used to produce the published `Stream&lt;Value, AFError&gt;` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">258</td>
+<td class="src"><pre><code class="objc">    public init&lt;Serializer: DataStreamSerializer&gt;(_ request: DataStreamRequest, queue: DispatchQueue, serializer: Serializer)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">259</td>
+<td class="src"><pre><code class="objc">        where Value == Serializer.SerializedObject {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">260</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">261</td>
+<td class="src"><pre><code class="objc">        streamHandler = { request.responseStream(using: serializer, on: queue, stream: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">262</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">263</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">264</td>
+<td class="src"><pre><code class="objc">    /// Publishes only the `Result` of the `DataStreamRequest.Stream`'s `Event`s.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">265</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">266</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher` publishing the `Result&lt;Value, AFError&gt;` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">267</td>
+<td class="src"><pre><code class="objc">    public func result() -&gt; AnyPublisher&lt;Result&lt;Value, AFError&gt;, Never&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">268</td>
+<td class="src"><pre><code class="objc">        compactMap { stream in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">269</td>
+<td class="src"><pre><code class="objc">            switch stream.event {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">270</td>
+<td class="src"><pre><code class="objc">            case let .stream(result):</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">271</td>
+<td class="src"><pre><code class="objc">                return result</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">272</td>
+<td class="src"><pre><code class="objc">            // If the stream has completed with an error, send the error value downstream as a `.failure`.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">273</td>
+<td class="src"><pre><code class="objc">            case let .complete(completion):</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">274</td>
+<td class="src"><pre><code class="objc">                return completion.error.map(Result.failure)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">275</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">276</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">277</td>
+<td class="src"><pre><code class="objc">        .eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">278</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">279</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">280</td>
+<td class="src"><pre><code class="objc">    /// Publishes the streamed values of the `DataStreamRequest.Stream` as a sequence of `Value` or fail with the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">281</td>
+<td class="src"><pre><code class="objc">    /// `AFError` instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">282</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">283</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher&lt;Value, AFError&gt;` publishing the stream.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">284</td>
+<td class="src"><pre><code class="objc">    public func value() -&gt; AnyPublisher&lt;Value, AFError&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">285</td>
+<td class="src"><pre><code class="objc">        result().setFailureType(to: AFError.self).flatMap { $0.publisher }.eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">286</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">287</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">288</td>
+<td class="src"><pre><code class="objc">    public func receive&lt;S&gt;(subscriber: S) where S: Subscriber, DataStreamPublisher.Failure == S.Failure, DataStreamPublisher.Output == S.Input {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">289</td>
+<td class="src"><pre><code class="objc">        subscriber.receive(subscription: Inner(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">290</td>
+<td class="src"><pre><code class="objc">                                               streamHandler: streamHandler,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">291</td>
+<td class="src"><pre><code class="objc">                                               downstream: subscriber))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">292</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">293</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">294</td>
+<td class="src"><pre><code class="objc">    private final class Inner&lt;Downstream: Subscriber&gt;: Subscription, Cancellable</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">295</td>
+<td class="src"><pre><code class="objc">        where Downstream.Input == Output {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">296</td>
+<td class="src"><pre><code class="objc">        typealias Failure = Downstream.Failure</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">297</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">298</td>
+<td class="src"><pre><code class="objc">        @Protected</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">299</td>
+<td class="src"><pre><code class="objc">        private var downstream: Downstream?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">300</td>
+<td class="src"><pre><code class="objc">        private let request: DataStreamRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">301</td>
+<td class="src"><pre><code class="objc">        private let streamHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">302</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">303</td>
+<td class="src"><pre><code class="objc">        init(request: DataStreamRequest, streamHandler: @escaping Handler, downstream: Downstream) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">304</td>
+<td class="src"><pre><code class="objc">            self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">305</td>
+<td class="src"><pre><code class="objc">            self.streamHandler = streamHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">306</td>
+<td class="src"><pre><code class="objc">            self.downstream = downstream</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">307</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">308</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">309</td>
+<td class="src"><pre><code class="objc">        func request(_ demand: Subscribers.Demand) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">310</td>
+<td class="src"><pre><code class="objc">            assert(demand &gt; 0)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">311</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">312</td>
+<td class="src"><pre><code class="objc">            guard let downstream = downstream else { return }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">313</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">314</td>
+<td class="src"><pre><code class="objc">            self.downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">315</td>
+<td class="src"><pre><code class="objc">            streamHandler { stream in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">316</td>
+<td class="src"><pre><code class="objc">                _ = downstream.receive(stream)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">317</td>
+<td class="src"><pre><code class="objc">                if case .complete = stream.event {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">318</td>
+<td class="src"><pre><code class="objc">                    downstream.receive(completion: .finished)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">319</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">320</td>
+<td class="src"><pre><code class="objc">            }.resume()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">321</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">322</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">323</td>
+<td class="src"><pre><code class="objc">        func cancel() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">324</td>
+<td class="src"><pre><code class="objc">            request.cancel()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">325</td>
+<td class="src"><pre><code class="objc">            downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">326</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">327</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">328</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">329</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">330</td>
+<td class="src"><pre><code class="objc">extension DataStreamRequest {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">331</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataStreamPublisher` for this instance using the given `DataStreamSerializer` and `DispatchQueue`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">332</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">333</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">334</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `DataStreamSerializer` used to serialize the streamed `Data`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">335</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataRequest.Stream` values will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">336</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DataStreamPublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">337</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">338</td>
+<td class="src"><pre><code class="objc">    public func publishStream&lt;Serializer: DataStreamSerializer&gt;(using serializer: Serializer,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">339</td>
+<td class="src"><pre><code class="objc">                                                                on queue: DispatchQueue = .main) -&gt; DataStreamPublisher&lt;Serializer.SerializedObject&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">340</td>
+<td class="src"><pre><code class="objc">        DataStreamPublisher(self, queue: queue, serializer: serializer)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">341</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">342</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">343</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataStreamPublisher` for this instance which uses a `PassthroughStreamSerializer` to stream `Data`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">344</td>
+<td class="src"><pre><code class="objc">    /// unserialized.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">345</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">346</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">347</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataRequest.Stream` values will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">348</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DataStreamPublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">349</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">350</td>
+<td class="src"><pre><code class="objc">    public func publishData(queue: DispatchQueue = .main) -&gt; DataStreamPublisher&lt;Data&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">351</td>
+<td class="src"><pre><code class="objc">        publishStream(using: PassthroughStreamSerializer(), on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">352</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">353</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">354</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataStreamPublisher` for this instance which uses a `StringStreamSerializer` to serialize stream</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">355</td>
+<td class="src"><pre><code class="objc">    /// `Data` values into `String` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">356</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">357</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">358</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataRequest.Stream` values will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">359</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DataStreamPublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">360</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">361</td>
+<td class="src"><pre><code class="objc">    public func publishString(queue: DispatchQueue = .main) -&gt; DataStreamPublisher&lt;String&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">362</td>
+<td class="src"><pre><code class="objc">        publishStream(using: StringStreamSerializer(), on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">363</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">364</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">365</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataStreamPublisher` for this instance which uses a `DecodableStreamSerializer` with the provided</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">366</td>
+<td class="src"><pre><code class="objc">    /// parameters to serialize stream `Data` values into the provided type.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">367</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">368</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">369</td>
+<td class="src"><pre><code class="objc">    ///   - type:         `Decodable` type to which to decode stream `Data`. Inferred from the context by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">370</td>
+<td class="src"><pre><code class="objc">    ///   - queue:        `DispatchQueue` on which the `DataRequest.Stream` values will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">371</td>
+<td class="src"><pre><code class="objc">    ///   - decoder:      `DataDecoder` instance used to decode stream `Data`. `JSONDecoder()` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">372</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor: `DataPreprocessor` which filters incoming stream `Data` before serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">373</td>
+<td class="src"><pre><code class="objc">    ///                   `PassthroughPreprocessor()` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">374</td>
+<td class="src"><pre><code class="objc">    /// - Returns:        The `DataStreamPublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">375</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">376</td>
+<td class="src"><pre><code class="objc">    public func publishDecodable&lt;T: Decodable&gt;(type: T.Type = T.self,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">377</td>
+<td class="src"><pre><code class="objc">                                               queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">378</td>
+<td class="src"><pre><code class="objc">                                               decoder: DataDecoder = JSONDecoder(),</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">379</td>
+<td class="src"><pre><code class="objc">                                               preprocessor: DataPreprocessor = PassthroughPreprocessor()) -&gt; DataStreamPublisher&lt;T&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">380</td>
+<td class="src"><pre><code class="objc">        publishStream(using: DecodableStreamSerializer(decoder: decoder,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">381</td>
+<td class="src"><pre><code class="objc">                                                       dataPreprocessor: preprocessor),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">382</td>
+<td class="src"><pre><code class="objc">                      on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">383</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">384</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">385</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">386</td>
+<td class="src"><pre><code class="objc">/// A Combine `Publisher` that publishes the `DownloadResponse&lt;Value, AFError&gt;` of the provided `DownloadRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">387</td>
+<td class="src"><pre><code class="objc">@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">388</td>
+<td class="src"><pre><code class="objc">public struct DownloadResponsePublisher&lt;Value&gt;: Publisher {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">389</td>
+<td class="src"><pre><code class="objc">    public typealias Output = DownloadResponse&lt;Value, AFError&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">390</td>
+<td class="src"><pre><code class="objc">    public typealias Failure = Never</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">391</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">392</td>
+<td class="src"><pre><code class="objc">    private typealias Handler = (@escaping (_ response: DownloadResponse&lt;Value, AFError&gt;) -&gt; Void) -&gt; DownloadRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">393</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">394</td>
+<td class="src"><pre><code class="objc">    private let request: DownloadRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">395</td>
+<td class="src"><pre><code class="objc">    private let responseHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">396</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">397</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which will serialize responses using the provided `ResponseSerializer`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">398</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">399</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">400</td>
+<td class="src"><pre><code class="objc">    ///   - request:    `DownloadRequest` for which to publish the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">401</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DownloadResponse` value will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">402</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `ResponseSerializer` used to produce the published `DownloadResponse`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">403</td>
+<td class="src"><pre><code class="objc">    public init&lt;Serializer: ResponseSerializer&gt;(_ request: DownloadRequest, queue: DispatchQueue, serializer: Serializer)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">404</td>
+<td class="src"><pre><code class="objc">        where Value == Serializer.SerializedObject {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">405</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">406</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, responseSerializer: serializer, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">407</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">408</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">409</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which will serialize responses using the provided `DownloadResponseSerializerProtocol` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">410</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">411</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">412</td>
+<td class="src"><pre><code class="objc">    ///   - request:    `DownloadRequest` for which to publish the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">413</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DataResponse` value will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">414</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `DownloadResponseSerializerProtocol` used to produce the published `DownloadResponse`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">415</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">416</td>
+<td class="src"><pre><code class="objc">    public init&lt;Serializer: DownloadResponseSerializerProtocol&gt;(_ request: DownloadRequest,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">417</td>
+<td class="src"><pre><code class="objc">                                                                queue: DispatchQueue,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">418</td>
+<td class="src"><pre><code class="objc">                                                                serializer: Serializer)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">419</td>
+<td class="src"><pre><code class="objc">        where Value == Serializer.SerializedObject {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">420</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">421</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, responseSerializer: serializer, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">422</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">423</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">424</td>
+<td class="src"><pre><code class="objc">    /// Publishes only the `Result` of the `DownloadResponse` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">425</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">426</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher` publishing the `Result&lt;Value, AFError&gt;` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">427</td>
+<td class="src"><pre><code class="objc">    public func result() -&gt; AnyPublisher&lt;Result&lt;Value, AFError&gt;, Never&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">428</td>
+<td class="src"><pre><code class="objc">        map { $0.result }.eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">429</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">430</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">431</td>
+<td class="src"><pre><code class="objc">    /// Publishes the `Result` of the `DownloadResponse` as a single `Value` or fail with the `AFError` instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">432</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">433</td>
+<td class="src"><pre><code class="objc">    /// - Returns: The `AnyPublisher&lt;Value, AFError&gt;` publishing the stream.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">434</td>
+<td class="src"><pre><code class="objc">    public func value() -&gt; AnyPublisher&lt;Value, AFError&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">435</td>
+<td class="src"><pre><code class="objc">        setFailureType(to: AFError.self).flatMap { $0.result.publisher }.eraseToAnyPublisher()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">436</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">437</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">438</td>
+<td class="src"><pre><code class="objc">    public func receive&lt;S&gt;(subscriber: S) where S: Subscriber, DownloadResponsePublisher.Failure == S.Failure, DownloadResponsePublisher.Output == S.Input {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">439</td>
+<td class="src"><pre><code class="objc">        subscriber.receive(subscription: Inner(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">440</td>
+<td class="src"><pre><code class="objc">                                               responseHandler: responseHandler,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">441</td>
+<td class="src"><pre><code class="objc">                                               downstream: subscriber))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">442</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">443</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">444</td>
+<td class="src"><pre><code class="objc">    private final class Inner&lt;Downstream: Subscriber&gt;: Subscription, Cancellable</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">445</td>
+<td class="src"><pre><code class="objc">        where Downstream.Input == Output {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">446</td>
+<td class="src"><pre><code class="objc">        typealias Failure = Downstream.Failure</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">447</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">448</td>
+<td class="src"><pre><code class="objc">        @Protected</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">449</td>
+<td class="src"><pre><code class="objc">        private var downstream: Downstream?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">450</td>
+<td class="src"><pre><code class="objc">        private let request: DownloadRequest</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">451</td>
+<td class="src"><pre><code class="objc">        private let responseHandler: Handler</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">452</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">453</td>
+<td class="src"><pre><code class="objc">        init(request: DownloadRequest, responseHandler: @escaping Handler, downstream: Downstream) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">454</td>
+<td class="src"><pre><code class="objc">            self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">455</td>
+<td class="src"><pre><code class="objc">            self.responseHandler = responseHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">456</td>
+<td class="src"><pre><code class="objc">            self.downstream = downstream</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">457</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">458</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">459</td>
+<td class="src"><pre><code class="objc">        func request(_ demand: Subscribers.Demand) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">460</td>
+<td class="src"><pre><code class="objc">            assert(demand &gt; 0)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">461</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">462</td>
+<td class="src"><pre><code class="objc">            guard let downstream = downstream else { return }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">463</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">464</td>
+<td class="src"><pre><code class="objc">            self.downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">465</td>
+<td class="src"><pre><code class="objc">            responseHandler { response in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">466</td>
+<td class="src"><pre><code class="objc">                _ = downstream.receive(response)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">467</td>
+<td class="src"><pre><code class="objc">                downstream.receive(completion: .finished)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">468</td>
+<td class="src"><pre><code class="objc">            }.resume()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">469</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">470</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">471</td>
+<td class="src"><pre><code class="objc">        func cancel() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">472</td>
+<td class="src"><pre><code class="objc">            request.cancel()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">473</td>
+<td class="src"><pre><code class="objc">            downstream = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">474</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">475</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">476</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">477</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">478</td>
+<td class="src"><pre><code class="objc">extension DownloadRequest {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">479</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponsePublisher` for this instance using the given `ResponseSerializer` and `DispatchQueue`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">480</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">481</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">482</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `ResponseSerializer` used to serialize the response `Data` from disk.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">483</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DownloadResponse` will be published.`.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">484</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">485</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">486</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">487</td>
+<td class="src"><pre><code class="objc">    public func publishResponse&lt;Serializer: ResponseSerializer, T&gt;(using serializer: Serializer, on queue: DispatchQueue = .main) -&gt; DownloadResponsePublisher&lt;T&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">488</td>
+<td class="src"><pre><code class="objc">        where Serializer.SerializedObject == T {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">489</td>
+<td class="src"><pre><code class="objc">        DownloadResponsePublisher(self, queue: queue, serializer: serializer)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">490</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">491</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">492</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponsePublisher` for this instance using the given `DownloadResponseSerializerProtocol` and</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">493</td>
+<td class="src"><pre><code class="objc">    /// `DispatchQueue`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">494</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">495</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">496</td>
+<td class="src"><pre><code class="objc">    ///   - serializer: `DownloadResponseSerializer` used to serialize the response `Data` from disk.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">497</td>
+<td class="src"><pre><code class="objc">    ///   - queue:      `DispatchQueue` on which the `DownloadResponse` will be published.`.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">498</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">499</td>
+<td class="src"><pre><code class="objc">    /// - Returns:      The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">500</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">501</td>
+<td class="src"><pre><code class="objc">    public func publishResponse&lt;Serializer: DownloadResponseSerializerProtocol, T&gt;(using serializer: Serializer, on queue: DispatchQueue = .main) -&gt; DownloadResponsePublisher&lt;T&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">502</td>
+<td class="src"><pre><code class="objc">        where Serializer.SerializedObject == T {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">503</td>
+<td class="src"><pre><code class="objc">        DownloadResponsePublisher(self, queue: queue, serializer: serializer)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">504</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">505</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">506</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponsePublisher` for this instance and uses a `URLResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">507</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">508</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">509</td>
+<td class="src"><pre><code class="objc">    /// - Parameter queue: `DispatchQueue` on which the `DownloadResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">510</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">511</td>
+<td class="src"><pre><code class="objc">    /// - Returns:         The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">512</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">513</td>
+<td class="src"><pre><code class="objc">    public func publishURL(queue: DispatchQueue = .main) -&gt; DownloadResponsePublisher&lt;URL&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">514</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: URLResponseSerializer(), on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">515</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">516</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">517</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponsePublisher` for this instance and uses a `DataResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">518</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">519</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">520</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">521</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DownloadResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">522</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">523</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">524</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">525</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">526</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">527</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">528</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">529</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">530</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">531</td>
+<td class="src"><pre><code class="objc">    public func publishData(queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">532</td>
+<td class="src"><pre><code class="objc">                            preprocessor: DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">533</td>
+<td class="src"><pre><code class="objc">                            emptyResponseCodes: Set&lt;Int&gt; = DataResponseSerializer.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">534</td>
+<td class="src"><pre><code class="objc">                            emptyRequestMethods: Set&lt;HTTPMethod&gt; = DataResponseSerializer.defaultEmptyRequestMethods) -&gt; DownloadResponsePublisher&lt;Data&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">535</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: DataResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">536</td>
+<td class="src"><pre><code class="objc">                                                      emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">537</td>
+<td class="src"><pre><code class="objc">                                                      emptyRequestMethods: emptyRequestMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">538</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">539</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">540</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">541</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance and uses a `StringResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">542</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">543</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">544</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">545</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">546</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">547</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">548</td>
+<td class="src"><pre><code class="objc">    ///   - encoding:            `String.Encoding` to parse the response. `nil` by default, in which case the encoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">549</td>
+<td class="src"><pre><code class="objc">    ///                          will be determined by the server response, falling back to the default HTTP character</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">550</td>
+<td class="src"><pre><code class="objc">    ///                          set, `ISO-8859-1`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">551</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">552</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">553</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">554</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">555</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">556</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">557</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">558</td>
+<td class="src"><pre><code class="objc">    public func publishString(queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">559</td>
+<td class="src"><pre><code class="objc">                              preprocessor: DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">560</td>
+<td class="src"><pre><code class="objc">                              encoding: String.Encoding? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">561</td>
+<td class="src"><pre><code class="objc">                              emptyResponseCodes: Set&lt;Int&gt; = StringResponseSerializer.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">562</td>
+<td class="src"><pre><code class="objc">                              emptyRequestMethods: Set&lt;HTTPMethod&gt; = StringResponseSerializer.defaultEmptyRequestMethods) -&gt; DownloadResponsePublisher&lt;String&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">563</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: StringResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">564</td>
+<td class="src"><pre><code class="objc">                                                        encoding: encoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">565</td>
+<td class="src"><pre><code class="objc">                                                        emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">566</td>
+<td class="src"><pre><code class="objc">                                                        emptyRequestMethods: emptyRequestMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">567</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">568</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">569</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">570</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponsePublisher` for this instance and uses a `DecodableResponseSerializer` to serialize the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">571</td>
+<td class="src"><pre><code class="objc">    /// response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">572</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">573</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">574</td>
+<td class="src"><pre><code class="objc">    ///   - type:                `Decodable` type to which to decode response `Data`. Inferred from the context by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">575</td>
+<td class="src"><pre><code class="objc">    ///   - queue:               `DispatchQueue` on which the `DataResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">576</td>
+<td class="src"><pre><code class="objc">    ///   - preprocessor:        `DataPreprocessor` which filters the `Data` before serialization. `PassthroughPreprocessor()`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">577</td>
+<td class="src"><pre><code class="objc">    ///                          by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">578</td>
+<td class="src"><pre><code class="objc">    ///   - decoder:             `DataDecoder` instance used to decode response `Data`. `JSONDecoder()` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">579</td>
+<td class="src"><pre><code class="objc">    ///   - emptyResponseCodes:  `Set&lt;Int&gt;` of HTTP status codes for which empty responses are allowed. `[204, 205]` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">580</td>
+<td class="src"><pre><code class="objc">    ///                          default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">581</td>
+<td class="src"><pre><code class="objc">    ///   - emptyRequestMethods: `Set&lt;HTTPMethod&gt;` of `HTTPMethod`s for which empty responses are allowed, regardless of</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">582</td>
+<td class="src"><pre><code class="objc">    ///                          status code. `[.head]` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">583</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">584</td>
+<td class="src"><pre><code class="objc">    /// - Returns:               The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">585</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">586</td>
+<td class="src"><pre><code class="objc">    public func publishDecodable&lt;T: Decodable&gt;(type: T.Type = T.self,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">587</td>
+<td class="src"><pre><code class="objc">                                               queue: DispatchQueue = .main,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">588</td>
+<td class="src"><pre><code class="objc">                                               preprocessor: DataPreprocessor = DecodableResponseSerializer&lt;T&gt;.defaultDataPreprocessor,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">589</td>
+<td class="src"><pre><code class="objc">                                               decoder: DataDecoder = JSONDecoder(),</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">590</td>
+<td class="src"><pre><code class="objc">                                               emptyResponseCodes: Set&lt;Int&gt; = DecodableResponseSerializer&lt;T&gt;.defaultEmptyResponseCodes,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">591</td>
+<td class="src"><pre><code class="objc">                                               emptyResponseMethods: Set&lt;HTTPMethod&gt; = DecodableResponseSerializer&lt;T&gt;.defaultEmptyRequestMethods) -&gt; DownloadResponsePublisher&lt;T&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">592</td>
+<td class="src"><pre><code class="objc">        publishResponse(using: DecodableResponseSerializer(dataPreprocessor: preprocessor,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">593</td>
+<td class="src"><pre><code class="objc">                                                           decoder: decoder,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">594</td>
+<td class="src"><pre><code class="objc">                                                           emptyResponseCodes: emptyResponseCodes,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">595</td>
+<td class="src"><pre><code class="objc">                                                           emptyRequestMethods: emptyResponseMethods),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">596</td>
+<td class="src"><pre><code class="objc">                        on: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">597</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">598</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">599</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">600</td>
+<td class="src"><pre><code class="objc">@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">601</td>
+<td class="src"><pre><code class="objc">extension DownloadResponsePublisher where Value == URL? {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">602</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance which publishes a `DownloadResponse&lt;URL?, AFError&gt;` value without serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">603</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">604</td>
+<td class="src"><pre><code class="objc">    public init(_ request: DownloadRequest, queue: DispatchQueue) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">605</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">606</td>
+<td class="src"><pre><code class="objc">        responseHandler = { request.response(queue: queue, completionHandler: $0) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">607</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">608</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">609</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">610</td>
+<td class="src"><pre><code class="objc">extension DownloadRequest {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">611</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponsePublisher` for this instance which does not serialize the response before publishing.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">612</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">613</td>
+<td class="src"><pre><code class="objc">    /// - Parameter queue: `DispatchQueue` on which the `DownloadResponse` will be published. `.main` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">614</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">615</td>
+<td class="src"><pre><code class="objc">    /// - Returns:         The `DownloadResponsePublisher`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">616</td>
+<td class="src"><pre><code class="objc">    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">617</td>
+<td class="src"><pre><code class="objc">    public func publishUnserialized(on queue: DispatchQueue = .main) -&gt; DownloadResponsePublisher&lt;URL?&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">618</td>
+<td class="src"><pre><code class="objc">        DownloadResponsePublisher(self, queue: queue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">619</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">620</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">621</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">622</td>
+<td class="src"><pre><code class="objc">#endif</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2021 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -26,6 +26,7 @@
 		83481E1226F5781B00DC2EC0 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83481E1126F5781B00DC2EC0 /* LoadingViewSpy.swift */; };
 		83481E1526F5784200DC2EC0 /* DisplayScreenViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83481E1426F5784200DC2EC0 /* DisplayScreenViewSpy.swift */; };
 		83481E1626F5799A00DC2EC0 /* TestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C10F26F1157E005FFBFC /* TestExtension.swift */; };
+		83481E1826F590F700DC2EC0 /* BeagleComponentMockFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A283B26F441D0005E9EF1 /* BeagleComponentMockFactories.swift */; };
 		8370C08B26F10EF4005FFBFC /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8370C08226F10EF4005FFBFC /* Data.framework */; };
 		8370C09B26F10F0B005FFBFC /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09A26F10F0B005FFBFC /* HttpClient.swift */; };
 		8370C09E26F10F3E005FFBFC /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8370C09D26F10F3E005FFBFC /* ExtensionHelpers.swift */; };
@@ -963,6 +964,7 @@
 			files = (
 				83481E1226F5781B00DC2EC0 /* LoadingViewSpy.swift in Sources */,
 				83481E1026F5780B00DC2EC0 /* AlertViewSpy.swift in Sources */,
+				83481E1826F590F700DC2EC0 /* BeagleComponentMockFactories.swift in Sources */,
 				83481E1626F5799A00DC2EC0 /* TestExtension.swift in Sources */,
 				83481DFF26F575BE00DC2EC0 /* ScreenSpy.swift in Sources */,
 				83481DFE26F575BA00DC2EC0 /* TestPresentationFactories.swift in Sources */,

@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Parser.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "Parser.swift" : </span><span>Lines: </span><span class="cov_high">90.51%</span><span> Branches: </span><span class="cov_medium">77.19%</span>
+</h2>
+<h4 class="cov_subtitle">(124 of 137 relevant lines covered)</h4>
+<h4 class="cov_filepath">../../Library/Developer/Xcode/DerivedData/server-driven-ui-ios-dpdbyuhldehuondfhutxcvvbrvtz/SourcePackages/checkouts/Fakery/Sources/Fakery/Data/Parser.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">public final class Parser {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">  public var locale: String {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">    didSet {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">      if locale != oldValue {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc">        loadData(forLocale: locale)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">      }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">  private var data = [String: Any]()</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="never">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">  let provider: Provider</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">  // MARK: - Initialization</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">  public init(locale: String = Config.defaultLocale) {</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">    self.locale = locale</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">    provider = Provider()</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">    loadData(forLocale: locale)</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">    if locale != Config.defaultLocale {</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">      loadData(forLocale: Config.defaultLocale)</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="covered">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">3x</td>
+</tr>
+<tr class="never">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc">  // MARK: - Parsing</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">  public func fetch(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc">    var parsed = ""</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc">    guard let keyData = fetchRaw(key) else </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="missed">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc">      return parsed</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc">    let subject = getSubject(key)</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">37</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">38</td>
+<td class="src"><pre><code class="objc">    if let value = keyData as? String </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="missed">
+<td class="num">39</td>
+<td class="src"><pre><code class="objc">      parsed = value</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">40</td>
+<td class="src"><pre><code class="objc">    } else if let array = keyData as? [String], let item = array.random() {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">41</td>
+<td class="src"><pre><code class="objc">      parsed = item</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">42</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">43</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">44</td>
+<td class="src"><pre><code class="objc">    if parsed.range(of: "#{") != nil {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">45</td>
+<td class="src"><pre><code class="objc">      parsed = parse(parsed, forSubject: subject)</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">46</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">48</td>
+<td class="src"><pre><code class="objc">    return parsed</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">49</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="never">
+<td class="num">50</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">51</td>
+<td class="src"><pre><code class="objc">  public func fetchRaw(_ key: String) -&gt; Any? {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">52</td>
+<td class="src"><pre><code class="objc">    let result = fetchRaw(key, forLocale: locale)</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">53</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">54</td>
+<td class="src"><pre><code class="objc">    guard locale != Config.defaultLocale else </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="missed">
+<td class="num">55</td>
+<td class="src"><pre><code class="objc">      return result</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">    return result ?? </code><code class="objc missed">fetchRaw(key, forLocale: Config.defaultLocale)</code><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="never">
+<td class="num">60</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">61</td>
+<td class="src"><pre><code class="objc">  func parse(_ template: String, forSubject subject: String) -&gt; String {</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">    var text = ""</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">    let string = NSString(string: template)</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">    var regex: NSRegularExpression</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">    do {</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">      try regex = NSRegularExpression(pattern: "(\\(?)#\\{([A-Za-z]+\\.)?([^\\}]+)\\}([^#]+)?",</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">                                      options: .caseInsensitive)</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">      let matches = regex.matches(in: template,</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">        options: .reportCompletion,</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">        range: NSRange(location: 0, length: string.length))</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">      guard !matches.isEmpty else </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="missed">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">        return template</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc">      }</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">      for match in matches {</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">        if match.numberOfRanges &lt; 4 </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="missed">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc">          continue</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc">        let prefixRange = match.range(at: 1)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc">        let subjectRange = match.range(at: 2)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">        let methodRange = match.range(at: 3)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc">        let otherRange = match.range(at: 4)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">        if prefixRange.length &gt; 0 </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="missed">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc">          text += string.substring(with: prefixRange)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc">        var subjectWithDot = subject + "."</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">94</td>
+<td class="src"><pre><code class="objc">        if subjectRange.length &gt; 0 {</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">95</td>
+<td class="src"><pre><code class="objc">          subjectWithDot = string.substring(with: subjectRange)</code></pre></td>
+<td class="coverage">12x</td>
+</tr>
+<tr class="covered">
+<td class="num">96</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">97</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">98</td>
+<td class="src"><pre><code class="objc">        if methodRange.length &gt; 0 {</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">99</td>
+<td class="src"><pre><code class="objc">          let key = subjectWithDot.lowercased() + string.substring(with: methodRange)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">100</td>
+<td class="src"><pre><code class="objc">          text += fetch(key)</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">101</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">102</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">103</td>
+<td class="src"><pre><code class="objc">        if otherRange.length &gt; 0 {</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">104</td>
+<td class="src"><pre><code class="objc">          text += string.substring(with: otherRange)</code></pre></td>
+<td class="coverage">9x</td>
+</tr>
+<tr class="covered">
+<td class="num">105</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">106</td>
+<td class="src"><pre><code class="objc">      }</code></pre></td>
+<td class="coverage">16x</td>
+</tr>
+<tr class="covered">
+<td class="num">107</td>
+<td class="src"><pre><code class="objc">    } catch </code><code class="objc missed">{}</code><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">108</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">109</td>
+<td class="src"><pre><code class="objc">    return text</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="covered">
+<td class="num">110</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">7x</td>
+</tr>
+<tr class="never">
+<td class="num">111</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">112</td>
+<td class="src"><pre><code class="objc">  private func fetchRaw(_ key: String, forLocale locale: String) -&gt; Any? {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">113</td>
+<td class="src"><pre><code class="objc">    let parts = key.components(separatedBy: ".")</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">114</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">115</td>
+<td class="src"><pre><code class="objc">    guard let localeData = data[locale] as? [String: Any],</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">116</td>
+<td class="src"><pre><code class="objc">      var parsed = localeData["faker"] as? [String: Any],</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">117</td>
+<td class="src"><pre><code class="objc">      !parts.isEmpty else </code><code class="objc missed">{ return nil }</code><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">118</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">119</td>
+<td class="src"><pre><code class="objc">    var result: Any?</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">120</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">121</td>
+<td class="src"><pre><code class="objc">    for part in parts {</code></pre></td>
+<td class="coverage">60x</td>
+</tr>
+<tr class="covered">
+<td class="num">122</td>
+<td class="src"><pre><code class="objc">      guard let parsedPart = parsed[part] as? [String: Any] else {</code></pre></td>
+<td class="coverage">60x</td>
+</tr>
+<tr class="covered">
+<td class="num">123</td>
+<td class="src"><pre><code class="objc">        result = parsed[part]</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">124</td>
+<td class="src"><pre><code class="objc">        continue</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">125</td>
+<td class="src"><pre><code class="objc">      }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">126</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">127</td>
+<td class="src"><pre><code class="objc">      parsed = parsedPart</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">128</td>
+<td class="src"><pre><code class="objc">      result = parsedPart</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">129</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">130</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">131</td>
+<td class="src"><pre><code class="objc">    return result</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">132</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="never">
+<td class="num">133</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">134</td>
+<td class="src"><pre><code class="objc">  private func getSubject(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">135</td>
+<td class="src"><pre><code class="objc">    var subject: String = ""</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">136</td>
+<td class="src"><pre><code class="objc">    let parts = key.components(separatedBy: ".")</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">137</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">138</td>
+<td class="src"><pre><code class="objc">    if !parts.isEmpty {</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">139</td>
+<td class="src"><pre><code class="objc">      subject = parts[0]</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">140</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">141</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">142</td>
+<td class="src"><pre><code class="objc">    return subject</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="covered">
+<td class="num">143</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">30x</td>
+</tr>
+<tr class="never">
+<td class="num">144</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">145</td>
+<td class="src"><pre><code class="objc">  // MARK: - Data loading</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">146</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">147</td>
+<td class="src"><pre><code class="objc">  private func loadData(forLocale locale: String) {</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">148</td>
+<td class="src"><pre><code class="objc">    guard let localeData = provider.dataForLocale(locale),</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">149</td>
+<td class="src"><pre><code class="objc">      let parsedData = try? JSONSerialization.jsonObject(with: localeData, options: .allowFragments),</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">150</td>
+<td class="src"><pre><code class="objc">      let json = parsedData as? [String: Any],</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">151</td>
+<td class="src"><pre><code class="objc">      let localeJson = json[locale] else </code><code class="objc missed">{</code><code class="objc"></code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="missed">
+<td class="num">152</td>
+<td class="src"><pre><code class="objc">        print("JSON file for '\(locale)' locale was not found.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">153</td>
+<td class="src"><pre><code class="objc">        return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">154</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">155</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">156</td>
+<td class="src"><pre><code class="objc">    data[locale] = localeJson</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="covered">
+<td class="num">157</td>
+<td class="src"><pre><code class="objc">  }</code></pre></td>
+<td class="coverage">4x</td>
+</tr>
+<tr class="never">
+<td class="num">158</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2021 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

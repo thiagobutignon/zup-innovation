@@ -1,0 +1,2292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Response.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "Response.swift" : </span><span>Lines: </span><span class="cov_low">4.37%</span><span> Branches: </span><span class="cov_low">1.69%</span>
+</h2>
+<h4 class="cov_subtitle">(8 of 183 relevant lines covered)</h4>
+<h4 class="cov_filepath">../../Library/Developer/Xcode/DerivedData/server-driven-ui-ios-dpdbyuhldehuondfhutxcvvbrvtz/SourcePackages/checkouts/Alamofire/Source/Response.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc">//  Response.swift</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">//  Permission is hereby granted, free of charge, to any person obtaining a copy</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc">//  of this software and associated documentation files (the "Software"), to deal</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">//  in the Software without restriction, including without limitation the rights</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc">//  copies of the Software, and to permit persons to whom the Software is</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc">//  furnished to do so, subject to the following conditions:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">//  The above copyright notice and this permission notice shall be included in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc">//  all copies or substantial portions of the Software.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc">/// Default type of `DataResponse` returned by Alamofire, with an `AFError` `Failure` type.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">public typealias AFDataResponse&lt;Success&gt; = DataResponse&lt;Success, AFError&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">/// Default type of `DownloadResponse` returned by Alamofire, with an `AFError` `Failure` type.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc">public typealias AFDownloadResponse&lt;Success&gt; = DownloadResponse&lt;Success, AFError&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc">/// Type used to store all values associated with a serialized response of a `DataRequest` or `UploadRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc">public struct DataResponse&lt;Success, Failure: Error&gt; {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">    /// The URL request sent to the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc">    public let request: URLRequest?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">37</td>
+<td class="src"><pre><code class="objc">    /// The server's response to the URL request.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">38</td>
+<td class="src"><pre><code class="objc">    public let response: HTTPURLResponse?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">39</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">40</td>
+<td class="src"><pre><code class="objc">    /// The data returned by the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">41</td>
+<td class="src"><pre><code class="objc">    public let data: Data?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">42</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">43</td>
+<td class="src"><pre><code class="objc">    /// The final metrics of the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">44</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">45</td>
+<td class="src"><pre><code class="objc">    /// - Note: Due to `FB7624529`, collection of `URLSessionTaskMetrics` on watchOS is currently disabled.`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">46</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc">    public let metrics: URLSessionTaskMetrics?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">48</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">49</td>
+<td class="src"><pre><code class="objc">    /// The time taken to serialize the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">50</td>
+<td class="src"><pre><code class="objc">    public let serializationDuration: TimeInterval</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">51</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">52</td>
+<td class="src"><pre><code class="objc">    /// The result of response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">53</td>
+<td class="src"><pre><code class="objc">    public let result: Result&lt;Success, Failure&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">54</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">55</td>
+<td class="src"><pre><code class="objc">    /// Returns the associated value of the result if it is a success, `nil` otherwise.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">    public var value: Success? { result.success }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">    /// Returns the associated error value if the result if it is a failure, `nil` otherwise.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">    public var error: Failure? { result.failure }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">60</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">61</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DataResponse` instance with the specified parameters derived from the response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">    ///   - request:               The `URLRequest` sent to the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">    ///   - response:              The `HTTPURLResponse` from the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">    ///   - data:                  The `Data` returned by the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">    ///   - metrics:               The `URLSessionTaskMetrics` of the `DataRequest` or `UploadRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">    ///   - serializationDuration: The duration taken by serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">    ///   - result:                The `Result` of response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">    public init(request: URLRequest?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">                response: HTTPURLResponse?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">                data: Data?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc">                metrics: URLSessionTaskMetrics?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">                serializationDuration: TimeInterval,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">                result: Result&lt;Success, Failure&gt;) {</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc">        self.response = response</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">        self.data = data</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">        self.metrics = metrics</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc">        self.serializationDuration = serializationDuration</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">        self.result = result</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="covered">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">25x</td>
+</tr>
+<tr class="never">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">// MARK: -</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc">extension DataResponse: CustomStringConvertible, CustomDebugStringConvertible {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">    /// The textual representation used when written to an output stream, which includes whether the result was a</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc">    /// success or failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">    public var description: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc">        "\(result)"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">94</td>
+<td class="src"><pre><code class="objc">    /// The debug textual representation used when written to an output stream, which includes (if available) a summary</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">95</td>
+<td class="src"><pre><code class="objc">    /// of the `URLRequest`, the request's headers and body (if decodable as a `String` below 100KB); the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">96</td>
+<td class="src"><pre><code class="objc">    /// `HTTPURLResponse`'s status code, headers, and body; the duration of the network and serialization actions; and</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">97</td>
+<td class="src"><pre><code class="objc">    /// the `Result` of serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">98</td>
+<td class="src"><pre><code class="objc">    public var debugDescription: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">99</td>
+<td class="src"><pre><code class="objc">        guard let urlRequest = request else { return "[Request]: None\n[Result]: \(result)" }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">100</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">101</td>
+<td class="src"><pre><code class="objc">        let requestDescription = DebugDescription.description(of: urlRequest)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">102</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">103</td>
+<td class="src"><pre><code class="objc">        let responseDescription = response.map { response in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">104</td>
+<td class="src"><pre><code class="objc">            let responseBodyDescription = DebugDescription.description(for: data, headers: response.headers)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">105</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">106</td>
+<td class="src"><pre><code class="objc">            return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">107</td>
+<td class="src"><pre><code class="objc">            \(DebugDescription.description(of: response))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">108</td>
+<td class="src"><pre><code class="objc">                \(responseBodyDescription.indentingNewlines())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">109</td>
+<td class="src"><pre><code class="objc">            """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">110</td>
+<td class="src"><pre><code class="objc">        } ?? "[Response]: None"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">111</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">112</td>
+<td class="src"><pre><code class="objc">        let networkDuration = metrics.map { "\($0.taskInterval.duration)s" } ?? "None"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">113</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">114</td>
+<td class="src"><pre><code class="objc">        return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">115</td>
+<td class="src"><pre><code class="objc">        \(requestDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">116</td>
+<td class="src"><pre><code class="objc">        \(responseDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">117</td>
+<td class="src"><pre><code class="objc">        [Network Duration]: \(networkDuration)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">118</td>
+<td class="src"><pre><code class="objc">        [Serialization Duration]: \(serializationDuration)s</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">119</td>
+<td class="src"><pre><code class="objc">        [Result]: \(result)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">120</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">121</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">122</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">123</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">124</td>
+<td class="src"><pre><code class="objc">// MARK: -</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">125</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">126</td>
+<td class="src"><pre><code class="objc">extension DataResponse {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">127</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the specified closure when the result of this `DataResponse` is a success, passing the unwrapped</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">128</td>
+<td class="src"><pre><code class="objc">    /// result value as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">129</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">130</td>
+<td class="src"><pre><code class="objc">    /// Use the `map` method with a closure that does not throw. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">131</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">132</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DataResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">133</td>
+<td class="src"><pre><code class="objc">    ///     let possibleInt = possibleData.map { $0.count }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">134</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">135</td>
+<td class="src"><pre><code class="objc">    /// - parameter transform: A closure that takes the success value of the instance's result.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">136</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">137</td>
+<td class="src"><pre><code class="objc">    /// - returns: A `DataResponse` whose result wraps the value returned by the given closure. If this instance's</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">138</td>
+<td class="src"><pre><code class="objc">    ///            result is a failure, returns a response wrapping the same failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">139</td>
+<td class="src"><pre><code class="objc">    public func map&lt;NewSuccess&gt;(_ transform: (Success) -&gt; NewSuccess) -&gt; DataResponse&lt;NewSuccess, Failure&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">140</td>
+<td class="src"><pre><code class="objc">        DataResponse&lt;NewSuccess, Failure&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">141</td>
+<td class="src"><pre><code class="objc">                                          response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">142</td>
+<td class="src"><pre><code class="objc">                                          data: data,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">143</td>
+<td class="src"><pre><code class="objc">                                          metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">144</td>
+<td class="src"><pre><code class="objc">                                          serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">145</td>
+<td class="src"><pre><code class="objc">                                          result: result.map(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">146</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">147</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">148</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the given closure when the result of this `DataResponse` is a success, passing the unwrapped result</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">149</td>
+<td class="src"><pre><code class="objc">    /// value as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">150</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">151</td>
+<td class="src"><pre><code class="objc">    /// Use the `tryMap` method with a closure that may throw an error. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">152</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">153</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DataResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">154</td>
+<td class="src"><pre><code class="objc">    ///     let possibleObject = possibleData.tryMap {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">155</td>
+<td class="src"><pre><code class="objc">    ///         try JSONSerialization.jsonObject(with: $0)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">156</td>
+<td class="src"><pre><code class="objc">    ///     }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">157</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">158</td>
+<td class="src"><pre><code class="objc">    /// - parameter transform: A closure that takes the success value of the instance's result.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">159</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">160</td>
+<td class="src"><pre><code class="objc">    /// - returns: A success or failure `DataResponse` depending on the result of the given closure. If this instance's</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">161</td>
+<td class="src"><pre><code class="objc">    ///            result is a failure, returns the same failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">162</td>
+<td class="src"><pre><code class="objc">    public func tryMap&lt;NewSuccess&gt;(_ transform: (Success) throws -&gt; NewSuccess) -&gt; DataResponse&lt;NewSuccess, Error&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">163</td>
+<td class="src"><pre><code class="objc">        DataResponse&lt;NewSuccess, Error&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">164</td>
+<td class="src"><pre><code class="objc">                                        response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">165</td>
+<td class="src"><pre><code class="objc">                                        data: data,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">166</td>
+<td class="src"><pre><code class="objc">                                        metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">167</td>
+<td class="src"><pre><code class="objc">                                        serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">168</td>
+<td class="src"><pre><code class="objc">                                        result: result.tryMap(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">169</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">170</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">171</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the specified closure when the `DataResponse` is a failure, passing the unwrapped error as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">172</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">173</td>
+<td class="src"><pre><code class="objc">    /// Use the `mapError` function with a closure that does not throw. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">174</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">175</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DataResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">176</td>
+<td class="src"><pre><code class="objc">    ///     let withMyError = possibleData.mapError { MyError.error($0) }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">177</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">178</td>
+<td class="src"><pre><code class="objc">    /// - Parameter transform: A closure that takes the error of the instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">179</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">180</td>
+<td class="src"><pre><code class="objc">    /// - Returns: A `DataResponse` instance containing the result of the transform.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">181</td>
+<td class="src"><pre><code class="objc">    public func mapError&lt;NewFailure: Error&gt;(_ transform: (Failure) -&gt; NewFailure) -&gt; DataResponse&lt;Success, NewFailure&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">182</td>
+<td class="src"><pre><code class="objc">        DataResponse&lt;Success, NewFailure&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">183</td>
+<td class="src"><pre><code class="objc">                                          response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">184</td>
+<td class="src"><pre><code class="objc">                                          data: data,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">185</td>
+<td class="src"><pre><code class="objc">                                          metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">186</td>
+<td class="src"><pre><code class="objc">                                          serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">187</td>
+<td class="src"><pre><code class="objc">                                          result: result.mapError(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">188</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">189</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">190</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the specified closure when the `DataResponse` is a failure, passing the unwrapped error as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">191</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">192</td>
+<td class="src"><pre><code class="objc">    /// Use the `tryMapError` function with a closure that may throw an error. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">193</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">194</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DataResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">195</td>
+<td class="src"><pre><code class="objc">    ///     let possibleObject = possibleData.tryMapError {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">196</td>
+<td class="src"><pre><code class="objc">    ///         try someFailableFunction(taking: $0)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">197</td>
+<td class="src"><pre><code class="objc">    ///     }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">198</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">199</td>
+<td class="src"><pre><code class="objc">    /// - Parameter transform: A throwing closure that takes the error of the instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">200</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">201</td>
+<td class="src"><pre><code class="objc">    /// - Returns: A `DataResponse` instance containing the result of the transform.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">202</td>
+<td class="src"><pre><code class="objc">    public func tryMapError&lt;NewFailure: Error&gt;(_ transform: (Failure) throws -&gt; NewFailure) -&gt; DataResponse&lt;Success, Error&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">203</td>
+<td class="src"><pre><code class="objc">        DataResponse&lt;Success, Error&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">204</td>
+<td class="src"><pre><code class="objc">                                     response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">205</td>
+<td class="src"><pre><code class="objc">                                     data: data,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">206</td>
+<td class="src"><pre><code class="objc">                                     metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">207</td>
+<td class="src"><pre><code class="objc">                                     serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">208</td>
+<td class="src"><pre><code class="objc">                                     result: result.tryMapError(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">209</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">210</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">211</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">212</td>
+<td class="src"><pre><code class="objc">// MARK: -</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">213</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">214</td>
+<td class="src"><pre><code class="objc">/// Used to store all data associated with a serialized response of a download request.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">215</td>
+<td class="src"><pre><code class="objc">public struct DownloadResponse&lt;Success, Failure: Error&gt; {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">216</td>
+<td class="src"><pre><code class="objc">    /// The URL request sent to the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">217</td>
+<td class="src"><pre><code class="objc">    public let request: URLRequest?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">218</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">219</td>
+<td class="src"><pre><code class="objc">    /// The server's response to the URL request.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">220</td>
+<td class="src"><pre><code class="objc">    public let response: HTTPURLResponse?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">221</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">222</td>
+<td class="src"><pre><code class="objc">    /// The final destination URL of the data returned from the server after it is moved.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">223</td>
+<td class="src"><pre><code class="objc">    public let fileURL: URL?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">224</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">225</td>
+<td class="src"><pre><code class="objc">    /// The resume data generated if the request was cancelled.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">226</td>
+<td class="src"><pre><code class="objc">    public let resumeData: Data?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">227</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">228</td>
+<td class="src"><pre><code class="objc">    /// The final metrics of the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">229</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">230</td>
+<td class="src"><pre><code class="objc">    /// - Note: Due to `FB7624529`, collection of `URLSessionTaskMetrics` on watchOS is currently disabled.`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">231</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">232</td>
+<td class="src"><pre><code class="objc">    public let metrics: URLSessionTaskMetrics?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">233</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">234</td>
+<td class="src"><pre><code class="objc">    /// The time taken to serialize the response.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">235</td>
+<td class="src"><pre><code class="objc">    public let serializationDuration: TimeInterval</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">236</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">237</td>
+<td class="src"><pre><code class="objc">    /// The result of response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">238</td>
+<td class="src"><pre><code class="objc">    public let result: Result&lt;Success, Failure&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">239</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">240</td>
+<td class="src"><pre><code class="objc">    /// Returns the associated value of the result if it is a success, `nil` otherwise.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">241</td>
+<td class="src"><pre><code class="objc">    public var value: Success? { result.success }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">242</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">243</td>
+<td class="src"><pre><code class="objc">    /// Returns the associated error value if the result if it is a failure, `nil` otherwise.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">244</td>
+<td class="src"><pre><code class="objc">    public var error: Failure? { result.failure }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">245</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">246</td>
+<td class="src"><pre><code class="objc">    /// Creates a `DownloadResponse` instance with the specified parameters derived from response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">247</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">248</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">249</td>
+<td class="src"><pre><code class="objc">    ///   - request:               The `URLRequest` sent to the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">250</td>
+<td class="src"><pre><code class="objc">    ///   - response:              The `HTTPURLResponse` from the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">251</td>
+<td class="src"><pre><code class="objc">    ///   - temporaryURL:          The temporary destination `URL` of the data returned from the server.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">252</td>
+<td class="src"><pre><code class="objc">    ///   - destinationURL:        The final destination `URL` of the data returned from the server, if it was moved.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">253</td>
+<td class="src"><pre><code class="objc">    ///   - resumeData:            The resume `Data` generated if the request was cancelled.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">254</td>
+<td class="src"><pre><code class="objc">    ///   - metrics:               The `URLSessionTaskMetrics` of the `DownloadRequest`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">255</td>
+<td class="src"><pre><code class="objc">    ///   - serializationDuration: The duration taken by serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">256</td>
+<td class="src"><pre><code class="objc">    ///   - result:                The `Result` of response serialization.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">257</td>
+<td class="src"><pre><code class="objc">    public init(request: URLRequest?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">258</td>
+<td class="src"><pre><code class="objc">                response: HTTPURLResponse?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">259</td>
+<td class="src"><pre><code class="objc">                fileURL: URL?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">260</td>
+<td class="src"><pre><code class="objc">                resumeData: Data?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">261</td>
+<td class="src"><pre><code class="objc">                metrics: URLSessionTaskMetrics?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">262</td>
+<td class="src"><pre><code class="objc">                serializationDuration: TimeInterval,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">263</td>
+<td class="src"><pre><code class="objc">                result: Result&lt;Success, Failure&gt;) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">264</td>
+<td class="src"><pre><code class="objc">        self.request = request</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">265</td>
+<td class="src"><pre><code class="objc">        self.response = response</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">266</td>
+<td class="src"><pre><code class="objc">        self.fileURL = fileURL</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">267</td>
+<td class="src"><pre><code class="objc">        self.resumeData = resumeData</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">268</td>
+<td class="src"><pre><code class="objc">        self.metrics = metrics</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">269</td>
+<td class="src"><pre><code class="objc">        self.serializationDuration = serializationDuration</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">270</td>
+<td class="src"><pre><code class="objc">        self.result = result</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">271</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">272</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">273</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">274</td>
+<td class="src"><pre><code class="objc">// MARK: -</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">275</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">276</td>
+<td class="src"><pre><code class="objc">extension DownloadResponse: CustomStringConvertible, CustomDebugStringConvertible {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">277</td>
+<td class="src"><pre><code class="objc">    /// The textual representation used when written to an output stream, which includes whether the result was a</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">278</td>
+<td class="src"><pre><code class="objc">    /// success or failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">279</td>
+<td class="src"><pre><code class="objc">    public var description: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">280</td>
+<td class="src"><pre><code class="objc">        "\(result)"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">281</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">282</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">283</td>
+<td class="src"><pre><code class="objc">    /// The debug textual representation used when written to an output stream, which includes the URL request, the URL</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">284</td>
+<td class="src"><pre><code class="objc">    /// response, the temporary and destination URLs, the resume data, the durations of the network and serialization</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">285</td>
+<td class="src"><pre><code class="objc">    /// actions, and the response serialization result.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">286</td>
+<td class="src"><pre><code class="objc">    public var debugDescription: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">287</td>
+<td class="src"><pre><code class="objc">        guard let urlRequest = request else { return "[Request]: None\n[Result]: \(result)" }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">288</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">289</td>
+<td class="src"><pre><code class="objc">        let requestDescription = DebugDescription.description(of: urlRequest)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">290</td>
+<td class="src"><pre><code class="objc">        let responseDescription = response.map(DebugDescription.description(of:)) ?? "[Response]: None"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">291</td>
+<td class="src"><pre><code class="objc">        let networkDuration = metrics.map { "\($0.taskInterval.duration)s" } ?? "None"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">292</td>
+<td class="src"><pre><code class="objc">        let resumeDataDescription = resumeData.map { "\($0)" } ?? "None"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">293</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">294</td>
+<td class="src"><pre><code class="objc">        return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">295</td>
+<td class="src"><pre><code class="objc">        \(requestDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">296</td>
+<td class="src"><pre><code class="objc">        \(responseDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">297</td>
+<td class="src"><pre><code class="objc">        [File URL]: \(fileURL?.path ?? "None")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">298</td>
+<td class="src"><pre><code class="objc">        [Resume Data]: \(resumeDataDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">299</td>
+<td class="src"><pre><code class="objc">        [Network Duration]: \(networkDuration)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">300</td>
+<td class="src"><pre><code class="objc">        [Serialization Duration]: \(serializationDuration)s</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">301</td>
+<td class="src"><pre><code class="objc">        [Result]: \(result)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">302</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">303</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">304</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">305</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">306</td>
+<td class="src"><pre><code class="objc">// MARK: -</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">307</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">308</td>
+<td class="src"><pre><code class="objc">extension DownloadResponse {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">309</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the given closure when the result of this `DownloadResponse` is a success, passing the unwrapped</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">310</td>
+<td class="src"><pre><code class="objc">    /// result value as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">311</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">312</td>
+<td class="src"><pre><code class="objc">    /// Use the `map` method with a closure that does not throw. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">313</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">314</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DownloadResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">315</td>
+<td class="src"><pre><code class="objc">    ///     let possibleInt = possibleData.map { $0.count }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">316</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">317</td>
+<td class="src"><pre><code class="objc">    /// - parameter transform: A closure that takes the success value of the instance's result.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">318</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">319</td>
+<td class="src"><pre><code class="objc">    /// - returns: A `DownloadResponse` whose result wraps the value returned by the given closure. If this instance's</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">320</td>
+<td class="src"><pre><code class="objc">    ///            result is a failure, returns a response wrapping the same failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">321</td>
+<td class="src"><pre><code class="objc">    public func map&lt;NewSuccess&gt;(_ transform: (Success) -&gt; NewSuccess) -&gt; DownloadResponse&lt;NewSuccess, Failure&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">322</td>
+<td class="src"><pre><code class="objc">        DownloadResponse&lt;NewSuccess, Failure&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">323</td>
+<td class="src"><pre><code class="objc">                                              response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">324</td>
+<td class="src"><pre><code class="objc">                                              fileURL: fileURL,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">325</td>
+<td class="src"><pre><code class="objc">                                              resumeData: resumeData,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">326</td>
+<td class="src"><pre><code class="objc">                                              metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">327</td>
+<td class="src"><pre><code class="objc">                                              serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">328</td>
+<td class="src"><pre><code class="objc">                                              result: result.map(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">329</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">330</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">331</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the given closure when the result of this `DownloadResponse` is a success, passing the unwrapped</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">332</td>
+<td class="src"><pre><code class="objc">    /// result value as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">333</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">334</td>
+<td class="src"><pre><code class="objc">    /// Use the `tryMap` method with a closure that may throw an error. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">335</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">336</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DownloadResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">337</td>
+<td class="src"><pre><code class="objc">    ///     let possibleObject = possibleData.tryMap {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">338</td>
+<td class="src"><pre><code class="objc">    ///         try JSONSerialization.jsonObject(with: $0)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">339</td>
+<td class="src"><pre><code class="objc">    ///     }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">340</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">341</td>
+<td class="src"><pre><code class="objc">    /// - parameter transform: A closure that takes the success value of the instance's result.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">342</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">343</td>
+<td class="src"><pre><code class="objc">    /// - returns: A success or failure `DownloadResponse` depending on the result of the given closure. If this</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">344</td>
+<td class="src"><pre><code class="objc">    /// instance's result is a failure, returns the same failure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">345</td>
+<td class="src"><pre><code class="objc">    public func tryMap&lt;NewSuccess&gt;(_ transform: (Success) throws -&gt; NewSuccess) -&gt; DownloadResponse&lt;NewSuccess, Error&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">346</td>
+<td class="src"><pre><code class="objc">        DownloadResponse&lt;NewSuccess, Error&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">347</td>
+<td class="src"><pre><code class="objc">                                            response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">348</td>
+<td class="src"><pre><code class="objc">                                            fileURL: fileURL,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">349</td>
+<td class="src"><pre><code class="objc">                                            resumeData: resumeData,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">350</td>
+<td class="src"><pre><code class="objc">                                            metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">351</td>
+<td class="src"><pre><code class="objc">                                            serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">352</td>
+<td class="src"><pre><code class="objc">                                            result: result.tryMap(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">353</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">354</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">355</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the specified closure when the `DownloadResponse` is a failure, passing the unwrapped error as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">356</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">357</td>
+<td class="src"><pre><code class="objc">    /// Use the `mapError` function with a closure that does not throw. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">358</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">359</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DownloadResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">360</td>
+<td class="src"><pre><code class="objc">    ///     let withMyError = possibleData.mapError { MyError.error($0) }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">361</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">362</td>
+<td class="src"><pre><code class="objc">    /// - Parameter transform: A closure that takes the error of the instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">363</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">364</td>
+<td class="src"><pre><code class="objc">    /// - Returns: A `DownloadResponse` instance containing the result of the transform.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">365</td>
+<td class="src"><pre><code class="objc">    public func mapError&lt;NewFailure: Error&gt;(_ transform: (Failure) -&gt; NewFailure) -&gt; DownloadResponse&lt;Success, NewFailure&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">366</td>
+<td class="src"><pre><code class="objc">        DownloadResponse&lt;Success, NewFailure&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">367</td>
+<td class="src"><pre><code class="objc">                                              response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">368</td>
+<td class="src"><pre><code class="objc">                                              fileURL: fileURL,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">369</td>
+<td class="src"><pre><code class="objc">                                              resumeData: resumeData,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">370</td>
+<td class="src"><pre><code class="objc">                                              metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">371</td>
+<td class="src"><pre><code class="objc">                                              serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">372</td>
+<td class="src"><pre><code class="objc">                                              result: result.mapError(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">373</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">374</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">375</td>
+<td class="src"><pre><code class="objc">    /// Evaluates the specified closure when the `DownloadResponse` is a failure, passing the unwrapped error as a parameter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">376</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">377</td>
+<td class="src"><pre><code class="objc">    /// Use the `tryMapError` function with a closure that may throw an error. For example:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">378</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">379</td>
+<td class="src"><pre><code class="objc">    ///     let possibleData: DownloadResponse&lt;Data&gt; = ...</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">380</td>
+<td class="src"><pre><code class="objc">    ///     let possibleObject = possibleData.tryMapError {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">381</td>
+<td class="src"><pre><code class="objc">    ///         try someFailableFunction(taking: $0)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">382</td>
+<td class="src"><pre><code class="objc">    ///     }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">383</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">384</td>
+<td class="src"><pre><code class="objc">    /// - Parameter transform: A throwing closure that takes the error of the instance.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">385</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">386</td>
+<td class="src"><pre><code class="objc">    /// - Returns: A `DownloadResponse` instance containing the result of the transform.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">387</td>
+<td class="src"><pre><code class="objc">    public func tryMapError&lt;NewFailure: Error&gt;(_ transform: (Failure) throws -&gt; NewFailure) -&gt; DownloadResponse&lt;Success, Error&gt; {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">388</td>
+<td class="src"><pre><code class="objc">        DownloadResponse&lt;Success, Error&gt;(request: request,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">389</td>
+<td class="src"><pre><code class="objc">                                         response: response,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">390</td>
+<td class="src"><pre><code class="objc">                                         fileURL: fileURL,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">391</td>
+<td class="src"><pre><code class="objc">                                         resumeData: resumeData,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">392</td>
+<td class="src"><pre><code class="objc">                                         metrics: metrics,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">393</td>
+<td class="src"><pre><code class="objc">                                         serializationDuration: serializationDuration,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">394</td>
+<td class="src"><pre><code class="objc">                                         result: result.tryMapError(transform))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">395</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">396</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">397</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">398</td>
+<td class="src"><pre><code class="objc">private enum DebugDescription {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">399</td>
+<td class="src"><pre><code class="objc">    static func description(of request: URLRequest) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">400</td>
+<td class="src"><pre><code class="objc">        let requestSummary = "\(request.httpMethod!) \(request)"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">401</td>
+<td class="src"><pre><code class="objc">        let requestHeadersDescription = DebugDescription.description(for: request.headers)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">402</td>
+<td class="src"><pre><code class="objc">        let requestBodyDescription = DebugDescription.description(for: request.httpBody, headers: request.headers)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">403</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">404</td>
+<td class="src"><pre><code class="objc">        return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">405</td>
+<td class="src"><pre><code class="objc">        [Request]: \(requestSummary)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">406</td>
+<td class="src"><pre><code class="objc">            \(requestHeadersDescription.indentingNewlines())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">407</td>
+<td class="src"><pre><code class="objc">            \(requestBodyDescription.indentingNewlines())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">408</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">409</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">410</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">411</td>
+<td class="src"><pre><code class="objc">    static func description(of response: HTTPURLResponse) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">412</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">413</td>
+<td class="src"><pre><code class="objc">        [Response]:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">414</td>
+<td class="src"><pre><code class="objc">            [Status Code]: \(response.statusCode)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">415</td>
+<td class="src"><pre><code class="objc">            \(DebugDescription.description(for: response.headers).indentingNewlines())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">416</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">417</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">418</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">419</td>
+<td class="src"><pre><code class="objc">    static func description(for headers: HTTPHeaders) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">420</td>
+<td class="src"><pre><code class="objc">        guard !headers.isEmpty else { return "[Headers]: None" }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">421</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">422</td>
+<td class="src"><pre><code class="objc">        let headerDescription = "\(headers.sorted())".indentingNewlines()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">423</td>
+<td class="src"><pre><code class="objc">        return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">424</td>
+<td class="src"><pre><code class="objc">        [Headers]:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">425</td>
+<td class="src"><pre><code class="objc">            \(headerDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">426</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">427</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">428</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">429</td>
+<td class="src"><pre><code class="objc">    static func description(for data: Data?,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">430</td>
+<td class="src"><pre><code class="objc">                            headers: HTTPHeaders,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">431</td>
+<td class="src"><pre><code class="objc">                            allowingPrintableTypes printableTypes: [String] = ["json", "xml", "text"],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">432</td>
+<td class="src"><pre><code class="objc">                            maximumLength: Int = 100_000) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">433</td>
+<td class="src"><pre><code class="objc">        guard let data = data, !data.isEmpty else { return "[Body]: None" }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">434</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">435</td>
+<td class="src"><pre><code class="objc">        guard</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">436</td>
+<td class="src"><pre><code class="objc">            data.count &lt;= maximumLength,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">437</td>
+<td class="src"><pre><code class="objc">            printableTypes.compactMap({ headers["Content-Type"]?.contains($0) }).contains(true)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">438</td>
+<td class="src"><pre><code class="objc">        else { return "[Body]: \(data.count) bytes" }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">439</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">440</td>
+<td class="src"><pre><code class="objc">        return """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">441</td>
+<td class="src"><pre><code class="objc">        [Body]:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">442</td>
+<td class="src"><pre><code class="objc">            \(String(decoding: data, as: UTF8.self)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">443</td>
+<td class="src"><pre><code class="objc">            .trimmingCharacters(in: .whitespacesAndNewlines)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">444</td>
+<td class="src"><pre><code class="objc">            .indentingNewlines())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">445</td>
+<td class="src"><pre><code class="objc">        """</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">446</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">447</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">448</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">449</td>
+<td class="src"><pre><code class="objc">extension String {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">450</td>
+<td class="src"><pre><code class="objc">    fileprivate func indentingNewlines(by spaceCount: Int = 4) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">451</td>
+<td class="src"><pre><code class="objc">        let spaces = String(repeating: " ", count: spaceCount)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">452</td>
+<td class="src"><pre><code class="objc">        return replacingOccurrences(of: "\n", with: "\n\(spaces)")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">453</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">454</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2021 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

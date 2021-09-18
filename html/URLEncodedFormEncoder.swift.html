@@ -1,0 +1,4902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>URLEncodedFormEncoder.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "URLEncodedFormEncoder.swift" : </span><span>Lines: </span><span class="cov_low">0.00%</span><span> Branches: </span><span class="cov_low">0.00%</span>
+</h2>
+<h4 class="cov_subtitle">(0 of 557 relevant lines covered)</h4>
+<h4 class="cov_filepath">../../Library/Developer/Xcode/DerivedData/server-driven-ui-ios-dpdbyuhldehuondfhutxcvvbrvtz/SourcePackages/checkouts/Alamofire/Source/URLEncodedFormEncoder.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc">//  URLEncodedFormEncoder.swift</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">//  Copyright (c) 2019 Alamofire Software Foundation (http://alamofire.org/)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">//  Permission is hereby granted, free of charge, to any person obtaining a copy</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc">//  of this software and associated documentation files (the "Software"), to deal</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">//  in the Software without restriction, including without limitation the rights</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc">//  copies of the Software, and to permit persons to whom the Software is</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc">//  furnished to do so, subject to the following conditions:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">//  The above copyright notice and this permission notice shall be included in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc">//  all copies or substantial portions of the Software.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc">/// An object that encodes instances into URL-encoded query strings.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">/// There is no published specification for how to encode collection types. By default, the convention of appending</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc">/// `[]` to the key for array values (`foo[]=1&amp;foo[]=2`), and appending the key surrounded by square brackets for</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc">/// nested dictionary values (`foo[bar]=baz`) is used. Optionally, `ArrayEncoding` can be used to omit the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc">/// square brackets appended to array keys.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">/// `BoolEncoding` can be used to configure how `Bool` values are encoded. The default behavior is to encode</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc">/// `true` as 1 and `false` as 0.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">37</td>
+<td class="src"><pre><code class="objc">/// `DateEncoding` can be used to configure how `Date` values are encoded. By default, the `.deferredToDate`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">38</td>
+<td class="src"><pre><code class="objc">/// strategy is used, which formats dates from their structure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">39</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">40</td>
+<td class="src"><pre><code class="objc">/// `SpaceEncoding` can be used to configure how spaces are encoded. Modern encodings use percent replacement (`%20`),</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">41</td>
+<td class="src"><pre><code class="objc">/// while older encodings may expect spaces to be replaced with `+`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">42</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">43</td>
+<td class="src"><pre><code class="objc">/// This type is largely based on Vapor's [`url-encoded-form`](https://github.com/vapor/url-encoded-form) project.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">44</td>
+<td class="src"><pre><code class="objc">public final class URLEncodedFormEncoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">45</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for `Array` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">46</td>
+<td class="src"><pre><code class="objc">    public enum ArrayEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc">        /// An empty set of square brackets ("[]") are appended to the key for every value. This is the default encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">48</td>
+<td class="src"><pre><code class="objc">        case brackets</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">49</td>
+<td class="src"><pre><code class="objc">        /// No brackets are appended to the key and the key is encoded as is.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">50</td>
+<td class="src"><pre><code class="objc">        case noBrackets</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">51</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">52</td>
+<td class="src"><pre><code class="objc">        /// Encodes the key according to the encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">53</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">54</td>
+<td class="src"><pre><code class="objc">        /// - Parameter key: The `key` to encode.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">55</td>
+<td class="src"><pre><code class="objc">        /// - Returns:       The encoded key.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">        func encode(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">            case .brackets: return "\(key)[]"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">            case .noBrackets: return key</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">60</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">61</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for `Bool` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">    public enum BoolEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">        /// Encodes `true` as `1`, `false` as `0`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">        case numeric</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">        /// Encodes `true` as "true", `false` as "false". This is the default encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">        case literal</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">        /// Encodes the given `Bool` as a `String`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc">        /// - Parameter value: The `Bool` to encode.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">        /// - Returns:         The encoded `String`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc">        func encode(_ value: Bool) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">            case .numeric: return value ? "1" : "0"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">            case .literal: return value ? "true" : "false"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for `Data` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">    public enum DataEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc">        /// Defers encoding to the `Data` type.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc">        case deferredToData</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Data` as a Base64-encoded string. This is the default encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc">        case base64</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">        /// Encode the `Data` as a custom value encoded by the given closure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc">        case custom((Data) throws -&gt; String)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Data` according to the encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">94</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">95</td>
+<td class="src"><pre><code class="objc">        /// - Parameter data: The `Data` to encode.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">96</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">97</td>
+<td class="src"><pre><code class="objc">        /// - Returns:        The encoded `String`, or `nil` if the `Data` should be encoded according to its</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">98</td>
+<td class="src"><pre><code class="objc">        ///                   `Encodable` implementation.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">99</td>
+<td class="src"><pre><code class="objc">        func encode(_ data: Data) throws -&gt; String? {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">100</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">101</td>
+<td class="src"><pre><code class="objc">            case .deferredToData: return nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">102</td>
+<td class="src"><pre><code class="objc">            case .base64: return data.base64EncodedString()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">103</td>
+<td class="src"><pre><code class="objc">            case let .custom(encoding): return try encoding(data)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">104</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">105</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">106</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">107</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">108</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for `Date` values.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">109</td>
+<td class="src"><pre><code class="objc">    public enum DateEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">110</td>
+<td class="src"><pre><code class="objc">        /// ISO8601 and RFC3339 formatter.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">111</td>
+<td class="src"><pre><code class="objc">        private static let iso8601Formatter: ISO8601DateFormatter = {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">112</td>
+<td class="src"><pre><code class="objc">            let formatter = ISO8601DateFormatter()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">113</td>
+<td class="src"><pre><code class="objc">            formatter.formatOptions = .withInternetDateTime</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">114</td>
+<td class="src"><pre><code class="objc">            return formatter</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">115</td>
+<td class="src"><pre><code class="objc">        }()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">116</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">117</td>
+<td class="src"><pre><code class="objc">        /// Defers encoding to the `Date` type. This is the default encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">118</td>
+<td class="src"><pre><code class="objc">        case deferredToDate</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">119</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Date`s as seconds since midnight UTC on January 1, 1970.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">120</td>
+<td class="src"><pre><code class="objc">        case secondsSince1970</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">121</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Date`s as milliseconds since midnight UTC on January 1, 1970.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">122</td>
+<td class="src"><pre><code class="objc">        case millisecondsSince1970</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">123</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Date`s according to the ISO8601 and RFC3339 standards.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">124</td>
+<td class="src"><pre><code class="objc">        case iso8601</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">125</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Date`s using the given `DateFormatter`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">126</td>
+<td class="src"><pre><code class="objc">        case formatted(DateFormatter)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">127</td>
+<td class="src"><pre><code class="objc">        /// Encodes `Date`s using the given closure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">128</td>
+<td class="src"><pre><code class="objc">        case custom((Date) throws -&gt; String)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">129</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">130</td>
+<td class="src"><pre><code class="objc">        /// Encodes the date according to the encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">131</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">132</td>
+<td class="src"><pre><code class="objc">        /// - Parameter date: The `Date` to encode.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">133</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">134</td>
+<td class="src"><pre><code class="objc">        /// - Returns:        The encoded `String`, or `nil` if the `Date` should be encoded according to its</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">135</td>
+<td class="src"><pre><code class="objc">        ///                   `Encodable` implementation.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">136</td>
+<td class="src"><pre><code class="objc">        func encode(_ date: Date) throws -&gt; String? {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">137</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">138</td>
+<td class="src"><pre><code class="objc">            case .deferredToDate:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">139</td>
+<td class="src"><pre><code class="objc">                return nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">140</td>
+<td class="src"><pre><code class="objc">            case .secondsSince1970:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">141</td>
+<td class="src"><pre><code class="objc">                return String(date.timeIntervalSince1970)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">142</td>
+<td class="src"><pre><code class="objc">            case .millisecondsSince1970:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">143</td>
+<td class="src"><pre><code class="objc">                return String(date.timeIntervalSince1970 * 1000.0)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">144</td>
+<td class="src"><pre><code class="objc">            case .iso8601:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">145</td>
+<td class="src"><pre><code class="objc">                return DateEncoding.iso8601Formatter.string(from: date)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">146</td>
+<td class="src"><pre><code class="objc">            case let .formatted(formatter):</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">147</td>
+<td class="src"><pre><code class="objc">                return formatter.string(from: date)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">148</td>
+<td class="src"><pre><code class="objc">            case let .custom(closure):</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">149</td>
+<td class="src"><pre><code class="objc">                return try closure(date)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">150</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">151</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">152</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">153</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">154</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for keys.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">155</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">156</td>
+<td class="src"><pre><code class="objc">    /// This type is derived from [`JSONEncoder`'s `KeyEncodingStrategy`](https://github.com/apple/swift/blob/6aa313b8dd5f05135f7f878eccc1db6f9fbe34ff/stdlib/public/Darwin/Foundation/JSONEncoder.swift#L128)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">157</td>
+<td class="src"><pre><code class="objc">    /// and [`XMLEncoder`s `KeyEncodingStrategy`](https://github.com/MaxDesiatov/XMLCoder/blob/master/Sources/XMLCoder/Encoder/XMLEncoder.swift#L102).</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">158</td>
+<td class="src"><pre><code class="objc">    public enum KeyEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">159</td>
+<td class="src"><pre><code class="objc">        /// Use the keys specified by each type. This is the default encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">160</td>
+<td class="src"><pre><code class="objc">        case useDefaultKeys</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">161</td>
+<td class="src"><pre><code class="objc">        /// Convert from "camelCaseKeys" to "snake_case_keys" before writing a key.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">162</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">163</td>
+<td class="src"><pre><code class="objc">        /// Capital characters are determined by testing membership in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">164</td>
+<td class="src"><pre><code class="objc">        /// `CharacterSet.uppercaseLetters` and `CharacterSet.lowercaseLetters`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">165</td>
+<td class="src"><pre><code class="objc">        /// (Unicode General Categories Lu and Lt).</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">166</td>
+<td class="src"><pre><code class="objc">        /// The conversion to lower case uses `Locale.system`, also known as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">167</td>
+<td class="src"><pre><code class="objc">        /// the ICU "root" locale. This means the result is consistent</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">168</td>
+<td class="src"><pre><code class="objc">        /// regardless of the current user's locale and language preferences.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">169</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">170</td>
+<td class="src"><pre><code class="objc">        /// Converting from camel case to snake case:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">171</td>
+<td class="src"><pre><code class="objc">        /// 1. Splits words at the boundary of lower-case to upper-case</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">172</td>
+<td class="src"><pre><code class="objc">        /// 2. Inserts `_` between words</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">173</td>
+<td class="src"><pre><code class="objc">        /// 3. Lowercases the entire string</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">174</td>
+<td class="src"><pre><code class="objc">        /// 4. Preserves starting and ending `_`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">175</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">176</td>
+<td class="src"><pre><code class="objc">        /// For example, `oneTwoThree` becomes `one_two_three`. `_oneTwoThree_` becomes `_one_two_three_`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">177</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">178</td>
+<td class="src"><pre><code class="objc">        /// - Note: Using a key encoding strategy has a nominal performance cost, as each string key has to be converted.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">179</td>
+<td class="src"><pre><code class="objc">        case convertToSnakeCase</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">180</td>
+<td class="src"><pre><code class="objc">        /// Same as convertToSnakeCase, but using `-` instead of `_`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">181</td>
+<td class="src"><pre><code class="objc">        /// For example `oneTwoThree` becomes `one-two-three`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">182</td>
+<td class="src"><pre><code class="objc">        case convertToKebabCase</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">183</td>
+<td class="src"><pre><code class="objc">        /// Capitalize the first letter only.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">184</td>
+<td class="src"><pre><code class="objc">        /// For example `oneTwoThree` becomes  `OneTwoThree`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">185</td>
+<td class="src"><pre><code class="objc">        case capitalized</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">186</td>
+<td class="src"><pre><code class="objc">        /// Uppercase all letters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">187</td>
+<td class="src"><pre><code class="objc">        /// For example `oneTwoThree` becomes  `ONETWOTHREE`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">188</td>
+<td class="src"><pre><code class="objc">        case uppercased</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">189</td>
+<td class="src"><pre><code class="objc">        /// Lowercase all letters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">190</td>
+<td class="src"><pre><code class="objc">        /// For example `oneTwoThree` becomes  `onetwothree`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">191</td>
+<td class="src"><pre><code class="objc">        case lowercased</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">192</td>
+<td class="src"><pre><code class="objc">        /// A custom encoding using the provided closure.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">193</td>
+<td class="src"><pre><code class="objc">        case custom((String) -&gt; String)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">194</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">195</td>
+<td class="src"><pre><code class="objc">        func encode(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">196</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">197</td>
+<td class="src"><pre><code class="objc">            case .useDefaultKeys: return key</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">198</td>
+<td class="src"><pre><code class="objc">            case .convertToSnakeCase: return convertToSnakeCase(key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">199</td>
+<td class="src"><pre><code class="objc">            case .convertToKebabCase: return convertToKebabCase(key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">200</td>
+<td class="src"><pre><code class="objc">            case .capitalized: return String(key.prefix(1).uppercased() + key.dropFirst())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">201</td>
+<td class="src"><pre><code class="objc">            case .uppercased: return key.uppercased()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">202</td>
+<td class="src"><pre><code class="objc">            case .lowercased: return key.lowercased()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">203</td>
+<td class="src"><pre><code class="objc">            case let .custom(encoding): return encoding(key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">204</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">205</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">206</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">207</td>
+<td class="src"><pre><code class="objc">        private func convertToSnakeCase(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">208</td>
+<td class="src"><pre><code class="objc">            convert(key, usingSeparator: "_")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">209</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">210</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">211</td>
+<td class="src"><pre><code class="objc">        private func convertToKebabCase(_ key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">212</td>
+<td class="src"><pre><code class="objc">            convert(key, usingSeparator: "-")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">213</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">214</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">215</td>
+<td class="src"><pre><code class="objc">        private func convert(_ key: String, usingSeparator separator: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">216</td>
+<td class="src"><pre><code class="objc">            guard !key.isEmpty else { return key }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">217</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">218</td>
+<td class="src"><pre><code class="objc">            var words: [Range&lt;String.Index&gt;] = []</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">219</td>
+<td class="src"><pre><code class="objc">            // The general idea of this algorithm is to split words on</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">220</td>
+<td class="src"><pre><code class="objc">            // transition from lower to upper case, then on transition of &gt;1</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">221</td>
+<td class="src"><pre><code class="objc">            // upper case characters to lowercase</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">222</td>
+<td class="src"><pre><code class="objc">            //</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">223</td>
+<td class="src"><pre><code class="objc">            // myProperty -&gt; my_property</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">224</td>
+<td class="src"><pre><code class="objc">            // myURLProperty -&gt; my_url_property</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">225</td>
+<td class="src"><pre><code class="objc">            //</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">226</td>
+<td class="src"><pre><code class="objc">            // It is assumed, per Swift naming conventions, that the first character of the key is lowercase.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">227</td>
+<td class="src"><pre><code class="objc">            var wordStart = key.startIndex</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">228</td>
+<td class="src"><pre><code class="objc">            var searchRange = key.index(after: wordStart)..&lt;key.endIndex</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">229</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">230</td>
+<td class="src"><pre><code class="objc">            // Find next uppercase character</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">231</td>
+<td class="src"><pre><code class="objc">            while let upperCaseRange = key.rangeOfCharacter(from: CharacterSet.uppercaseLetters, options: [], range: searchRange) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">232</td>
+<td class="src"><pre><code class="objc">                let untilUpperCase = wordStart..&lt;upperCaseRange.lowerBound</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">233</td>
+<td class="src"><pre><code class="objc">                words.append(untilUpperCase)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">234</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">235</td>
+<td class="src"><pre><code class="objc">                // Find next lowercase character</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">236</td>
+<td class="src"><pre><code class="objc">                searchRange = upperCaseRange.lowerBound..&lt;searchRange.upperBound</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">237</td>
+<td class="src"><pre><code class="objc">                guard let lowerCaseRange = key.rangeOfCharacter(from: CharacterSet.lowercaseLetters, options: [], range: searchRange) else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">238</td>
+<td class="src"><pre><code class="objc">                    // There are no more lower case letters. Just end here.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">239</td>
+<td class="src"><pre><code class="objc">                    wordStart = searchRange.lowerBound</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">240</td>
+<td class="src"><pre><code class="objc">                    break</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">241</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">242</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">243</td>
+<td class="src"><pre><code class="objc">                // Is the next lowercase letter more than 1 after the uppercase?</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">244</td>
+<td class="src"><pre><code class="objc">                // If so, we encountered a group of uppercase letters that we</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">245</td>
+<td class="src"><pre><code class="objc">                // should treat as its own word</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">246</td>
+<td class="src"><pre><code class="objc">                let nextCharacterAfterCapital = key.index(after: upperCaseRange.lowerBound)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">247</td>
+<td class="src"><pre><code class="objc">                if lowerCaseRange.lowerBound == nextCharacterAfterCapital {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">248</td>
+<td class="src"><pre><code class="objc">                    // The next character after capital is a lower case character and therefore not a word boundary.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">249</td>
+<td class="src"><pre><code class="objc">                    // Continue searching for the next upper case for the boundary.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">250</td>
+<td class="src"><pre><code class="objc">                    wordStart = upperCaseRange.lowerBound</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">251</td>
+<td class="src"><pre><code class="objc">                } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">252</td>
+<td class="src"><pre><code class="objc">                    // There was a range of &gt;1 capital letters. Turn those into a word, stopping at the capital before the lower case character.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">253</td>
+<td class="src"><pre><code class="objc">                    let beforeLowerIndex = key.index(before: lowerCaseRange.lowerBound)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">254</td>
+<td class="src"><pre><code class="objc">                    words.append(upperCaseRange.lowerBound..&lt;beforeLowerIndex)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">255</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">256</td>
+<td class="src"><pre><code class="objc">                    // Next word starts at the capital before the lowercase we just found</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">257</td>
+<td class="src"><pre><code class="objc">                    wordStart = beforeLowerIndex</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">258</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">259</td>
+<td class="src"><pre><code class="objc">                searchRange = lowerCaseRange.upperBound..&lt;searchRange.upperBound</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">260</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">261</td>
+<td class="src"><pre><code class="objc">            words.append(wordStart..&lt;searchRange.upperBound)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">262</td>
+<td class="src"><pre><code class="objc">            let result = words.map { range in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">263</td>
+<td class="src"><pre><code class="objc">                key[range].lowercased()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">264</td>
+<td class="src"><pre><code class="objc">            }.joined(separator: separator)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">265</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">266</td>
+<td class="src"><pre><code class="objc">            return result</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">267</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">268</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">269</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">270</td>
+<td class="src"><pre><code class="objc">    /// Encoding to use for spaces.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">271</td>
+<td class="src"><pre><code class="objc">    public enum SpaceEncoding {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">272</td>
+<td class="src"><pre><code class="objc">        /// Encodes spaces according to normal percent escaping rules (%20).</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">273</td>
+<td class="src"><pre><code class="objc">        case percentEscaped</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">274</td>
+<td class="src"><pre><code class="objc">        /// Encodes spaces as `+`,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">275</td>
+<td class="src"><pre><code class="objc">        case plusReplaced</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">276</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">277</td>
+<td class="src"><pre><code class="objc">        /// Encodes the string according to the encoding.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">278</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">279</td>
+<td class="src"><pre><code class="objc">        /// - Parameter string: The `String` to encode.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">280</td>
+<td class="src"><pre><code class="objc">        ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">281</td>
+<td class="src"><pre><code class="objc">        /// - Returns:          The encoded `String`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">282</td>
+<td class="src"><pre><code class="objc">        func encode(_ string: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">283</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">284</td>
+<td class="src"><pre><code class="objc">            case .percentEscaped: return string.replacingOccurrences(of: " ", with: "%20")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">285</td>
+<td class="src"><pre><code class="objc">            case .plusReplaced: return string.replacingOccurrences(of: " ", with: "+")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">286</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">287</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">288</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">289</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">290</td>
+<td class="src"><pre><code class="objc">    /// `URLEncodedFormEncoder` error.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">291</td>
+<td class="src"><pre><code class="objc">    public enum Error: Swift.Error {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">292</td>
+<td class="src"><pre><code class="objc">        /// An invalid root object was created by the encoder. Only keyed values are valid.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">293</td>
+<td class="src"><pre><code class="objc">        case invalidRootObject(String)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">294</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">295</td>
+<td class="src"><pre><code class="objc">        var localizedDescription: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">296</td>
+<td class="src"><pre><code class="objc">            switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">297</td>
+<td class="src"><pre><code class="objc">            case let .invalidRootObject(object):</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">298</td>
+<td class="src"><pre><code class="objc">                return "URLEncodedFormEncoder requires keyed root object. Received \(object) instead."</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">299</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">300</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">301</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">302</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">303</td>
+<td class="src"><pre><code class="objc">    /// Whether or not to sort the encoded key value pairs.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">304</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">305</td>
+<td class="src"><pre><code class="objc">    /// - Note: This setting ensures a consistent ordering for all encodings of the same parameters. When set to `false`,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">306</td>
+<td class="src"><pre><code class="objc">    ///         encoded `Dictionary` values may have a different encoded order each time they're encoded due to</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">307</td>
+<td class="src"><pre><code class="objc">    ///       ` Dictionary`'s random storage order, but `Encodable` types will maintain their encoded order.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">308</td>
+<td class="src"><pre><code class="objc">    public let alphabetizeKeyValuePairs: Bool</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">309</td>
+<td class="src"><pre><code class="objc">    /// The `ArrayEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">310</td>
+<td class="src"><pre><code class="objc">    public let arrayEncoding: ArrayEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">311</td>
+<td class="src"><pre><code class="objc">    /// The `BoolEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">312</td>
+<td class="src"><pre><code class="objc">    public let boolEncoding: BoolEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">313</td>
+<td class="src"><pre><code class="objc">    /// THe `DataEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">314</td>
+<td class="src"><pre><code class="objc">    public let dataEncoding: DataEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">315</td>
+<td class="src"><pre><code class="objc">    /// The `DateEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">316</td>
+<td class="src"><pre><code class="objc">    public let dateEncoding: DateEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">317</td>
+<td class="src"><pre><code class="objc">    /// The `KeyEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">318</td>
+<td class="src"><pre><code class="objc">    public let keyEncoding: KeyEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">319</td>
+<td class="src"><pre><code class="objc">    /// The `SpaceEncoding` to use.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">320</td>
+<td class="src"><pre><code class="objc">    public let spaceEncoding: SpaceEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">321</td>
+<td class="src"><pre><code class="objc">    /// The `CharacterSet` of allowed (non-escaped) characters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">322</td>
+<td class="src"><pre><code class="objc">    public var allowedCharacters: CharacterSet</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">323</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">324</td>
+<td class="src"><pre><code class="objc">    /// Creates an instance from the supplied parameters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">325</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">326</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">327</td>
+<td class="src"><pre><code class="objc">    ///   - alphabetizeKeyValuePairs: Whether or not to sort the encoded key value pairs. `true` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">328</td>
+<td class="src"><pre><code class="objc">    ///   - arrayEncoding:            The `ArrayEncoding` to use. `.brackets` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">329</td>
+<td class="src"><pre><code class="objc">    ///   - boolEncoding:             The `BoolEncoding` to use. `.numeric` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">330</td>
+<td class="src"><pre><code class="objc">    ///   - dataEncoding:             The `DataEncoding` to use. `.base64` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">331</td>
+<td class="src"><pre><code class="objc">    ///   - dateEncoding:             The `DateEncoding` to use. `.deferredToDate` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">332</td>
+<td class="src"><pre><code class="objc">    ///   - keyEncoding:              The `KeyEncoding` to use. `.useDefaultKeys` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">333</td>
+<td class="src"><pre><code class="objc">    ///   - spaceEncoding:            The `SpaceEncoding` to use. `.percentEscaped` by default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">334</td>
+<td class="src"><pre><code class="objc">    ///   - allowedCharacters:        The `CharacterSet` of allowed (non-escaped) characters. `.afURLQueryAllowed` by</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">335</td>
+<td class="src"><pre><code class="objc">    ///                               default.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">336</td>
+<td class="src"><pre><code class="objc">    public init(alphabetizeKeyValuePairs: Bool = true,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">337</td>
+<td class="src"><pre><code class="objc">                arrayEncoding: ArrayEncoding = .brackets,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">338</td>
+<td class="src"><pre><code class="objc">                boolEncoding: BoolEncoding = .numeric,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">339</td>
+<td class="src"><pre><code class="objc">                dataEncoding: DataEncoding = .base64,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">340</td>
+<td class="src"><pre><code class="objc">                dateEncoding: DateEncoding = .deferredToDate,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">341</td>
+<td class="src"><pre><code class="objc">                keyEncoding: KeyEncoding = .useDefaultKeys,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">342</td>
+<td class="src"><pre><code class="objc">                spaceEncoding: SpaceEncoding = .percentEscaped,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">343</td>
+<td class="src"><pre><code class="objc">                allowedCharacters: CharacterSet = .afURLQueryAllowed) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">344</td>
+<td class="src"><pre><code class="objc">        self.alphabetizeKeyValuePairs = alphabetizeKeyValuePairs</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">345</td>
+<td class="src"><pre><code class="objc">        self.arrayEncoding = arrayEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">346</td>
+<td class="src"><pre><code class="objc">        self.boolEncoding = boolEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">347</td>
+<td class="src"><pre><code class="objc">        self.dataEncoding = dataEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">348</td>
+<td class="src"><pre><code class="objc">        self.dateEncoding = dateEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">349</td>
+<td class="src"><pre><code class="objc">        self.keyEncoding = keyEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">350</td>
+<td class="src"><pre><code class="objc">        self.spaceEncoding = spaceEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">351</td>
+<td class="src"><pre><code class="objc">        self.allowedCharacters = allowedCharacters</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">352</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">353</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">354</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Encodable) throws -&gt; URLEncodedFormComponent {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">355</td>
+<td class="src"><pre><code class="objc">        let context = URLEncodedFormContext(.object([]))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">356</td>
+<td class="src"><pre><code class="objc">        let encoder = _URLEncodedFormEncoder(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">357</td>
+<td class="src"><pre><code class="objc">                                             boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">358</td>
+<td class="src"><pre><code class="objc">                                             dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">359</td>
+<td class="src"><pre><code class="objc">                                             dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">360</td>
+<td class="src"><pre><code class="objc">        try value.encode(to: encoder)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">361</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">362</td>
+<td class="src"><pre><code class="objc">        return context.component</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">363</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">364</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">365</td>
+<td class="src"><pre><code class="objc">    /// Encodes the `value` as a URL form encoded `String`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">366</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">367</td>
+<td class="src"><pre><code class="objc">    /// - Parameter value: The `Encodable` value.`</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">368</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">369</td>
+<td class="src"><pre><code class="objc">    /// - Returns:         The encoded `String`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">370</td>
+<td class="src"><pre><code class="objc">    /// - Throws:          An `Error` or `EncodingError` instance if encoding fails.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">371</td>
+<td class="src"><pre><code class="objc">    public func encode(_ value: Encodable) throws -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">372</td>
+<td class="src"><pre><code class="objc">        let component: URLEncodedFormComponent = try encode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">373</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">374</td>
+<td class="src"><pre><code class="objc">        guard case let .object(object) = component else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">375</td>
+<td class="src"><pre><code class="objc">            throw Error.invalidRootObject("\(component)")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">376</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">377</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">378</td>
+<td class="src"><pre><code class="objc">        let serializer = URLEncodedFormSerializer(alphabetizeKeyValuePairs: alphabetizeKeyValuePairs,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">379</td>
+<td class="src"><pre><code class="objc">                                                  arrayEncoding: arrayEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">380</td>
+<td class="src"><pre><code class="objc">                                                  keyEncoding: keyEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">381</td>
+<td class="src"><pre><code class="objc">                                                  spaceEncoding: spaceEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">382</td>
+<td class="src"><pre><code class="objc">                                                  allowedCharacters: allowedCharacters)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">383</td>
+<td class="src"><pre><code class="objc">        let query = serializer.serialize(object)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">384</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">385</td>
+<td class="src"><pre><code class="objc">        return query</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">386</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">387</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">388</td>
+<td class="src"><pre><code class="objc">    /// Encodes the value as `Data`. This is performed by first creating an encoded `String` and then returning the</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">389</td>
+<td class="src"><pre><code class="objc">    /// `.utf8` data.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">390</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">391</td>
+<td class="src"><pre><code class="objc">    /// - Parameter value: The `Encodable` value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">392</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">393</td>
+<td class="src"><pre><code class="objc">    /// - Returns:         The encoded `Data`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">394</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">395</td>
+<td class="src"><pre><code class="objc">    /// - Throws:          An `Error` or `EncodingError` instance if encoding fails.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">396</td>
+<td class="src"><pre><code class="objc">    public func encode(_ value: Encodable) throws -&gt; Data {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">397</td>
+<td class="src"><pre><code class="objc">        let string: String = try encode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">398</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">399</td>
+<td class="src"><pre><code class="objc">        return Data(string.utf8)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">400</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">401</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">402</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">403</td>
+<td class="src"><pre><code class="objc">final class _URLEncodedFormEncoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">404</td>
+<td class="src"><pre><code class="objc">    var codingPath: [CodingKey]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">405</td>
+<td class="src"><pre><code class="objc">    // Returns an empty dictionary, as this encoder doesn't support userInfo.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">406</td>
+<td class="src"><pre><code class="objc">    var userInfo: [CodingUserInfoKey: Any] { [:] }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">407</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">408</td>
+<td class="src"><pre><code class="objc">    let context: URLEncodedFormContext</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">409</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">410</td>
+<td class="src"><pre><code class="objc">    private let boolEncoding: URLEncodedFormEncoder.BoolEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">411</td>
+<td class="src"><pre><code class="objc">    private let dataEncoding: URLEncodedFormEncoder.DataEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">412</td>
+<td class="src"><pre><code class="objc">    private let dateEncoding: URLEncodedFormEncoder.DateEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">413</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">414</td>
+<td class="src"><pre><code class="objc">    init(context: URLEncodedFormContext,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">415</td>
+<td class="src"><pre><code class="objc">         codingPath: [CodingKey] = [],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">416</td>
+<td class="src"><pre><code class="objc">         boolEncoding: URLEncodedFormEncoder.BoolEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">417</td>
+<td class="src"><pre><code class="objc">         dataEncoding: URLEncodedFormEncoder.DataEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">418</td>
+<td class="src"><pre><code class="objc">         dateEncoding: URLEncodedFormEncoder.DateEncoding) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">419</td>
+<td class="src"><pre><code class="objc">        self.context = context</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">420</td>
+<td class="src"><pre><code class="objc">        self.codingPath = codingPath</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">421</td>
+<td class="src"><pre><code class="objc">        self.boolEncoding = boolEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">422</td>
+<td class="src"><pre><code class="objc">        self.dataEncoding = dataEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">423</td>
+<td class="src"><pre><code class="objc">        self.dateEncoding = dateEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">424</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">425</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">426</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">427</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder: Encoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">428</td>
+<td class="src"><pre><code class="objc">    func container&lt;Key&gt;(keyedBy type: Key.Type) -&gt; KeyedEncodingContainer&lt;Key&gt; where Key: CodingKey {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">429</td>
+<td class="src"><pre><code class="objc">        let container = _URLEncodedFormEncoder.KeyedContainer&lt;Key&gt;(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">430</td>
+<td class="src"><pre><code class="objc">                                                                   codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">431</td>
+<td class="src"><pre><code class="objc">                                                                   boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">432</td>
+<td class="src"><pre><code class="objc">                                                                   dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">433</td>
+<td class="src"><pre><code class="objc">                                                                   dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">434</td>
+<td class="src"><pre><code class="objc">        return KeyedEncodingContainer(container)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">435</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">436</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">437</td>
+<td class="src"><pre><code class="objc">    func unkeyedContainer() -&gt; UnkeyedEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">438</td>
+<td class="src"><pre><code class="objc">        _URLEncodedFormEncoder.UnkeyedContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">439</td>
+<td class="src"><pre><code class="objc">                                                codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">440</td>
+<td class="src"><pre><code class="objc">                                                boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">441</td>
+<td class="src"><pre><code class="objc">                                                dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">442</td>
+<td class="src"><pre><code class="objc">                                                dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">443</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">444</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">445</td>
+<td class="src"><pre><code class="objc">    func singleValueContainer() -&gt; SingleValueEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">446</td>
+<td class="src"><pre><code class="objc">        _URLEncodedFormEncoder.SingleValueContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">447</td>
+<td class="src"><pre><code class="objc">                                                    codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">448</td>
+<td class="src"><pre><code class="objc">                                                    boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">449</td>
+<td class="src"><pre><code class="objc">                                                    dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">450</td>
+<td class="src"><pre><code class="objc">                                                    dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">451</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">452</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">453</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">454</td>
+<td class="src"><pre><code class="objc">final class URLEncodedFormContext {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">455</td>
+<td class="src"><pre><code class="objc">    var component: URLEncodedFormComponent</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">456</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">457</td>
+<td class="src"><pre><code class="objc">    init(_ component: URLEncodedFormComponent) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">458</td>
+<td class="src"><pre><code class="objc">        self.component = component</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">459</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">460</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">461</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">462</td>
+<td class="src"><pre><code class="objc">enum URLEncodedFormComponent {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">463</td>
+<td class="src"><pre><code class="objc">    typealias Object = [(key: String, value: URLEncodedFormComponent)]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">464</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">465</td>
+<td class="src"><pre><code class="objc">    case string(String)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">466</td>
+<td class="src"><pre><code class="objc">    case array([URLEncodedFormComponent])</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">467</td>
+<td class="src"><pre><code class="objc">    case object(Object)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">468</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">469</td>
+<td class="src"><pre><code class="objc">    /// Converts self to an `[URLEncodedFormData]` or returns `nil` if not convertible.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">470</td>
+<td class="src"><pre><code class="objc">    var array: [URLEncodedFormComponent]? {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">471</td>
+<td class="src"><pre><code class="objc">        switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">472</td>
+<td class="src"><pre><code class="objc">        case let .array(array): return array</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">473</td>
+<td class="src"><pre><code class="objc">        default: return nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">474</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">475</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">476</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">477</td>
+<td class="src"><pre><code class="objc">    /// Converts self to an `Object` or returns `nil` if not convertible.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">478</td>
+<td class="src"><pre><code class="objc">    var object: Object? {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">479</td>
+<td class="src"><pre><code class="objc">        switch self {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">480</td>
+<td class="src"><pre><code class="objc">        case let .object(object): return object</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">481</td>
+<td class="src"><pre><code class="objc">        default: return nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">482</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">483</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">484</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">485</td>
+<td class="src"><pre><code class="objc">    /// Sets self to the supplied value at a given path.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">486</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">487</td>
+<td class="src"><pre><code class="objc">    ///     data.set(to: "hello", at: ["path", "to", "value"])</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">488</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">489</td>
+<td class="src"><pre><code class="objc">    /// - parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">490</td>
+<td class="src"><pre><code class="objc">    ///     - value: Value of `Self` to set at the supplied path.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">491</td>
+<td class="src"><pre><code class="objc">    ///     - path: `CodingKey` path to update with the supplied value.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">492</td>
+<td class="src"><pre><code class="objc">    public mutating func set(to value: URLEncodedFormComponent, at path: [CodingKey]) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">493</td>
+<td class="src"><pre><code class="objc">        set(&amp;self, to: value, at: path)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">494</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">495</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">496</td>
+<td class="src"><pre><code class="objc">    /// Recursive backing method to `set(to:at:)`.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">497</td>
+<td class="src"><pre><code class="objc">    private func set(_ context: inout URLEncodedFormComponent, to value: URLEncodedFormComponent, at path: [CodingKey]) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">498</td>
+<td class="src"><pre><code class="objc">        guard path.count &gt;= 1 else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">499</td>
+<td class="src"><pre><code class="objc">            context = value</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">500</td>
+<td class="src"><pre><code class="objc">            return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">501</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">502</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">503</td>
+<td class="src"><pre><code class="objc">        let end = path[0]</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">504</td>
+<td class="src"><pre><code class="objc">        var child: URLEncodedFormComponent</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">505</td>
+<td class="src"><pre><code class="objc">        switch path.count {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">506</td>
+<td class="src"><pre><code class="objc">        case 1:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">507</td>
+<td class="src"><pre><code class="objc">            child = value</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">508</td>
+<td class="src"><pre><code class="objc">        case 2...:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">509</td>
+<td class="src"><pre><code class="objc">            if let index = end.intValue {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">510</td>
+<td class="src"><pre><code class="objc">                let array = context.array ?? []</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">511</td>
+<td class="src"><pre><code class="objc">                if array.count &gt; index {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">512</td>
+<td class="src"><pre><code class="objc">                    child = array[index]</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">513</td>
+<td class="src"><pre><code class="objc">                } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">514</td>
+<td class="src"><pre><code class="objc">                    child = .array([])</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">515</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">516</td>
+<td class="src"><pre><code class="objc">                set(&amp;child, to: value, at: Array(path[1...]))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">517</td>
+<td class="src"><pre><code class="objc">            } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">518</td>
+<td class="src"><pre><code class="objc">                child = context.object?.first { $0.key == end.stringValue }?.value ?? .object(.init())</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">519</td>
+<td class="src"><pre><code class="objc">                set(&amp;child, to: value, at: Array(path[1...]))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">520</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">521</td>
+<td class="src"><pre><code class="objc">        default: fatalError("Unreachable")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">522</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">523</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">524</td>
+<td class="src"><pre><code class="objc">        if let index = end.intValue {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">525</td>
+<td class="src"><pre><code class="objc">            if var array = context.array {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">526</td>
+<td class="src"><pre><code class="objc">                if array.count &gt; index {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">527</td>
+<td class="src"><pre><code class="objc">                    array[index] = child</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">528</td>
+<td class="src"><pre><code class="objc">                } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">529</td>
+<td class="src"><pre><code class="objc">                    array.append(child)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">530</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">531</td>
+<td class="src"><pre><code class="objc">                context = .array(array)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">532</td>
+<td class="src"><pre><code class="objc">            } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">533</td>
+<td class="src"><pre><code class="objc">                context = .array([child])</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">534</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">535</td>
+<td class="src"><pre><code class="objc">        } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">536</td>
+<td class="src"><pre><code class="objc">            if var object = context.object {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">537</td>
+<td class="src"><pre><code class="objc">                if let index = object.firstIndex(where: { $0.key == end.stringValue }) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">538</td>
+<td class="src"><pre><code class="objc">                    object[index] = (key: end.stringValue, value: child)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">539</td>
+<td class="src"><pre><code class="objc">                } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">540</td>
+<td class="src"><pre><code class="objc">                    object.append((key: end.stringValue, value: child))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">541</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">542</td>
+<td class="src"><pre><code class="objc">                context = .object(object)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">543</td>
+<td class="src"><pre><code class="objc">            } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">544</td>
+<td class="src"><pre><code class="objc">                context = .object([(key: end.stringValue, value: child)])</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">545</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">546</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">547</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">548</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">549</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">550</td>
+<td class="src"><pre><code class="objc">struct AnyCodingKey: CodingKey, Hashable {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">551</td>
+<td class="src"><pre><code class="objc">    let stringValue: String</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">552</td>
+<td class="src"><pre><code class="objc">    let intValue: Int?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">553</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">554</td>
+<td class="src"><pre><code class="objc">    init?(stringValue: String) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">555</td>
+<td class="src"><pre><code class="objc">        self.stringValue = stringValue</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">556</td>
+<td class="src"><pre><code class="objc">        intValue = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">557</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">558</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">559</td>
+<td class="src"><pre><code class="objc">    init?(intValue: Int) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">560</td>
+<td class="src"><pre><code class="objc">        stringValue = "\(intValue)"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">561</td>
+<td class="src"><pre><code class="objc">        self.intValue = intValue</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">562</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">563</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">564</td>
+<td class="src"><pre><code class="objc">    init&lt;Key&gt;(_ base: Key) where Key: CodingKey {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">565</td>
+<td class="src"><pre><code class="objc">        if let intValue = base.intValue {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">566</td>
+<td class="src"><pre><code class="objc">            self.init(intValue: intValue)!</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">567</td>
+<td class="src"><pre><code class="objc">        } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">568</td>
+<td class="src"><pre><code class="objc">            self.init(stringValue: base.stringValue)!</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">569</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">570</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">571</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">572</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">573</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">574</td>
+<td class="src"><pre><code class="objc">    final class KeyedContainer&lt;Key&gt; where Key: CodingKey {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">575</td>
+<td class="src"><pre><code class="objc">        var codingPath: [CodingKey]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">576</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">577</td>
+<td class="src"><pre><code class="objc">        private let context: URLEncodedFormContext</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">578</td>
+<td class="src"><pre><code class="objc">        private let boolEncoding: URLEncodedFormEncoder.BoolEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">579</td>
+<td class="src"><pre><code class="objc">        private let dataEncoding: URLEncodedFormEncoder.DataEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">580</td>
+<td class="src"><pre><code class="objc">        private let dateEncoding: URLEncodedFormEncoder.DateEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">581</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">582</td>
+<td class="src"><pre><code class="objc">        init(context: URLEncodedFormContext,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">583</td>
+<td class="src"><pre><code class="objc">             codingPath: [CodingKey],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">584</td>
+<td class="src"><pre><code class="objc">             boolEncoding: URLEncodedFormEncoder.BoolEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">585</td>
+<td class="src"><pre><code class="objc">             dataEncoding: URLEncodedFormEncoder.DataEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">586</td>
+<td class="src"><pre><code class="objc">             dateEncoding: URLEncodedFormEncoder.DateEncoding) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">587</td>
+<td class="src"><pre><code class="objc">            self.context = context</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">588</td>
+<td class="src"><pre><code class="objc">            self.codingPath = codingPath</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">589</td>
+<td class="src"><pre><code class="objc">            self.boolEncoding = boolEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">590</td>
+<td class="src"><pre><code class="objc">            self.dataEncoding = dataEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">591</td>
+<td class="src"><pre><code class="objc">            self.dateEncoding = dateEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">592</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">593</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">594</td>
+<td class="src"><pre><code class="objc">        private func nestedCodingPath(for key: CodingKey) -&gt; [CodingKey] {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">595</td>
+<td class="src"><pre><code class="objc">            codingPath + [key]</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">596</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">597</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">598</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">599</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">600</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder.KeyedContainer: KeyedEncodingContainerProtocol {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">601</td>
+<td class="src"><pre><code class="objc">    func encodeNil(forKey key: Key) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">602</td>
+<td class="src"><pre><code class="objc">        let context = EncodingError.Context(codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">603</td>
+<td class="src"><pre><code class="objc">                                            debugDescription: "URLEncodedFormEncoder cannot encode nil values.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">604</td>
+<td class="src"><pre><code class="objc">        throw EncodingError.invalidValue("\(key): nil", context)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">605</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">606</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">607</td>
+<td class="src"><pre><code class="objc">    func encode&lt;T&gt;(_ value: T, forKey key: Key) throws where T: Encodable {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">608</td>
+<td class="src"><pre><code class="objc">        var container = nestedSingleValueEncoder(for: key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">609</td>
+<td class="src"><pre><code class="objc">        try container.encode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">610</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">611</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">612</td>
+<td class="src"><pre><code class="objc">    func nestedSingleValueEncoder(for key: Key) -&gt; SingleValueEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">613</td>
+<td class="src"><pre><code class="objc">        let container = _URLEncodedFormEncoder.SingleValueContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">614</td>
+<td class="src"><pre><code class="objc">                                                                    codingPath: nestedCodingPath(for: key),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">615</td>
+<td class="src"><pre><code class="objc">                                                                    boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">616</td>
+<td class="src"><pre><code class="objc">                                                                    dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">617</td>
+<td class="src"><pre><code class="objc">                                                                    dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">618</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">619</td>
+<td class="src"><pre><code class="objc">        return container</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">620</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">621</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">622</td>
+<td class="src"><pre><code class="objc">    func nestedUnkeyedContainer(forKey key: Key) -&gt; UnkeyedEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">623</td>
+<td class="src"><pre><code class="objc">        let container = _URLEncodedFormEncoder.UnkeyedContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">624</td>
+<td class="src"><pre><code class="objc">                                                                codingPath: nestedCodingPath(for: key),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">625</td>
+<td class="src"><pre><code class="objc">                                                                boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">626</td>
+<td class="src"><pre><code class="objc">                                                                dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">627</td>
+<td class="src"><pre><code class="objc">                                                                dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">628</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">629</td>
+<td class="src"><pre><code class="objc">        return container</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">630</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">631</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">632</td>
+<td class="src"><pre><code class="objc">    func nestedContainer&lt;NestedKey&gt;(keyedBy keyType: NestedKey.Type, forKey key: Key) -&gt; KeyedEncodingContainer&lt;NestedKey&gt; where NestedKey: CodingKey {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">633</td>
+<td class="src"><pre><code class="objc">        let container = _URLEncodedFormEncoder.KeyedContainer&lt;NestedKey&gt;(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">634</td>
+<td class="src"><pre><code class="objc">                                                                         codingPath: nestedCodingPath(for: key),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">635</td>
+<td class="src"><pre><code class="objc">                                                                         boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">636</td>
+<td class="src"><pre><code class="objc">                                                                         dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">637</td>
+<td class="src"><pre><code class="objc">                                                                         dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">638</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">639</td>
+<td class="src"><pre><code class="objc">        return KeyedEncodingContainer(container)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">640</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">641</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">642</td>
+<td class="src"><pre><code class="objc">    func superEncoder() -&gt; Encoder {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">643</td>
+<td class="src"><pre><code class="objc">        _URLEncodedFormEncoder(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">644</td>
+<td class="src"><pre><code class="objc">                               codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">645</td>
+<td class="src"><pre><code class="objc">                               boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">646</td>
+<td class="src"><pre><code class="objc">                               dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">647</td>
+<td class="src"><pre><code class="objc">                               dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">648</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">649</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">650</td>
+<td class="src"><pre><code class="objc">    func superEncoder(forKey key: Key) -&gt; Encoder {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">651</td>
+<td class="src"><pre><code class="objc">        _URLEncodedFormEncoder(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">652</td>
+<td class="src"><pre><code class="objc">                               codingPath: nestedCodingPath(for: key),</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">653</td>
+<td class="src"><pre><code class="objc">                               boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">654</td>
+<td class="src"><pre><code class="objc">                               dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">655</td>
+<td class="src"><pre><code class="objc">                               dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">656</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">657</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">658</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">659</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">660</td>
+<td class="src"><pre><code class="objc">    final class SingleValueContainer {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">661</td>
+<td class="src"><pre><code class="objc">        var codingPath: [CodingKey]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">662</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">663</td>
+<td class="src"><pre><code class="objc">        private var canEncodeNewValue = true</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">664</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">665</td>
+<td class="src"><pre><code class="objc">        private let context: URLEncodedFormContext</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">666</td>
+<td class="src"><pre><code class="objc">        private let boolEncoding: URLEncodedFormEncoder.BoolEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">667</td>
+<td class="src"><pre><code class="objc">        private let dataEncoding: URLEncodedFormEncoder.DataEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">668</td>
+<td class="src"><pre><code class="objc">        private let dateEncoding: URLEncodedFormEncoder.DateEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">669</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">670</td>
+<td class="src"><pre><code class="objc">        init(context: URLEncodedFormContext,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">671</td>
+<td class="src"><pre><code class="objc">             codingPath: [CodingKey],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">672</td>
+<td class="src"><pre><code class="objc">             boolEncoding: URLEncodedFormEncoder.BoolEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">673</td>
+<td class="src"><pre><code class="objc">             dataEncoding: URLEncodedFormEncoder.DataEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">674</td>
+<td class="src"><pre><code class="objc">             dateEncoding: URLEncodedFormEncoder.DateEncoding) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">675</td>
+<td class="src"><pre><code class="objc">            self.context = context</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">676</td>
+<td class="src"><pre><code class="objc">            self.codingPath = codingPath</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">677</td>
+<td class="src"><pre><code class="objc">            self.boolEncoding = boolEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">678</td>
+<td class="src"><pre><code class="objc">            self.dataEncoding = dataEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">679</td>
+<td class="src"><pre><code class="objc">            self.dateEncoding = dateEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">680</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">681</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">682</td>
+<td class="src"><pre><code class="objc">        private func checkCanEncode(value: Any?) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">683</td>
+<td class="src"><pre><code class="objc">            guard canEncodeNewValue else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">684</td>
+<td class="src"><pre><code class="objc">                let context = EncodingError.Context(codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">685</td>
+<td class="src"><pre><code class="objc">                                                    debugDescription: "Attempt to encode value through single value container when previously value already encoded.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">686</td>
+<td class="src"><pre><code class="objc">                throw EncodingError.invalidValue(value as Any, context)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">687</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">688</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">689</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">690</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">691</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">692</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder.SingleValueContainer: SingleValueEncodingContainer {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">693</td>
+<td class="src"><pre><code class="objc">    func encodeNil() throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">694</td>
+<td class="src"><pre><code class="objc">        try checkCanEncode(value: nil)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">695</td>
+<td class="src"><pre><code class="objc">        defer { canEncodeNewValue = false }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">696</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">697</td>
+<td class="src"><pre><code class="objc">        let context = EncodingError.Context(codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">698</td>
+<td class="src"><pre><code class="objc">                                            debugDescription: "URLEncodedFormEncoder cannot encode nil values.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">699</td>
+<td class="src"><pre><code class="objc">        throw EncodingError.invalidValue("nil", context)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">700</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">701</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">702</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Bool) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">703</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(boolEncoding.encode(value)))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">704</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">705</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">706</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: String) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">707</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">708</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">709</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">710</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Double) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">711</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">712</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">713</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">714</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Float) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">715</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">716</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">717</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">718</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Int) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">719</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">720</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">721</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">722</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Int8) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">723</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">724</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">725</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">726</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Int16) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">727</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">728</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">729</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">730</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Int32) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">731</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">732</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">733</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">734</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: Int64) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">735</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">736</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">737</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">738</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: UInt) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">739</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">740</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">741</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">742</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: UInt8) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">743</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">744</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">745</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">746</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: UInt16) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">747</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">748</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">749</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">750</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: UInt32) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">751</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">752</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">753</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">754</td>
+<td class="src"><pre><code class="objc">    func encode(_ value: UInt64) throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">755</td>
+<td class="src"><pre><code class="objc">        try encode(value, as: String(value))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">756</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">757</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">758</td>
+<td class="src"><pre><code class="objc">    private func encode&lt;T&gt;(_ value: T, as string: String) throws where T: Encodable {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">759</td>
+<td class="src"><pre><code class="objc">        try checkCanEncode(value: value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">760</td>
+<td class="src"><pre><code class="objc">        defer { canEncodeNewValue = false }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">761</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">762</td>
+<td class="src"><pre><code class="objc">        context.component.set(to: .string(string), at: codingPath)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">763</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">764</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">765</td>
+<td class="src"><pre><code class="objc">    func encode&lt;T&gt;(_ value: T) throws where T: Encodable {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">766</td>
+<td class="src"><pre><code class="objc">        switch value {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">767</td>
+<td class="src"><pre><code class="objc">        case let date as Date:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">768</td>
+<td class="src"><pre><code class="objc">            guard let string = try dateEncoding.encode(date) else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">769</td>
+<td class="src"><pre><code class="objc">                try attemptToEncode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">770</td>
+<td class="src"><pre><code class="objc">                return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">771</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">772</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">773</td>
+<td class="src"><pre><code class="objc">            try encode(value, as: string)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">774</td>
+<td class="src"><pre><code class="objc">        case let data as Data:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">775</td>
+<td class="src"><pre><code class="objc">            guard let string = try dataEncoding.encode(data) else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">776</td>
+<td class="src"><pre><code class="objc">                try attemptToEncode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">777</td>
+<td class="src"><pre><code class="objc">                return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">778</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">779</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">780</td>
+<td class="src"><pre><code class="objc">            try encode(value, as: string)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">781</td>
+<td class="src"><pre><code class="objc">        case let decimal as Decimal:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">782</td>
+<td class="src"><pre><code class="objc">            // Decimal's `Encodable` implementation returns an object, not a single value, so override it.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">783</td>
+<td class="src"><pre><code class="objc">            try encode(value, as: String(describing: decimal))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">784</td>
+<td class="src"><pre><code class="objc">        default:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">785</td>
+<td class="src"><pre><code class="objc">            try attemptToEncode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">786</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">787</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">788</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">789</td>
+<td class="src"><pre><code class="objc">    private func attemptToEncode&lt;T&gt;(_ value: T) throws where T: Encodable {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">790</td>
+<td class="src"><pre><code class="objc">        try checkCanEncode(value: value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">791</td>
+<td class="src"><pre><code class="objc">        defer { canEncodeNewValue = false }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">792</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">793</td>
+<td class="src"><pre><code class="objc">        let encoder = _URLEncodedFormEncoder(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">794</td>
+<td class="src"><pre><code class="objc">                                             codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">795</td>
+<td class="src"><pre><code class="objc">                                             boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">796</td>
+<td class="src"><pre><code class="objc">                                             dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">797</td>
+<td class="src"><pre><code class="objc">                                             dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">798</td>
+<td class="src"><pre><code class="objc">        try value.encode(to: encoder)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">799</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">800</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">801</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">802</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">803</td>
+<td class="src"><pre><code class="objc">    final class UnkeyedContainer {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">804</td>
+<td class="src"><pre><code class="objc">        var codingPath: [CodingKey]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">805</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">806</td>
+<td class="src"><pre><code class="objc">        var count = 0</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">807</td>
+<td class="src"><pre><code class="objc">        var nestedCodingPath: [CodingKey] {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">808</td>
+<td class="src"><pre><code class="objc">            codingPath + [AnyCodingKey(intValue: count)!]</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">809</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">810</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">811</td>
+<td class="src"><pre><code class="objc">        private let context: URLEncodedFormContext</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">812</td>
+<td class="src"><pre><code class="objc">        private let boolEncoding: URLEncodedFormEncoder.BoolEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">813</td>
+<td class="src"><pre><code class="objc">        private let dataEncoding: URLEncodedFormEncoder.DataEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">814</td>
+<td class="src"><pre><code class="objc">        private let dateEncoding: URLEncodedFormEncoder.DateEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">815</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">816</td>
+<td class="src"><pre><code class="objc">        init(context: URLEncodedFormContext,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">817</td>
+<td class="src"><pre><code class="objc">             codingPath: [CodingKey],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">818</td>
+<td class="src"><pre><code class="objc">             boolEncoding: URLEncodedFormEncoder.BoolEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">819</td>
+<td class="src"><pre><code class="objc">             dataEncoding: URLEncodedFormEncoder.DataEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">820</td>
+<td class="src"><pre><code class="objc">             dateEncoding: URLEncodedFormEncoder.DateEncoding) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">821</td>
+<td class="src"><pre><code class="objc">            self.context = context</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">822</td>
+<td class="src"><pre><code class="objc">            self.codingPath = codingPath</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">823</td>
+<td class="src"><pre><code class="objc">            self.boolEncoding = boolEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">824</td>
+<td class="src"><pre><code class="objc">            self.dataEncoding = dataEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">825</td>
+<td class="src"><pre><code class="objc">            self.dateEncoding = dateEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">826</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">827</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">828</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">829</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">830</td>
+<td class="src"><pre><code class="objc">extension _URLEncodedFormEncoder.UnkeyedContainer: UnkeyedEncodingContainer {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">831</td>
+<td class="src"><pre><code class="objc">    func encodeNil() throws {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">832</td>
+<td class="src"><pre><code class="objc">        let context = EncodingError.Context(codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">833</td>
+<td class="src"><pre><code class="objc">                                            debugDescription: "URLEncodedFormEncoder cannot encode nil values.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">834</td>
+<td class="src"><pre><code class="objc">        throw EncodingError.invalidValue("nil", context)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">835</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">836</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">837</td>
+<td class="src"><pre><code class="objc">    func encode&lt;T&gt;(_ value: T) throws where T: Encodable {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">838</td>
+<td class="src"><pre><code class="objc">        var container = nestedSingleValueContainer()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">839</td>
+<td class="src"><pre><code class="objc">        try container.encode(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">840</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">841</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">842</td>
+<td class="src"><pre><code class="objc">    func nestedSingleValueContainer() -&gt; SingleValueEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">843</td>
+<td class="src"><pre><code class="objc">        defer { count += 1 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">844</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">845</td>
+<td class="src"><pre><code class="objc">        return _URLEncodedFormEncoder.SingleValueContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">846</td>
+<td class="src"><pre><code class="objc">                                                           codingPath: nestedCodingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">847</td>
+<td class="src"><pre><code class="objc">                                                           boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">848</td>
+<td class="src"><pre><code class="objc">                                                           dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">849</td>
+<td class="src"><pre><code class="objc">                                                           dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">850</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">851</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">852</td>
+<td class="src"><pre><code class="objc">    func nestedContainer&lt;NestedKey&gt;(keyedBy keyType: NestedKey.Type) -&gt; KeyedEncodingContainer&lt;NestedKey&gt; where NestedKey: CodingKey {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">853</td>
+<td class="src"><pre><code class="objc">        defer { count += 1 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">854</td>
+<td class="src"><pre><code class="objc">        let container = _URLEncodedFormEncoder.KeyedContainer&lt;NestedKey&gt;(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">855</td>
+<td class="src"><pre><code class="objc">                                                                         codingPath: nestedCodingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">856</td>
+<td class="src"><pre><code class="objc">                                                                         boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">857</td>
+<td class="src"><pre><code class="objc">                                                                         dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">858</td>
+<td class="src"><pre><code class="objc">                                                                         dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">859</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">860</td>
+<td class="src"><pre><code class="objc">        return KeyedEncodingContainer(container)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">861</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">862</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">863</td>
+<td class="src"><pre><code class="objc">    func nestedUnkeyedContainer() -&gt; UnkeyedEncodingContainer {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">864</td>
+<td class="src"><pre><code class="objc">        defer { count += 1 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">865</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">866</td>
+<td class="src"><pre><code class="objc">        return _URLEncodedFormEncoder.UnkeyedContainer(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">867</td>
+<td class="src"><pre><code class="objc">                                                       codingPath: nestedCodingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">868</td>
+<td class="src"><pre><code class="objc">                                                       boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">869</td>
+<td class="src"><pre><code class="objc">                                                       dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">870</td>
+<td class="src"><pre><code class="objc">                                                       dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">871</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">872</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">873</td>
+<td class="src"><pre><code class="objc">    func superEncoder() -&gt; Encoder {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">874</td>
+<td class="src"><pre><code class="objc">        defer { count += 1 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">875</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">876</td>
+<td class="src"><pre><code class="objc">        return _URLEncodedFormEncoder(context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">877</td>
+<td class="src"><pre><code class="objc">                                      codingPath: codingPath,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">878</td>
+<td class="src"><pre><code class="objc">                                      boolEncoding: boolEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">879</td>
+<td class="src"><pre><code class="objc">                                      dataEncoding: dataEncoding,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">880</td>
+<td class="src"><pre><code class="objc">                                      dateEncoding: dateEncoding)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">881</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">882</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">883</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">884</td>
+<td class="src"><pre><code class="objc">final class URLEncodedFormSerializer {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">885</td>
+<td class="src"><pre><code class="objc">    private let alphabetizeKeyValuePairs: Bool</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">886</td>
+<td class="src"><pre><code class="objc">    private let arrayEncoding: URLEncodedFormEncoder.ArrayEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">887</td>
+<td class="src"><pre><code class="objc">    private let keyEncoding: URLEncodedFormEncoder.KeyEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">888</td>
+<td class="src"><pre><code class="objc">    private let spaceEncoding: URLEncodedFormEncoder.SpaceEncoding</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">889</td>
+<td class="src"><pre><code class="objc">    private let allowedCharacters: CharacterSet</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">890</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">891</td>
+<td class="src"><pre><code class="objc">    init(alphabetizeKeyValuePairs: Bool,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">892</td>
+<td class="src"><pre><code class="objc">         arrayEncoding: URLEncodedFormEncoder.ArrayEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">893</td>
+<td class="src"><pre><code class="objc">         keyEncoding: URLEncodedFormEncoder.KeyEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">894</td>
+<td class="src"><pre><code class="objc">         spaceEncoding: URLEncodedFormEncoder.SpaceEncoding,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">895</td>
+<td class="src"><pre><code class="objc">         allowedCharacters: CharacterSet) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">896</td>
+<td class="src"><pre><code class="objc">        self.alphabetizeKeyValuePairs = alphabetizeKeyValuePairs</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">897</td>
+<td class="src"><pre><code class="objc">        self.arrayEncoding = arrayEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">898</td>
+<td class="src"><pre><code class="objc">        self.keyEncoding = keyEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">899</td>
+<td class="src"><pre><code class="objc">        self.spaceEncoding = spaceEncoding</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">900</td>
+<td class="src"><pre><code class="objc">        self.allowedCharacters = allowedCharacters</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">901</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">902</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">903</td>
+<td class="src"><pre><code class="objc">    func serialize(_ object: URLEncodedFormComponent.Object) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">904</td>
+<td class="src"><pre><code class="objc">        var output: [String] = []</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">905</td>
+<td class="src"><pre><code class="objc">        for (key, component) in object {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">906</td>
+<td class="src"><pre><code class="objc">            let value = serialize(component, forKey: key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">907</td>
+<td class="src"><pre><code class="objc">            output.append(value)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">908</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">909</td>
+<td class="src"><pre><code class="objc">        output = alphabetizeKeyValuePairs ? output.sorted() : output</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">910</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">911</td>
+<td class="src"><pre><code class="objc">        return output.joinedWithAmpersands()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">912</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">913</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">914</td>
+<td class="src"><pre><code class="objc">    func serialize(_ component: URLEncodedFormComponent, forKey key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">915</td>
+<td class="src"><pre><code class="objc">        switch component {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">916</td>
+<td class="src"><pre><code class="objc">        case let .string(string): return "\(escape(keyEncoding.encode(key)))=\(escape(string))"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">917</td>
+<td class="src"><pre><code class="objc">        case let .array(array): return serialize(array, forKey: key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">918</td>
+<td class="src"><pre><code class="objc">        case let .object(object): return serialize(object, forKey: key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">919</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">920</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">921</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">922</td>
+<td class="src"><pre><code class="objc">    func serialize(_ object: URLEncodedFormComponent.Object, forKey key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">923</td>
+<td class="src"><pre><code class="objc">        var segments: [String] = object.map { subKey, value in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">924</td>
+<td class="src"><pre><code class="objc">            let keyPath = "[\(subKey)]"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">925</td>
+<td class="src"><pre><code class="objc">            return serialize(value, forKey: key + keyPath)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">926</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">927</td>
+<td class="src"><pre><code class="objc">        segments = alphabetizeKeyValuePairs ? segments.sorted() : segments</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">928</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">929</td>
+<td class="src"><pre><code class="objc">        return segments.joinedWithAmpersands()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">930</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">931</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">932</td>
+<td class="src"><pre><code class="objc">    func serialize(_ array: [URLEncodedFormComponent], forKey key: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">933</td>
+<td class="src"><pre><code class="objc">        var segments: [String] = array.map { component in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">934</td>
+<td class="src"><pre><code class="objc">            let keyPath = arrayEncoding.encode(key)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">935</td>
+<td class="src"><pre><code class="objc">            return serialize(component, forKey: keyPath)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">936</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">937</td>
+<td class="src"><pre><code class="objc">        segments = alphabetizeKeyValuePairs ? segments.sorted() : segments</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">938</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">939</td>
+<td class="src"><pre><code class="objc">        return segments.joinedWithAmpersands()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">940</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">941</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">942</td>
+<td class="src"><pre><code class="objc">    func escape(_ query: String) -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">943</td>
+<td class="src"><pre><code class="objc">        var allowedCharactersWithSpace = allowedCharacters</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">944</td>
+<td class="src"><pre><code class="objc">        allowedCharactersWithSpace.insert(charactersIn: " ")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">945</td>
+<td class="src"><pre><code class="objc">        let escapedQuery = query.addingPercentEncoding(withAllowedCharacters: allowedCharactersWithSpace) ?? query</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">946</td>
+<td class="src"><pre><code class="objc">        let spaceEncodedQuery = spaceEncoding.encode(escapedQuery)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">947</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">948</td>
+<td class="src"><pre><code class="objc">        return spaceEncodedQuery</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">949</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">950</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">951</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">952</td>
+<td class="src"><pre><code class="objc">extension Array where Element == String {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">953</td>
+<td class="src"><pre><code class="objc">    func joinedWithAmpersands() -&gt; String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">954</td>
+<td class="src"><pre><code class="objc">        joined(separator: "&amp;")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">955</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">956</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">957</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">958</td>
+<td class="src"><pre><code class="objc">extension CharacterSet {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">959</td>
+<td class="src"><pre><code class="objc">    /// Creates a CharacterSet from RFC 3986 allowed characters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">960</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">961</td>
+<td class="src"><pre><code class="objc">    /// RFC 3986 states that the following characters are "reserved" characters.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">962</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">963</td>
+<td class="src"><pre><code class="objc">    /// - General Delimiters: ":", "#", "[", "]", "@", "?", "/"</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">964</td>
+<td class="src"><pre><code class="objc">    /// - Sub-Delimiters: "!", "$", "&amp;", "'", "(", ")", "*", "+", ",", ";", "="</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">965</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">966</td>
+<td class="src"><pre><code class="objc">    /// In RFC 3986 - Section 3.4, it states that the "?" and "/" characters should not be escaped to allow</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">967</td>
+<td class="src"><pre><code class="objc">    /// query strings to include a URL. Therefore, all "reserved" characters with the exception of "?" and "/"</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">968</td>
+<td class="src"><pre><code class="objc">    /// should be percent-escaped in the query string.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">969</td>
+<td class="src"><pre><code class="objc">    public static let afURLQueryAllowed: CharacterSet = {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">970</td>
+<td class="src"><pre><code class="objc">        let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">971</td>
+<td class="src"><pre><code class="objc">        let subDelimitersToEncode = "!$&amp;'()*+,;="</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">972</td>
+<td class="src"><pre><code class="objc">        let encodableDelimiters = CharacterSet(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">973</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">974</td>
+<td class="src"><pre><code class="objc">        return CharacterSet.urlQueryAllowed.subtracting(encodableDelimiters)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">975</td>
+<td class="src"><pre><code class="objc">    }()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">976</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2021 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

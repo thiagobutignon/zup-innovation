@@ -8,7 +8,6 @@
 import Foundation
 import Domain
 
-
 public func makeBeagleComponentChildrenWithText(backgroundColor: String, text: String) -> Children {
     return Children(beagleComponent: "beagle:container", style: Style(backgroundColor: backgroundColor, padding: Style.Padding(all: Style.Padding.All(value: 20, type: "REAL")), margin: Style.Margin(vertical: Style.Margin.Vertical(value: 10, type: "REAL"))), text: nil, textColor: nil, children: [makeBeagleComponentText(text: text)])
 }
