@@ -1,9 +1,0 @@
-coverage_service: html
-xcodeproj: server-driven-ui-ios.xcodeproj
-scheme: CI
-source_directory:
-  - Domain
-  - Data
-  - Infra
-  - Presentation
-output_directory: html
