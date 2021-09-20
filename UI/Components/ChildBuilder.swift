@@ -10,7 +10,7 @@ import UIKit
 public class ChildBuilder {
     static func title(text: String, textColor: String, fatherView: UIView, margin: CGFloat) -> UIView {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.autoResizingOff()
         label.textColor = UIColor(hex: textColor)
         label.font = UIFont.systemFont(ofSize: 16)
         label.text = text
@@ -21,7 +21,7 @@ public class ChildBuilder {
     
     static func container(backgroundColor: String, fatherView: UIView, margin: Int) -> UIView {
         let container = UIView()
-        container.translatesAutoresizingMaskIntoConstraints = false
+        container.autoResizingOff()
         container.backgroundColor = UIColor(hex: backgroundColor)
         fatherView.addSubviews([container])
         container.edgeToSuperView(margin: CGFloat(margin))

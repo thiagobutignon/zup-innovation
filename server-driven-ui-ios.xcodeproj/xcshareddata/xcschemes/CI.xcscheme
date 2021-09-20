@@ -104,6 +104,62 @@
                ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83019C7026F80001005880B7"
+               BuildableName = "Main.app"
+               BlueprintName = "Main"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83019C8526F80003005880B7"
+               BuildableName = "MainTests.xctest"
+               BlueprintName = "MainTests"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83481E1D26F5987900DC2EC0"
+               BuildableName = "UI.framework"
+               BlueprintName = "UI"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83481E2526F5987A00DC2EC0"
+               BuildableName = "UITests.xctest"
+               BlueprintName = "UITests"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -124,13 +180,6 @@
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8370C08926F10EF4005FFBFC"
-            BuildableName = "DataTests.xctest"
-            BlueprintName = "DataTests"
-            ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
-         </BuildableReference>
-         <BuildableReference
-            BuildableIdentifier = "primary"
             BlueprintIdentifier = "8370C0A326F10F59005FFBFC"
             BuildableName = "Domain.framework"
             BlueprintName = "Domain"
@@ -145,9 +194,30 @@
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8370C0CE26F111D8005FFBFC"
-            BuildableName = "InfraTests.xctest"
-            BlueprintName = "InfraTests"
+            BlueprintIdentifier = "83481DA026F55E4D00DC2EC0"
+            BuildableName = "IntegrationTests.xctest"
+            BlueprintName = "IntegrationTests"
+            ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "83019C7026F80001005880B7"
+            BuildableName = "Main.app"
+            BlueprintName = "Main"
+            ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "83481DE326F5756700DC2EC0"
+            BuildableName = "Presentation.framework"
+            BlueprintName = "Presentation"
+            ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "83481E1D26F5987900DC2EC0"
+            BuildableName = "UI.framework"
+            BlueprintName = "UI"
             ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
@@ -193,6 +263,28 @@
                BlueprintIdentifier = "83481DEB26F5756800DC2EC0"
                BuildableName = "PresentationTests.xctest"
                BlueprintName = "PresentationTests"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83019C8526F80003005880B7"
+               BuildableName = "MainTests.xctest"
+               BlueprintName = "MainTests"
+               ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83481E2526F5987A00DC2EC0"
+               BuildableName = "UITests.xctest"
+               BlueprintName = "UITests"
                ReferencedContainer = "container:server-driven-ui-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -12,7 +12,7 @@ import Presentation
 
 class ScreenViewControllerTests: XCTestCase {
     func test_loading_is_hidden_on_start() {
-        XCTAssertEqual(makeSut().screen?.loadingIndicator.isAnimating, false)
+        XCTAssertEqual(makeSut().screenView?.loadingIndicator.isAnimating, false)
     }
     
     func test_sut_implements_loadingView() {

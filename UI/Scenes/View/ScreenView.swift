@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class Screen: UIView {
+public final class ScreenView: UIView {
     public var loadingIndicator: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(style: .large)
         activityIndicatorView.autoResizingOff()
@@ -16,6 +16,7 @@ public final class Screen: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.configSuperView()
         self.setupConstraints()
     }

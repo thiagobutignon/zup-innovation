@@ -7,15 +7,16 @@
 
 import UIKit
 import Presentation
+import Domain
 
 public final class ScreenViewController: UIViewController {
-    public var screen: Screen?
+    public var screenView: ScreenView?
     var viewModel: DisplayScreenViewModel?
     public var loadScreen: ((ScreenRequest) -> Void)?
     
     public override func loadView() {
-        self.screen = Screen()
-        self.view = self.screen
+        self.screenView = ScreenView()
+        self.view = self.screenView
     }
     
     public override func viewDidLoad() {
@@ -38,10 +39,10 @@ extension ScreenViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
             view.isUserInteractionEnabled = false
-            self.screen?.loadingIndicator.startAnimating()
+            self.screenView?.loadingIndicator.startAnimating()
         } else {
             view.isUserInteractionEnabled = true
-            self.screen?.loadingIndicator.stopAnimating()
+            self.screenView?.loadingIndicator.stopAnimating()
         }
     }
 }
@@ -57,7 +58,14 @@ extension ScreenViewController: AlertView {
 extension ScreenViewController: DisplayScreenView {
     public func show(viewModel: DisplayScreenViewModel) {
         self.viewModel = viewModel
-        let data = viewModel.data
-        let _ = ChildBuilder.container(backgroundColor: data.style!.backgroundColor, fatherView: self.view, margin: (data.style?.padding?.all.value)!)
+        let data: BeagleComponent = viewModel.data
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        print(String(data: try! jsonEncoder.encode(data), encoding: .utf8)!)
+        let firstView = ChildBuilder.container(backgroundColor: data.style!.backgroundColor, fatherView: self.view, margin: (data.style?.padding?.all.value)!)
+        
+        let secondView = ChildBuilder.container(backgroundColor: data.children[0].style!.backgroundColor, fatherView: firstView, margin: (data.children[0].style?.padding!.all.value)!)
+        let thirdView = ChildBuilder.container(backgroundColor: data.children[0].children![0].style!.backgroundColor, fatherView: secondView, margin: (data.children[0].children![0].style!.padding!.all.value))
+        let textView = ChildBuilder.title(text: data.children[0].children![0].children![0].text!, textColor: data.children[0].children![0].children![0].textColor!, fatherView: thirdView, margin: 10)
     }
 }
