@@ -62,39 +62,29 @@ extension ScreenViewController: DisplayScreenView {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
         print(String(data: try! jsonEncoder.encode(data), encoding: .utf8)!)
-        let firstView = ChildBuilder.container(backgroundColor: data.style!.backgroundColor, fatherView: self.view, margin: (data.style?.padding?.all.value)!)
-        recursive(data: data, fatherView: firstView)
-    }
-    
-    func recursive(data: BeagleComponent, fatherView: UIView) {
-        if(data.children != nil) {
-            let newData = data.children?[0]
-            switch newData!.beagleComponent {
-                case "beagle:container":
-                    let newView = ChildBuilder.container(backgroundColor: (newData?.style!.backgroundColor)!, fatherView: fatherView, margin: (newData?.style?.padding!.all.value)!)
-                    recursive(data: newData!, fatherView: newView)
-                case "beagle:text":
-                    let newView = ChildBuilder.title(text: (newData?.text)!, textColor: (newData?.textColor)!, fatherView: fatherView, margin: 10)
-                    recursive(data: newData!, fatherView: newView)
-                default:
-                    break
-            }
+        var backgroundColor = "#FFF"
+        var marginValue = 20
+        if let newBackgroundColor = data.style?.backgroundColor {
+            backgroundColor = newBackgroundColor
         }
+        if let newMarginValue = data.style?.padding?.all.value {
+            marginValue = newMarginValue
+        }
+        let firstView = ChildBuilder.container(backgroundColor: backgroundColor, fatherView: self.view, margin: marginValue)
+        recursive(data: data.children![0], fatherView: firstView)
     }
     
-    func recursive(data: Children, fatherView: UIView) {
-        if(data.children != nil) {
-            let newData = data.children?[0]
-            switch newData!.beagleComponent {
+    func recursive(data: Children?, fatherView: UIView) {
+        guard let data = data else { return }
+            switch data.beagleComponent {
                 case "beagle:container":
-                    let newView = ChildBuilder.container(backgroundColor: (newData?.style!.backgroundColor)!, fatherView: fatherView, margin: (newData?.style?.padding!.all.value)!)
-                    recursive(data: newData!, fatherView: newView)
+                    let newView = ChildBuilder.container(backgroundColor: (data.style!.backgroundColor), fatherView: fatherView, margin: (data.style?.padding!.all.value)!)
+                    recursive(data: data.children![0], fatherView: newView)
                 case "beagle:text":
-                    let newView = ChildBuilder.title(text: (newData?.text)!, textColor: (newData?.textColor)!, fatherView: fatherView, margin: 10)
-                    recursive(data: newData!, fatherView: newView)
+                    let newView = ChildBuilder.title(text: (data.text)!, textColor: (data.textColor)!, fatherView: fatherView, margin: 10)
                 default:
                     break
-            }
+            
         }
     }
 }
