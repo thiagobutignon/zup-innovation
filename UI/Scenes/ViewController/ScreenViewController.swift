@@ -59,29 +59,33 @@ extension ScreenViewController: DisplayScreenView {
     public func show(viewModel: DisplayScreenViewModel) {
         self.viewModel = viewModel
         let data: BeagleComponent = viewModel.data
-        let jsonEncoder = JSONEncoder()
-        jsonEncoder.outputFormatting = .prettyPrinted
-        print(String(data: try! jsonEncoder.encode(data), encoding: .utf8)!)
         var backgroundColor = "#FFF"
-        var marginValue = 20
-        if let newBackgroundColor = data.style?.backgroundColor {
+        var paddingValue = 20
+        let style = data.style
+        if let newBackgroundColor = style?.backgroundColor {
             backgroundColor = newBackgroundColor
         }
-        if let newMarginValue = data.style?.padding?.all.value {
-            marginValue = newMarginValue
+        if let newPaddingValue = style?.padding?.all.value {
+            paddingValue = newPaddingValue
         }
-        let firstView = ChildBuilder.container(backgroundColor: backgroundColor, fatherView: self.view, margin: marginValue)
-        recursive(data: data.children![0], fatherView: firstView)
+        let firstView = ChildBuilder.containerFather(backgroundColor: backgroundColor, fatherView: self.view, padding: paddingValue)
+        for item in data.children! {
+            recursive(data: item, fatherView: firstView)
+        }
     }
     
     func recursive(data: Children?, fatherView: UIView) {
         guard let data = data else { return }
             switch data.beagleComponent {
                 case "beagle:container":
-                    let newView = ChildBuilder.container(backgroundColor: (data.style!.backgroundColor), fatherView: fatherView, margin: (data.style?.padding!.all.value)!)
+                    var margin: Int? = nil
+                    if let newMargin: Int = data.style?.margin?.vertical.value {
+                        margin = newMargin
+                    }
+                    let newView = ChildBuilder.container(backgroundColor: (data.style!.backgroundColor), fatherView: fatherView, padding: (data.style?.padding!.all.value)!, margin: margin)
                     recursive(data: data.children![0], fatherView: newView)
                 case "beagle:text":
-                    let newView = ChildBuilder.title(text: (data.text)!, textColor: (data.textColor)!, fatherView: fatherView, margin: 10)
+                    let _ = ChildBuilder.title(text: (data.text)!, textColor: (data.textColor)!, fatherView: fatherView, margin: 10)
                 default:
                     break
             

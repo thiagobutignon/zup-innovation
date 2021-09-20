@@ -19,12 +19,30 @@ public class ChildBuilder {
         return label
     }
     
-    static func container(backgroundColor: String, fatherView: UIView, margin: Int) -> UIView {
+    static func container(backgroundColor: String, fatherView: UIView, padding: Int, margin: Int?) -> UIView {
         let container = UIView()
         container.autoResizingOff()
         container.backgroundColor = UIColor(hex: backgroundColor)
         fatherView.addSubviews([container])
-        container.edgeToSuperView(margin: CGFloat(margin))
+        if (margin != nil) {
+            container.height(100)
+            container.topToTop(of: fatherView, relation: NSLayoutConstraint.Relation(rawValue: -1)!, margin: CGFloat(margin!))
+        } else {
+            container.edgeToSuperView(margin: CGFloat(padding))
+        }
+        
+        return container
+    }
+    
+    static func containerFather(backgroundColor: String, fatherView: UIView, padding: Int) -> UIView {
+        let container = UIView()
+        container.autoResizingOff()
+        container.backgroundColor = UIColor(hex: backgroundColor)
+        fatherView.addSubviews([container])
+        container.topToTop(of: fatherView, margin: CGFloat(padding))
+                 .leadingToLeading(of: fatherView)
+                 .trailingToTrailing(of: fatherView)
+                 .height(250)
         return container
     }
 }
