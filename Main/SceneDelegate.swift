@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windownScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windownScene)
-        let screenViewController = makeScreenBoxedText()
+        let screenViewController = makeScreenMultipleBoxes()
         window?.rootViewController = screenViewController
         window?.makeKeyAndVisible()
     }

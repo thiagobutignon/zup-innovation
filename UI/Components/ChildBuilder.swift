@@ -25,8 +25,17 @@ public class ChildBuilder {
         container.backgroundColor = UIColor(hex: backgroundColor)
         fatherView.addSubviews([container])
         if (margin != nil) {
+            var makeDistance = padding
+            if(fatherView.subviews.count != 1) {
+                makeDistance = 100 * (fatherView.subviews.count - 1) + padding + (margin! * fatherView.subviews.count - 1)
+               
+            }
+            print(makeDistance)
             container.height(100)
-            container.topToTop(of: fatherView, relation: NSLayoutConstraint.Relation(rawValue: -1)!, margin: CGFloat(margin!))
+                     .topToTop(of: fatherView, margin: CGFloat(makeDistance))
+                     .leadingToLeading(of: fatherView, margin: CGFloat(padding))
+                     .trailingToTrailing(of: fatherView, margin: -CGFloat(padding))
+            
         } else {
             container.edgeToSuperView(margin: CGFloat(padding))
         }
